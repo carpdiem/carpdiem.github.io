@@ -1,0 +1,17 @@
+name: proselint
+
+on: [push, pull_request]
+
+jobs:
+    proselint:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: pull_repo
+          uses: actions/checkout@v2
+
+        - name: install_proselint
+          run: pip install proselint
+
+        - name: run_proselint
+          run: find . -name '*.md' -exec proselint {} + || exit
