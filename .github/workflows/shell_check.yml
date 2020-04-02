@@ -17,6 +17,4 @@ jobs:
     steps:
     # Runs a set of commands using the runners shell
     - name: shell_check
-      run: |
-        sudo apt-get install -y shellcheck
-        find . -name '*.sh' -exec shellcheck {} +
+      run: find . -name '*.sh' -exec shellcheck {} +
