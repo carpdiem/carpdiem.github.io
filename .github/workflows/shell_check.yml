@@ -6,9 +6,6 @@ name: shell_check
 # events 
 on: [push, pull_request]
 
-# Need to include checkout action to have access to current repo
-- uses: actions/checkout@v2
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,4 +17,6 @@ jobs:
     steps:
     # Runs a set of commands using the runners shell
     - name: shell_check
+    # Need to include checkout action to have access to current repo
+    - uses: actions/checkout@v2
       run: ls
