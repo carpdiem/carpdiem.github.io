@@ -16,7 +16,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a set of commands using the runners shell
-    - name: shell_check
+    - name: pull_repo
     # Need to include checkout action to have access to current repo
       uses: actions/checkout@v2
+
+    - name: run_shellcheck
       run: ls
