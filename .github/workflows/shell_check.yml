@@ -19,6 +19,4 @@ jobs:
     - name: shell_check
       run: |
         sudo apt-get install -y shellcheck
-        find . '(' -name '*.bash' \
-        -o -name '*.sh' \
-        -o -name '*.zsh' ')' -exec shellcheck {} + || exit
+        find . -name '*.sh' -exec shellcheck {} + || exit
