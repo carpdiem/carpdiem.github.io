@@ -24,4 +24,4 @@ jobs:
         sudo apt-get install -y shellcheck
         find . '(' -name '*.bash' \
         -o -name '*.sh' \
-        -o -name '*.zsh' ')' -exec shellcheck {} + || exit
+        -o -name '*.zsh' ')' -exec shellcheck {} +
