@@ -18,5 +18,5 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: shell_check
     # Need to include checkout action to have access to current repo
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       run: ls
