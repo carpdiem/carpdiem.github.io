@@ -17,4 +17,4 @@ jobs:
     steps:
     # Runs a set of commands using the runners shell
     - name: shell_check
-      run: shellcheck simple_script.sh
+      run: ls
