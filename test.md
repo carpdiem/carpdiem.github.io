@@ -1,7 +1,3 @@
----
-layout: page
-title: "Test Page"
-permalink: /test
----
-
-This is a test of a new page!
+this is a test.
+a very very, very good test.
+I"ve got LOTS of tpyos.
