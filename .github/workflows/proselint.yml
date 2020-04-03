@@ -10,8 +10,13 @@ jobs:
         - name: pull_repo
           uses: actions/checkout@v2
 
+        - name: set up python
+          uses: actions/setup-python@v1
+          
         - name: install_proselint
-          run: pip install proselint
+          run: |
+            python -m pip install --upgrade pip
+            pip install proselint
 
         - name: run_proselint
           run: find . -name '*.md' -exec proselint {} + || exit
