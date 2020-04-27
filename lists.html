@@ -2,7 +2,7 @@
 layout: default
 title: Lists
 ---
-{% for l in lists %}
-<hr><hr>
-<p>{{ l.content | markdownify }}</p>
+{% for l in site.lists %}
+<hr>
+<p><b>{{ l.content | markdownify }}</b></p>
 {% endfor %}
