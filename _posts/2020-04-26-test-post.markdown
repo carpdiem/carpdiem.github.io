@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Test post"
+date: 2020-04-26 23:32:00 -0700
+categories: testCat1 testCat2
+---
+This is a test post. I'm just doing a test post here. Look at me testing this post functionality!
+{% highlight python %}
+def hello_world(x):
+	for i in range(x):
+		print("Hello world!")
+{% endhighlight %}
