@@ -1,0 +1,7 @@
+---
+layout: default
+title: Projects
+---
+{% for project in site.projects %}
+<p>{{ project.content | markdownify }} </p>
+{% endfor %}
