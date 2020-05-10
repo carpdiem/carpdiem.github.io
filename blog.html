@@ -1,0 +1,8 @@
+---
+layout: default
+title: Blog
+---
+{% for b in site.blog %}
+<p><b>New Blog Entry</b></p>
+<p>{{ b.content | markdownify }}</p>
+{% endfor %}

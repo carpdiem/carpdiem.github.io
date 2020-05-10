@@ -33,7 +33,11 @@ collections:
                 output: true
         lists:
                 output: true
-        writing:
+        essays:
+                output: true
+        blog:
+                output: true
+        misc:
                 output: true
 
 # Exclude from processing.

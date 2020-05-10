@@ -1,0 +1,7 @@
+---
+layout: default
+title: Misc
+---
+{% for m in site.misc %}
+<p>{{ m.content | markdownify }}</p>
+{% endfor %}
