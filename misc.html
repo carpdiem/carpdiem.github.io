@@ -3,5 +3,6 @@ layout: default
 title: Misc
 ---
 {% for m in site.misc %}
-<p>{{ m.content | markdownify }}</p>
+<h1>{{ m.title }}</h1>
+{{ m.content | markdownify }}
 {% endfor %}
