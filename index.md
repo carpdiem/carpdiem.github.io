@@ -5,3 +5,12 @@
 layout: home
 permalink: /
 ---
+
+{% for c in site.collections %}
+#{{ c.label }}
+<ul>
+{% assign sorted = {site.c.label | sort: 'last_modified'} | reverse %}
+{% for item in sorted %}
+<li>{{ item.title }}</li>
+{% endfor %}
+</ul>
