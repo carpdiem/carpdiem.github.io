@@ -14,3 +14,4 @@ permalink: /
 <li>{{ item.title }}</li>
 {% endfor %}
 </ul>
+{% endfor %}
