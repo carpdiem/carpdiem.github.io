@@ -31,14 +31,19 @@ plugins:
 collections:
         projects:
                 output: true
+                sort_by: last_modified
         lists:
                 output: true
+                sort_by: last_modified
         essays:
                 output: true
+                sort_by: last_modified
         blog:
                 output: true
+                sort_by: last_modified
         misc:
                 output: true
+                sort_by: last_modified
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

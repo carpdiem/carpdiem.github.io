@@ -4,14 +4,19 @@
 
 layout: home
 permalink: /
+title: Recent Updates
 ---
 
 {% for c in site.collections %}
-#{{ c.label }}
+{% if c.label != "posts" %}
+## <a href="{{ c.label }}">{{ c.label }}</a>
 <ul>
-{% assign sorted = {site.c.label | sort: 'last_modified'} | reverse %}
+{% assign sorted = site[c.label] | sort: 'last_modified' | reverse | slice: 0, 3 %}
 {% for item in sorted %}
-<li>{{ item.title }}</li>
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 {% endfor %}
+<li><a href="{{ c.label }}">See More</a></li>
 </ul>
+<hr>
+{% endif %}
 {% endfor %}
