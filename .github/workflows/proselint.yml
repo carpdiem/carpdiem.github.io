@@ -19,4 +19,4 @@ jobs:
             pip install proselint
 
         - name: run_proselint
-          run: find . -name '*.md' -exec proselint {} + || exit
+          run: find . -name '*.markdown' -exec proselint {} + || exit
