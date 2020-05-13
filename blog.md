@@ -2,6 +2,9 @@
 layout: default
 title: Blog
 ---
+<h2 style="text-align: center">shortform blog entries</h2>
+
+
 {% for b in site.blog %}
 
 ## <a href="{{ b.url }}">{{ b.title }}</a>

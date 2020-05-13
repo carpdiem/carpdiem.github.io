@@ -2,6 +2,8 @@
 layout: default
 title: Projects
 ---
+<h2 style="text-align: center">projects I'd like to share with you</h2>
+
 {% for p in site.projects %}
 
 ## <a href="{{ p.url }}">{{ p.title }}</a>

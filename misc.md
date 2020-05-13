@@ -2,6 +2,8 @@
 layout: default
 title: Misc
 ---
+<h2 style="text-align: center">various things that don't fit elsewhere</h2>
+
 {% for m in site.misc %}
 
 ## <a href="{{ m.url }}">{{ m.title }}</a>

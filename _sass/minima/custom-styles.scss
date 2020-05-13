@@ -4,3 +4,28 @@
 .nav_div:last-child {
 	margin-left: 30px;
 }
+
+a:visited {
+	color: #993322;
+}
+
+a:link {
+	color: #cc3300;
+}
+
+.active_page {
+//	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #777;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	flex: 1;
+}
+
+.not_active_page {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	flex: 1;
+}
