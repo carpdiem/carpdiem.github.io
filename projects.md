@@ -4,7 +4,8 @@ title: Projects
 ---
 <h2 style="text-align: center">projects I'd like to share with you</h2>
 
-{% for p in site.projects %}
+{% assign sorted = site.projects | sort: 'last_modified' | reverse %}
+{% for p in sorted %}
 
 ## <a href="{{ p.url }}">{{ p.title }}</a>
 

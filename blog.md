@@ -4,8 +4,8 @@ title: Blog
 ---
 <h2 style="text-align: center">shortform blog entries</h2>
 
-
-{% for b in site.blog %}
+{% assign sorted = site.blog | sort: 'last_modified' | reverse %}
+{% for b in sorted %}
 
 ## <a href="{{ b.url }}">{{ b.title }}</a>
 

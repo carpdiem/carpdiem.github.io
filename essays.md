@@ -5,7 +5,8 @@ title: Essays
 <h2 style="text-align: center">longform essays on various topics</h2>
 <h2 style="text-align: center">sometimes updated and revised</h2>
 
-{% for e in site.essays %}
+{% assign sorted = site.essays | sort: 'last_modified' | reverse %}
+{% for e in sorted %}
 
 ## <a href="{{ e.url }}">{{ e.title }}</a>
 

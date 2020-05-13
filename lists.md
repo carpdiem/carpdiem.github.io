@@ -4,7 +4,8 @@ title: Lists
 ---
 <h2 style="text-align: center">curious collections</h2>
 
-{% for l in site.lists %}
+{% assign sorted = site.lists | sort: 'last_modified' | reverse %}
+{% for l in sorted %}
 
 ## <a href="{{ l.url }}">{{ l.title }}</a>
 
