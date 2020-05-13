@@ -45,6 +45,14 @@ collections:
                 output: true
                 sort_by: last_modified
 
+header_pages:
+    - about.md
+    - blog.md
+    - essays.md
+    - lists.md
+    - misc.md
+    - projects.md
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -1,0 +1,24 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+.active_page {
+//	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #777;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	flex: 1;
+}
+
+.not_active_page {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	flex: 1;
+}
