@@ -29,3 +29,28 @@ a:link {
 	padding-right: 10px;
 	flex: 1;
 }
+
+.index_left_indent {
+	margin-left: 5%;
+	padding-top: $spacing-unit / 2;
+}
+
+.index_left_indent:first-child {
+	padding-top: 0;
+}
+
+.index_item_title {
+	margin-bottom: $spacing-unit / 2;
+}
+
+.index_title {
+	margin-bottom: 0;
+}
+
+.metadata {
+	font-size: $small-font-size;
+}
+
+.index_item_content {
+	padding-left: 5%;
+}

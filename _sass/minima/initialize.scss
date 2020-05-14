@@ -6,9 +6,9 @@
 	font-family: "Crimson Text";
 	src: url("../Crimson_Text/CrimsonText-Regular.ttf");
 }
-$base-font-family: "Crimson Text", sans-serif !default;
+$base-font-family: "Crimson Text", "Times New Roman", serif !default;
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size:   16px !default;
+$base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
