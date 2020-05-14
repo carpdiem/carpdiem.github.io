@@ -17,6 +17,8 @@ a:link {
 //	font-weight: bold;
 	text-decoration: underline;
 	text-decoration-color: #777;
+	-webkit-text-decoration-color: #777;
+	-blink-text-decoration-color: #777;
 	display: inline;
 	padding-left: 10px;
 	padding-right: 10px;
