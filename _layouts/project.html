@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="index_item_title" style="text-align: center">
+	<h2 class="no_break_title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+	<div class="metadata">Last Updated: {{ page.last_modified | date: '%B %d, %Y' }}</div>
+</div>
+<div>{{ page.content | markdownify }}</div>

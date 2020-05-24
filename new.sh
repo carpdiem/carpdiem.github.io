@@ -8,25 +8,107 @@ new () {
 	fi
 	
 	case "$1" in
-		list)
-			fname="_lists/draft_list.markdown"
+		blog)
+			fname="drafts/blog/draft_blog.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
 				d=$(date --rfc-3339=s)
 				d=${d:0:10}
 				echo "---" > $fname
-				echo "layout: default" >> $fname
-				echo "title: --title here--" >> $fname
-				echo "subtitle: --subtitle here--" >> $fname
-				echo "date: $d" >> $fname
-				echo "last_modified: $d" >> $fname
-				echo "---" >> $fname
+				{
+					echo "layout: blog_post";
+					echo "title: --title here--";
+					echo "date: $d";
+					echo "last_modified: $d";
+					echo "---";
+				} >> $fname
 				vim $fname
 			else
 				echo "Error: you already have a draft in progress. Stash it somewhere and try again."
 				return 1
 			fi
 			;;
-		esac
+		essay)
+			fname="drafts/essays/draft_essay.markdown"
+			if [[ ! -e $fname ]]; then
+				touch $fname
+				d=$(date --rfc-3339=s)
+				d=${d:0:10}
+				echo "---" > $fname
+				{
+					echo "layout: essay";
+					echo "title: --title here--";
+					echo "date: $d";
+					echo "last_modified: $d";
+					echo "---";
+				} >> $fname
+				vim $fname
+			else
+				echo "Error: you already have a draft in progress. Stash it somewhere and try again."
+				return 1
+			fi
+			;;
+		list)
+			fname="drafts/lists/draft_list.markdown"
+			if [[ ! -e $fname ]]; then
+				touch $fname
+				d=$(date --rfc-3339=s)
+				d=${d:0:10}
+				echo "---" > $fname
+				{
+					echo "layout: list";
+					echo "title: --title here--";
+					echo "date: $d";
+					echo "last_modified: $d";
+					echo "---";
+				} >> $fname
+				vim $fname
+			else
+				echo "Error: you already have a draft in progress. Stash it somewhere and try again."
+				return 1
+			fi
+			;;
+		misc)
+			fname="drafts/misc/draft_misc.markdown"
+			if [[ ! -e $fname ]]; then
+				touch $fname
+				d=$(date --rfc-3339=s)
+				d=${d:0:10}
+				echo "---" > $fname
+				{
+					echo "layout: misc";
+					echo "title: --title here--";
+					echo "date: $d";
+					echo "last_modified: $d";
+					echo "---";
+				} >> $fname
+				vim $fname
+			else
+				echo "Error: you already have a draft in progress. Stash it somewhere and try again."
+				return 1
+			fi
+			;;
+		project)
+			fname="drafts/projects/draft_project.markdown"
+			if [[ ! -e $fname ]]; then
+				touch $fname
+				d=$(date --rfc-3339=s)
+				d=${d:0:10}
+				echo "---" > $fname
+				{
+					echo "layout: project";
+					echo "title: --title here--";
+					echo "date: $d";
+					echo "last_modified: $d";
+					echo "---";
+				} >> $fname
+				vim $fname
+			else
+				echo "Error: you already have a draft in progress. Stash it somewhere and try again."
+				return 1
+			fi
+			;;
+
+	esac
 }
 					

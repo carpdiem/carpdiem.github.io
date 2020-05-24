@@ -1,6 +1,7 @@
 ---
 title: Beautiful Language
-layout: default
+layout: misc
+last_modified: 2020-04-29
 ---
 **aces**
 *"He was looking aces"*

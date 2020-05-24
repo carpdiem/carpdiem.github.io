@@ -14,11 +14,11 @@ permalink: /
 {% for item in sorted %}
 <div class="index_left_indent">
 <div class="index_item_title">
-<h3 class="index_title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
-<div class="metadata">Last Updated: {{ item.last_modified }}</div>
+<h3 class="no_break_title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+<div class="metadata">Last Updated: {{ item.last_modified | date: '%B %d, %Y' }}</div>
 </div>
 {% assign wc = item.content | number_of_words %}
-<div class="index_item_content">
+<div class="indent_from_left">
 {% if wc > 70 %}
 {% assign link = '<a href="' | append: item.url | append: '"> See Full</a>' %}
 {{ item.content | truncatewords: 70 | append: link | markdownify }}

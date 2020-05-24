@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="index_item_title">
+<h2 class="no_break_title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+<div class="metadata">{{ page.date | date: '%B %d, %Y' }}</div>
+</div>
+<div class="indent_from_left">{{ page.content | markdownify }}</div>
+
