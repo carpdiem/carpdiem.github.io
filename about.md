@@ -1,18 +1,18 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
+<h2 style="text-align: center">wherefore doth I exist?</h2>
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## This site…
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+…is a [digital garden](https://tomcritchlow.com/2019/02/17/building-digital-garden/), which is both a fantastic concept, and a fancy way of saying it's whatever I feel like it should be. For now, we've got the categories you see in the nav-bar. Feel free to visit the homepage to get a glimpse at the latest postings from each category.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## I am…
 
+…Michael, a wild polymath who lives out in California. I work by day as a product and technology leader in the tech industry. My hobbies include examining everything through the lens of physics. I think a great vacation is spending a couple weeks in a new city, ensconsed in cafes, speed-running an online class. And I believe that self-improvement, in every form, is simultaneously an art, a skill, and a lot of fun.
 
-[jekyll-organization]: https://github.com/jekyll
+## How do I reach you?
+
+For now, message me on Twitter. The link is in the footer.
