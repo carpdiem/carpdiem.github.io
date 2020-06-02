@@ -29,6 +29,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+feed:
+    categories:
+        - blog
+        - essays
+        - lists
+        - misc
+        - projects
+
 collections:
         projects:
                 output: true
