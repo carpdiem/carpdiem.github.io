@@ -17,7 +17,7 @@ publish () {
 					fname="/drafts/lists/draft_list.markdown"
 					;;
 				misc)
-					fname="/drafts/misc/draft_list.markdown"
+					fname="/drafts/misc/draft_misc.markdown"
 					;;
 				project)
 					fname="/drafts/projects/draft_project.markdown"
