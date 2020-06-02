@@ -17,7 +17,7 @@ title: Usually Pragmatic
 email: <redacted> 
 description: Just a <a href="https://tomcritchlow.com/2019/02/17/building-digital-garden/">digital garden</a> of my own.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://michaelwoods.io" # the base hostname & protocol for your site, e.g. http://example.com
 minima:
     social_links:
         twitter: carpdiem
