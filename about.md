@@ -15,4 +15,6 @@ permalink: /about/
 
 ## How do I reach you?
 
-For now, message me on Twitter. The link is in the footer.
+If it's short, message me on Twitter: [@carpdiem](https://twitter.com/carpdiem).
+
+If it's long, you can email me at "mail -AT- usuallypragmatic -DOT- com".
