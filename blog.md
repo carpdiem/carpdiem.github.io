@@ -7,7 +7,7 @@ permalink: /blog
 
 {% assign sorted = site.blog | sort: 'date' | reverse %}
 <div class="post-list">
-{% for b in sorted limit: 3 %}
+{% for b in sorted limit: 5 %}
 <div class="post">
 <div class="index_item_title">
 <h2 class="no_break_title"><a href="{{ b.url }}">{{ b.title }}</a></h2>
