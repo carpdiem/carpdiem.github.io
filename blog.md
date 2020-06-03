@@ -19,7 +19,7 @@ permalink: /blog
 <div class="metadata">Written: {{ b.date | date: '%B %d, %Y' }}</div>
 {% endif %}
 </div>
-<div class="indent_from_left">{{ b.content | markdownify }}</div>
+{{ b.content | markdownify }}
 <hr>
 </div>
 {% endfor %}

@@ -1,5 +1,8 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+p {
+	padding-left: 5%;
+}
 
 .nav_div {
 	padding-left: 10px;
@@ -34,8 +37,8 @@ a:link {
 }
 
 .index_left_indent {
-	margin-left: 5%;
 	padding-top: $spacing-unit / 2;
+	overflow: hidden;
 }
 
 .index_left_indent:first-child {
@@ -44,6 +47,7 @@ a:link {
 
 .index_item_title {
 	margin-bottom: $spacing-unit / 2;
+	display: inline-block;
 }
 
 .no_break_title {
@@ -66,10 +70,40 @@ p.feed-subscribe {
 	text-align: right;
 }
 
-.indent_from_left {
-	margin-left: 5%;
-}
-
 .inline {
 	display: inline;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $spacing-unit / 6;
+	max-width: 90%;
+}
+
+@media screen and (max-width: $on-medium) {
+	p img {
+		max-width: 94.7%;
+		margin-right: auto;
+		margin-left: 0;
+	}
+}
+
+.excerpt_image {
+	display: inline-block;
+	width: 33%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: $spacing-unit / 2;
+	float: right;
+	@media screen and (max-width: $on-medium) {
+		width: 90%;
+	}
+}
+
+img + em {
+	display: block;
+	text-align: center;
+	font-size: 90%;
 }

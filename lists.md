@@ -11,7 +11,6 @@ permalink: /lists
 <h2 class="no_break_title inline"><a href="{{ l.url }}">{{ l.title }}</a></h2>
 <div class="metadata inline">-- Last Updated: {{ l.last_modified | date: '%B %d, %Y' }}</div>
 </div>
-<div class="indent_from_left">
 {{ l.content | truncatewords: 70 | markdownify }}
 
 {% assign wc = l.content | number_of_words %}
@@ -19,5 +18,5 @@ permalink: /lists
 {% if wc > 70 %}
 <a href="{{ l.url }}">See Full</a>
 {% endif %}
-</div>
+<hr>
 {% endfor %}

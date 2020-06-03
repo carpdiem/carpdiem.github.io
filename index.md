@@ -17,15 +17,16 @@ permalink: /
 <h3 class="no_break_title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
 <div class="metadata">Last Updated: {{ item.last_modified | date: '%B %d, %Y' }}</div>
 </div>
+{% if item.image %}
+<img src="{{ site.baseurl }}/images/{{ item.image }}" class="excerpt_image">
+{% endif %}
 {% assign wc = item.content | number_of_words %}
-<div class="indent_from_left">
 {% if wc > 70 %}
 {% assign link = '<a href="' | append: item.url | append: '"> See Full</a>' %}
 {{ item.content | truncatewords: 70 | append: link | markdownify }}
 {% else %}
 {{ item.content | truncatewords: 70 | markdownify }}
 {% endif %}
-</div>
 </div>
 {% endfor %}
 <a href="{{ c.label }}">See More</a>
