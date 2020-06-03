@@ -1,27 +1,28 @@
 ---
-layout: default
+layout: blog_index
 title: Blog
 permalink: /blog
 ---
 <h2 style="text-align: center">shortform blog entries</h2>
 
 {% assign sorted = site.blog | sort: 'date' | reverse %}
-{% for b in sorted %}
+<div class="post-list">
+{% for b in sorted limit: 3 %}
+<div class="post">
 <div class="index_item_title">
 <h2 class="no_break_title"><a href="{{ b.url }}">{{ b.title }}</a></h2>
+{% assign written_date = b.date | date: '%s' %}
+{% assign updated_date = b.last_modified | date: '%s' %}
+{% if written_date < updated_date %}
+<div class="metadata">Last Updated: {{ b.last_modified | date: '%B %d, %Y' }}</div>
+{% else %}
 <div class="metadata">Written: {{ b.date | date: '%B %d, %Y' }}</div>
+{% endif %}
 </div>
 <div class="indent_from_left">{{ b.content | markdownify }}</div>
 <hr>
+</div>
 {% endfor %}
-{% comment %}
-{{ b.content | truncatewords: 70 | markdownify }}
+</div>
 
-{% assign wc = b.content | number_of_words %}
-
-{% if wc > 70 %}
-<a href="{{ b.url }}">See Full</a>
-{% endif %}
-
-{% endfor %}
-{% endcomment %}
+<div class="infinite-spinner"></div>

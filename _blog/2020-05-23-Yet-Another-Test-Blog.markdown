@@ -2,8 +2,10 @@
 layout: blog_post
 title: Yet Another Test Blog
 date: 2020-05-23
-last_modified: 2020-05-23
+last_modified: 2020-06-01
 ---
+EDIT: Look, an edit!
+
 This is a test blog entry!
 
 There have been many test blog entries like it, but this one is mine.

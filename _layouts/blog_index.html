@@ -1,21 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
-<div class="index_item_title">
-<h2 class="no_break_title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-{% assign written_date = page.date | date: '%s' %}
-{% assign updated_date = page.last_modified | date: '%s' %}
-{% if written_date < updated_date %}
-<div class="metadata">Last Updated: {{ page.last_modified | date: '%B %d, %Y' }}</div>
-{% else %}
-<div class="metadata">Written: {{ page.date | date: '%B %d, %Y' }}</div>
-{% endif %}
-
-</div>
-<div class="indent_from_left">{{ page.content | markdownify }}</div>
-<hr>
-</div>
+{{ content }}
 
 {% assign prevflag = 1 %}
 {% assign nextflag = 1 %}
