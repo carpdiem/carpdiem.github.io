@@ -11,6 +11,9 @@ permalink: /projects
 <h2 class="no_break_title inline"><a href="{{ p.url }}">{{ p.title }}</a></h2>
 <div class="metadata inline">-- Last Updated: {{ p.last_modified | date: '%B %d, %Y' }}</div>
 </div>
+{% if p.image %}
+<img src="{{ site.baseurl }}/images/{{ p.image }}" class="excerpt_image">
+{% endif %}
 {{ p.content | truncatewords: 70 | markdownify }}
 
 {% assign wc = p.content | number_of_words %}

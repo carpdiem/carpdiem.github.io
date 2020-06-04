@@ -27,23 +27,23 @@ publish () {
 		case "$1" in
 			blog)
 				d=$(grep date: "$sitedir$fname" | cut -d' ' -f2)
-				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-')
+				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
 				mv "$sitedir$fname" "$sitedir/_blog/$d-$t.markdown"
 				;;
 			essay)
-				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-')
+				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
 				mv "$sitedir$fname" "$sitedir/_essays/$t.markdown"
 				;;
 			list)
-				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-')
+				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
 				mv "$sitedir$fname" "$sitedir/_lists/$t.markdown"
 				;;
 			misc)
-				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-')
+				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
 				mv "$sitedir$fname" "$sitedir/_misc/$t.markdown"
 				;;
 			project)
-				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-')
+				t=$(grep title: "$sitedir$fname" | cut -d' ' -f1 --complement | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
 				mv "$sitedir$fname" "$sitedir/_projects/$t.markdown"
 				;;
 			*)
