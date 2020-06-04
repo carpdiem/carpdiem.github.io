@@ -15,7 +15,13 @@ permalink: /
 <div class="index_left_indent">
 <div class="index_item_title">
 <h3 class="no_break_title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+{% assign written_date = item.date | date: '%s' %}
+{% assign updated_date = item.last_modified | date: '%s' %}
+{% if written_date < updated_date %}
 <div class="metadata">Last Updated: {{ item.last_modified | date: '%B %d, %Y' }}</div>
+{% else %}
+<div class="metadata">Written: {{ item.date | date: '%B %d, %Y' }}</div>
+{% endif %}
 </div>
 {% if item.image %}
 <img src="{{ site.baseurl }}/images/{{ item.image }}" class="excerpt_image">

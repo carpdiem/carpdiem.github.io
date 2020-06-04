@@ -1,7 +1,24 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+blockquote {
+	border-left-width: 0;
+	margin-left: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	color: $text-color;
+	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+	background-color: #F5F5F5;
+}
+
 p {
 	padding-left: 5%;
+}
+
+blockquote > p {
+	padding-left: 0;
 }
 
 .nav_div {
@@ -82,10 +99,28 @@ img {
 	max-width: 90%;
 }
 
+.footer-col p {
+	padding-left: 0;
+}
+
 @media screen and (max-width: $on-medium) {
 	p img {
 		max-width: 94.7%;
 		margin-right: auto;
+		margin-left: 0;
+	}
+
+	.footer-col {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footer-col p {
+		text-align: center;
+	}
+
+	.nav_div a {
 		margin-left: 0;
 	}
 }
@@ -106,4 +141,20 @@ img + em {
 	display: block;
 	text-align: center;
 	font-size: 90%;
+}
+
+blockquote em {
+	font-style: italic;
+}
+
+iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding-top: $spacing-unit / 2;
 }
