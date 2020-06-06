@@ -17,7 +17,7 @@ title: Usually Pragmatic
 email: <redacted> 
 description: Just a digital garden of my own.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://michaelwoods.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://usuallypragmatic.com" # the base hostname & protocol for your site, e.g. http://example.com
 minima:
     social_links:
         twitter: carpdiem
