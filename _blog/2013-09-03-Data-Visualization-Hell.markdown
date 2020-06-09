@@ -7,4 +7,4 @@ last_modified: 2013-09-03
 
 Please make sure your graphs are grayscale safe before printing.
 
-![What colors are those again?](../images/blog/grayscale_graph_hell.jpg)
+![What colors are those again?]({{ site.url }}/images/blog/grayscale_graph_hell.jpg)

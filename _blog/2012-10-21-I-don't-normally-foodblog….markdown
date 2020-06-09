@@ -7,4 +7,4 @@ last_modified: 2012-10-21
 
 …but fresh kiwi, wild honey, and tart yogurt is *delicious*.
 
-![Tart yogurt breakfast](../images/blog/tart_yogurt.jpg)
+![Tart yogurt breakfast]({{ site.url }}/images/blog/tart_yogurt.jpg)

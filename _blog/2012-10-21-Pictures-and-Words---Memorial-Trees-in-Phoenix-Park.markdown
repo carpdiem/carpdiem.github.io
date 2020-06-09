@@ -7,4 +7,4 @@ last_modified: 2012-10-21
 
 There's a spot here where the trees have the names of people, one for each one dead.
 
-![Memorial Trees in Phoenix Park](../images/blog/memorial_trees.jpg)
+![Memorial Trees in Phoenix Park]({{ site.url }}/images/blog/memorial_trees.jpg)

@@ -13,10 +13,10 @@ The base is a pavilion of slanted stair steps, making the walk up to the inscrip
 
 Sweat a bit in the Duke's honor, for his journey was tougher than yours, and you are in his debt!
 
-![Monument to Arthur Wellesley, First Duke of Wellington](../images/blog/monument_to_wellington.jpg)
+![Monument to Arthur Wellesley, First Duke of Wellington]({{ site.url }}/images/blog/monument_to_wellington.jpg)
 
 ---
 
 P.S. - A closeup of the inscription, for those of you who're interested.
 
-![Inscription for the First Duke of Wellington](../images/blog/wellington_inscription.jpg)
+![Inscription for the First Duke of Wellington]({{ site.url }}/images/blog/wellington_inscription.jpg)

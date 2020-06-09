@@ -76,7 +76,7 @@ Go [here](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python).
 
 Then scroll down and click on this:
 
-![](../images/projects/learn_kf/launch_binder.png)
+![]({{ site.url }}/images/projects/learn_kf/launch_binder.png)
 
 This will launch an interactive Jupyter Notebook session in your browser that's backended by a remote server. It's less ideal than just installing everything locally because you can't save your work, and if you leave it alone for more than about 5 minutes, the remote server will shut down, and you'll have to reload everything from scratch. But if you must, it's there.
 
@@ -86,13 +86,13 @@ Go [here](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python).
 
 Then click on this to download all of the files as a .zip archive.
 
-![](../images/projects/learn_kf/download_zip.png)
+![]({{ site.url }}/images/projects/learn_kf/download_zip.png)
 
 ## Ok, so what's the big deal about Kalman Filters?
 
 If you're not used to them, the math will look like alphabet soup.
 
-![KF math](../images/projects/learn_kf/kalman_math.png)
+![KF math]({{ site.url }}/images/projects/learn_kf/kalman_math.png)
 *screenshot from the text by R. Labbe linked above*
 
 ## No, I mean, what do they *do*? Why do I care?

@@ -10,7 +10,7 @@ I'm a firm believer that no matter your circumstances, you can always find ways 
 
 Enter the quarantine.
 
-Ok, maybe not a full quarantine, but at least we've had a shelter-in-place order here in Silicon Valley since... mid-March? And lots of places started voluntarily closing even a few weeks before that.
+Ok, maybe not a full quarantine, but at least we've had a shelter-in-place order here in Silicon Valley since… mid-March? And lots of places started voluntarily closing even a few weeks before that.
 
 In particular, all of the table tennis clubs have been closed for about three months now, and if you know me at all, you know that I love table tennis. On an average week, I spend 10-12 hours training and playing at various clubs. So, with no clubs open, and with only a tiny, one-car garage at home that a table would never fit in, I've had plenty of free time on my hands.
 
@@ -24,7 +24,7 @@ The best time to learn new things is before you need them, with bonus points if 
 
 - I went through the entirety of [MIT's Missing Semester Course](https://missing.csail.mit.edu/), which covers a number of topics not typically explicitly included in a CS degree. For me, this was both an excellent refresher on some things I know and use widely (hello Vim!), as well as a very nice learning opportunity to pick up skills with some new tools (tmux, awk, sed, and others).
 
-- I had never actually studied Kalman Filters before, so when I was asked to give a technical lecture on them, it seemed like a great opportunity to dive in the deep end. To that end, I studied through the entirety of the Jupyter Notebook textbook that I link to in my [project page on How to Learn (Extended) Kalman Filters](../projects/How-do-you-learn-(Extended)-Kalman-Filters.html).
+- I had never actually studied Kalman Filters before, so when I was asked to give a technical lecture on them, it seemed like a great opportunity to dive in the deep end. To that end, I studied through the entirety of the Jupyter Notebook textbook that I link to in my [project page on How to Learn (Extended) Kalman Filters]({{ site.url }}/projects/How-do-you-learn-(Extended)-Kalman-Filters.html).
 
 ### Athletics
 
@@ -34,10 +34,10 @@ Obviously, with all of the table tennis clubs closed, and no table at home, this
 
 - Simultaneous with the lifting, I decided to do a significant cut diet. Since the progress on my previous cuts was always slowed by the need to eat enough to have enough energy for my table tennis training, and since now all the table tennis clubs were closed, I was looking forward to doing a proper cut. The results were great:
 
-  ![](../images/misc/cut_diet_june_2020_results.png)
+  ![]({{ site.url }}/images/misc/cut_diet_june_2020_results.png)
 *screenshot from the [RP App](https://renaissanceperiodization.com/rp-diet-app), an invaluable tool for successful lifting*
 
-- So, uhh, about not being able to train table tennis. Turns out I found a way to keep doing that too...
+- So, uhh, about not being able to train table tennis. Turns out I found a way to keep doing that too…
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/k1fwifW86m0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -47,13 +47,13 @@ Obviously, with all of the table tennis clubs closed, and no table at home, this
 
 - First, we did a silly, small puzzle. Then we did a 2,000-piece monstrosity of brown cats sitting on a wooden, brown bookshelf. Unsurprisingly, outside of a small minority, all of the other pieces were some shade of brown or another. It took weeks.
 
-  ![this is almost 4ft tall...](../images/misc/cat_puzzle.jpg)
+  ![this is almost 4ft tall…]({{ site.url }}/images/misc/cat_puzzle.jpg)
 
-- We also had the very good fortune to pick up a new board game on the last day that shops were open before the shelter-in-place order took effect. It was a spur-of-the-moment thing, driven almost entirely by the whimsical quality of the box art (ok, I'll admit it, we *did* look up reviews on BoardGameGeek before making the final decision...).
+- We also had the very good fortune to pick up a new board game on the last day that shops were open before the shelter-in-place order took effect. It was a spur-of-the-moment thing, driven almost entirely by the whimsical quality of the box art (ok, I'll admit it, we *did* look up reviews on BoardGameGeek before making the final decision…).
 
   The game is called [Root](https://boardgamegeek.com/boardgame/237182/root) and it is unique, excellent, *highly* asymmetric (seriously, among the factions, some work off of building an economic engine, others are warlike conquerors, and one is just straight-up playing an RPG), and tons of fun.
 
-  ![](../images/misc/root_box_front.png)
+  ![]({{ site.url }}/images/misc/root_box_front.png)
 
 ### Food
 

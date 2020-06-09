@@ -10,4 +10,4 @@ sometimes, in the distance, you can see
 St. Patrick's calling you home,
 above the rooftops.
 
-![St. Patrick's Cathedral](../images/blog/st_patricks.jpg)
+![St. Patrick's Cathedral]({{ site.url }}/images/blog/st_patricks.jpg)
