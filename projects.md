@@ -14,12 +14,13 @@ permalink: /projects
 {% if p.image %}
 <img src="{{ site.baseurl }}/images/{{ p.image }}" class="excerpt_image">
 {% endif %}
-{{ p.content | truncatewords: 70 | markdownify }}
 
-{% assign wc = p.content | number_of_words %}
-
-{% if wc > 70 %}
-<a href="{{ p.url }}">See Full</a>
+{% if p.content contains '<!--more-->' %}
+{{ p.content | split:'<!--more-->' | first | markdownify }}
+{% else %}
+{{ p.excerpt | markdownify }}
 {% endif %}
+
+<a href="{{ p.url }}">Read More</a>
 <hr>
 {% endfor %}

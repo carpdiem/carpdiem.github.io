@@ -27,13 +27,24 @@ permalink: /
 {% if item.image %}
 <img src="{{ site.baseurl }}/images/{{ item.image }}" class="excerpt_image">
 {% endif %}
+
+{% if item.content contains '<!--more-->' %}
+{{ item.content | split:'<!--more-->' | first | markdownify }}
+{% else %}
+{{ item.excerpt | markdownify }}
+{% endif %}
+{% assign link = '<a href="' | append: item.url | append: '"> Read More</a>' %}
+
+{% comment %}
 {% assign wc = item.content | number_of_words %}
 {% if wc > 70 %}
-{% assign link = '<a href="' | append: item.url | append: '"> See Full</a>' %}
+{% assign link = '<a href="' | append: item.url | append: '"> Read More</a>' %}
 {{ item.content | truncatewords: 70 | append: link | markdownify }}
 {% else %}
 {{ item.content | truncatewords: 70 | markdownify }}
 {% endif %}
+{% endcomment %}
+
 </div>
 </div>
 <hr>
