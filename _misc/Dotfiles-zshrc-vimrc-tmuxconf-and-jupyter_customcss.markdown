@@ -315,10 +315,14 @@ pre {
 
 #### Why do I post these here with dropbox links, rather than hosting them in a github repo?
 
-Frankly, I'm too lazy to bother *git add*-ind and *git commit*-ing them every time I make a change. In practice, I keep them synced to my Dropbox account, and have a setupNewUbuntu.sh script that I run on all of my personal systems to symlink them into ~/ after I get my local Dropbox folder synced.
+Frankly, I'm too lazy to bother *git add*-ing and *git commit*-ing them every time I make a change. In practice, I keep them synced to my Dropbox account, and have a setupNewUbuntu.sh script that I run on all of my personal systems to symlink them into ~/ after I get my local Dropbox folder synced.
 
 So far this has worked well, though I might adjust the setup as I need to in the future.
 
 #### Anything particularly interesting?
 
+Lines 116-117 of my .vimrc were critical to fixing an issue I had of extremely annoying pauses whenever I would tap the Caps-Lock key (I have my Caps-Lock set to act as ESC when you tap it, but CTRL when you hold it). this was coupled with lines 71-72 of my .zshrc, and lines 33-36 of my .tmux.conf.
 
+Lines 119-120 of my .vimrc were needed to fix a crazy-annoying bug where due to a particular vim plugin (indentLine), various characters would not be displayed when editing .markdown and .tex files. This included single asterisks, but not double asterisks! So \* would not be displayed, but \*\* would be displayed.
+
+Finally, I include my jupyter_custom.css file. It's not a true dotfile—no "." at the beginning!—but it serves a similar role for adjusting the default display properties of my Jupyter installation make my time using that software more enjoyable. And given just how often I fire that up, it's well worth it.
