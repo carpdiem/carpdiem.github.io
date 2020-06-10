@@ -7,7 +7,7 @@ last_modified: 2012-10-05
 
 Here's a golden opportunity to stretch your algebra muscles.
 
-Find two different numbers such that their product, the difference of their squares, and the quotient of their cubes are all equal to each other.
+Find two different numbers such that their product, the difference of their squares, and the quotient of their cubes are all equal to each other.<!--more-->
 
 Published in The Lady's Diary, a popular digest magazine from the 1700s.
 

@@ -7,7 +7,7 @@ last_modified: 2015-08-31
 
 I've come to believe in the importance of always having two minds.
 
-One of them is the acting—as in "action"—mind. This is the mind that's telling your body what to say, how to move, whether to react. The acting mind needs most of your available attention because it's responsible for most of your interactions with the world. It executes and responds. The acting mind is the tactical mind.
+One of them is the acting—as in "action"—mind. This is the mind that's telling your body what to say, how to move, whether to react. The acting mind needs most of your available attention because it's responsible for most of your interactions with the world. It executes and responds. The acting mind is the tactical mind.<!--more-->
 
 The other mind is the supervising mind. The supervising mind sits in the background and watches and listens. It's there to pay attention to the big picture, to long term trends, to necessary changes in direction. The supervising mind is a background process, and usually only needs a small minority of your attention to keep it sustained; but every so often, it rises to the front, the pieces of a pattern fit together, and it gives the acting mind a strategy update—"you've been talking too much in this conversation, and Jane is looking increasingly agitated, we need to see what she has to say".
 

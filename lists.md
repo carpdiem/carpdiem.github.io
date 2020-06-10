@@ -18,6 +18,6 @@ permalink: /lists
 {{ l.excerpt | markdownify }}
 {% endif %}
 
-<a href="{{ l.url }}">Read More</a>
+<a href="{{ l.url }}">…read more</a>
 <hr>
 {% endfor %}

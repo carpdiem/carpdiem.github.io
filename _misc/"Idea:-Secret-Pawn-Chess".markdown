@@ -7,7 +7,7 @@ last_modified: 2020-06-03
 
 Everything is the same as in normal chess, except that before the game begins, you secretly pick two of your pawns, and those two pawns can, in addition to all of the normal pawn moves, move and capture like a king.
 
-Before the game begins, each player should write down the starting file of their two super soldier pawns, to avoid any potential cheating.
+Before the game begins, each player should write down the starting file of their two super soldier pawns, to avoid any potential cheating.<!--more-->
 
 I think it would add a interesting element of uncertainty to the game. Play would probably be much more cautious and exploratory. Plus, even if you discover one of your opponent's super pawns, you have to keep track of it during play.
 

@@ -11,7 +11,7 @@ From [this post](http://slatestarcodex.com/2018/07/18/the-whole-city-is-center/)
 
 > *"Huge chunks of our hopes and dreams are the [godshatter](https://www.lesswrong.com/posts/cSXZpvqpa9vbGGLtG/thou-art-godshatter) of misfired-evolutionary processes."*
 
-#### As roughly as I can manage:
+#### As roughly as I can manage:<!--more-->
 
 godshatter; noun - Components or attributes of something which originally derived from some higher power, process, or purpose, and have now taken on independent meaning, existence, or purpose—usually more specific and less general than that of the originating higher power, process, or purpose.
 

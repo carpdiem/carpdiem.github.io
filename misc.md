@@ -7,6 +7,7 @@ permalink: /misc
 
 {% assign sorted = site.misc | sort: 'last_modified' | reverse %}
 {% for m in sorted %}
+<div class="index_left_indent">
 <div class="index_item_title">
 <h2 class="no_break_title inline"><a href="{{ m.url }}">{{ m.title }}</a></h2>
 <div class="metadata inline">-- Last Updated: {{ m.last_modified | date: '%B %d, %Y' }}</div>
@@ -20,6 +21,7 @@ permalink: /misc
 {{ m.excerpt | markdownify }}
 {% endif %}
 
-<a href="{{ m.url }}">Read More</a>
+<a href="{{ m.url }}">…read more</a>
+</div>
 <hr>
 {% endfor %}

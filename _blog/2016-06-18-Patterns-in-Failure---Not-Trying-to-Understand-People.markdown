@@ -9,7 +9,7 @@ Patterns in failure:
 
 > You've spent all day trying to make a new python library work for your project. The documentation sucks, but you've made headway. It took you three tries to get the data formats right, each time changing your mental model of what the library's helper functions expect until you made it work. By the end of the day, the project isn't over, but at least you're better able to predict how the library functions behave, and now you can apply it fluently to do what you need.
 >
-> Then you head to a meetup after work. It's full of new people, and most of them are idiots. You know it's true, because every time they try to contribute to whatever conversation is going on, there's something they've gotten wrong, and you can see clear as day that their suggestions just don't make sense. After all, you know the right answers, and they clearly don't.
+> Then you head to a meetup after work. It's full of new people, and most of them are idiots. You know it's true, because every time they try to contribute to whatever conversation is going on, there's something they've gotten wrong, and you can see clear as day that their suggestions just don't make sense. After all, you know the right answers, and they clearly don't.<!--more-->
 
 It happens all the time. It's not always at a meetup—sometimes it's with family, sometimes it's with friends—but every time, the pattern is the same: someone else says something dumb, or reacts to something in a weird way and you hear that voice in the back of your head.
 

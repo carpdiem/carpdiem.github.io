@@ -11,7 +11,7 @@ An obelisk, standing alone in a field, stretching to the sky.
 
 The base is a pavilion of slanted stair steps, making the walk up to the inscriptions a hike rather than a stroll.
 
-Sweat a bit in the Duke's honor, for his journey was tougher than yours, and you are in his debt!
+Sweat a bit in the Duke's honor, for his journey was tougher than yours, and you are in his debt!<!--more-->
 
 ![Monument to Arthur Wellesley, First Duke of Wellington]({{ site.url }}/images/blog/monument_to_wellington.jpg)
 

@@ -15,7 +15,7 @@ This is a collection of some of the best books I've ever encountered on various 
 
 - [Ultimate Back Fitness and Performance, by Stuart McGill](https://www.amazon.com/Ultimate-Fitness-Performance-Sixth-Stuart-McGill/dp/0973501839/)
 
-### Social and Emotional Interaction
+### Social and Emotional Interaction<!--more-->
 
 - [What Every Body Is Saying, by Joe Navarro](https://www.amazon.com/What-Every-Body-Saying-Speed-Reading/dp/0061438294/)
 

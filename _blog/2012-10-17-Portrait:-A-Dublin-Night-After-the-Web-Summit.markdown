@@ -7,7 +7,7 @@ last_modified: 2012-10-17
 
 First Smithwick's.
 
-You walk in the tavern and the music takes you. It's a man by the door with a flannel shirt and an electric-acoustic guitar belting out covers to songs. The place—an intimate affair packed to the gills with startup geeks alternatively hawking their social, geolocated wishlists for the hashtag enabled crowd; trying to impress the three girls in attendance; or sitting by the sides, staring into space—is cast in stark sepia and hard shadows from the ceiling lights.
+You walk in the tavern and the music takes you. It's a man by the door with a flannel shirt and an electric-acoustic guitar belting out covers to songs. The place—an intimate affair packed to the gills with startup geeks alternatively hawking their social, geolocated wishlists for the hashtag enabled crowd; trying to impress the three girls in attendance; or sitting by the sides, staring into space—is cast in stark sepia and hard shadows from the ceiling lights.<!--more-->
 
 But the guitar player preserves. The Fresh Prince of Bell Aire and the Beatles alike make spirited appearances to the half-dozen paying attention to the music.
 

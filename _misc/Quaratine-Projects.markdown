@@ -8,7 +8,7 @@ image: ../images/misc/cut_diet_june_2020_results.png
 
 I'm a firm believer that no matter your circumstances, you can always find ways to keep moving forward.
 
-Enter the quarantine.
+Enter the quarantine.<!--more-->
 
 Ok, maybe not a full quarantine, but at least we've had a shelter-in-place order here in Silicon Valley since… mid-March? And lots of places started voluntarily closing even a few weeks before that.
 

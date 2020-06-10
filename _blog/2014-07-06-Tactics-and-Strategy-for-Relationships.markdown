@@ -9,7 +9,7 @@ last_modified: 2014-07-06
 > 
 > *Tactics* - Be kind, responsive, and constructive whenever possible, and whenever impossible.
 > 
-> *Strategy* - Be mindful of your manias, and cognizant of how they interact with your partner's.
+> *Strategy* - Be mindful of your manias, and cognizant of how they interact with your partner's.<!--more-->
 
 These thoughts are brought to you by two good articles that have crossed my path recently. Regardless of whether you agree with some of their specific claims, their deeper messages are clear, clearly useful, and usefully specific. Highly recommended reading.
 

@@ -13,7 +13,7 @@ This is a collection of some of the best tools I've ever encountered for accompl
 
 - [Project Jupyter](https://jupyter.org/)
 
-- [Concepts App](https://concepts.app/en/) paired with an iPad Pro and Apple Pencil. The infinite canvas and flexibility with this setup has completely replaced pen and paper for my note-taking, and I used to buy moleskine notebooks in bulk because I used them so much.
+- [Concepts App](https://concepts.app/en/) paired with an iPad Pro and Apple Pencil. The infinite canvas and flexibility with this setup has completely replaced pen and paper for my note-taking, and I used to buy moleskine notebooks in bulk because I used them so much.<!--more-->
 
 - [MIT Open Courseware](https://ocw.mit.edu/index.htm): I've gone through perhaps a dozen courses on here over as many years, and despite newcomers to the scene like edX and Coursera, OCW's simple, straightforward, and unaldulterated approach of posting lecture videos and notes alongside pdfs of problem sets and exams, works brilliantly. They also have a unique depth of advanced topics that you simply can't find elsewhere.
 

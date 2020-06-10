@@ -7,7 +7,7 @@ last_modified: 2020-06-05
 
 After the trio of Stuart McGill, Dan John, and Ramsey Dewey all recommended kettlebells in quick succession, I made up my mind to finally get some and see what they were all about.
 
-Unfortunately, I finally made up my mind on this after the start of the Coronavirus pandemic. Thus, when I went looking for kettlebells, none were to be found. Literally everywhere was sold out due to gym-goers who stocked up when their membership gyms shut down.
+Unfortunately, I finally made up my mind on this after the start of the Coronavirus pandemic. Thus, when I went looking for kettlebells, none were to be found. Literally everywhere was sold out due to gym-goers who stocked up when their membership gyms shut down.<!--more-->
 
 Fast forward almost two months of checking websites daily, and waiting patiently for in-stock email notifications to arrive, and both [Rogue Fitness](https://www.roguefitness.com/) and [Vulcan Strength](https://www.vulcanstrength.com/) got a new shipment in within a few days of each other. Between the two companies, and in spite of absolutely absurd load on their websites once the news of their restock made the rounds, I was able to assemble a set of 4 kettlebells: 12, 16, 20, and 24kg.
 

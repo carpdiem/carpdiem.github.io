@@ -11,7 +11,7 @@ Permit me a ladder for an analogy.
 
 If you want to get to the top of a ladder, you better not try to climb it a quarter-rung every day. Do that and you'll never get anywhere, because every day, on the time between your efforts, you'll be slipping back down to the first rung.
 
-In multitasking research, this phenomenon is called "context switching costs". It means that it's hard to get back into the groove of something once you've taken a break.
+In multitasking research, this phenomenon is called "context switching costs". It means that it's hard to get back into the groove of something once you've taken a break.<!--more-->
 
 Instead, I have a different system. I set discrete goals, and then I make sacrifices to give my goals the focus I need in order to achieve them violently quickly.
 

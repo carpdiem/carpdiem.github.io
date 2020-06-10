@@ -8,7 +8,7 @@ image: ../images/projects/learn_kf/kalman_math.png
 
 I recently delivered a 3.5 hour lecture on Extended Kalman Filters, discussing the subject from 0-100%, and I'd like to share some of that prep with you all.
 
-First off, a disclaimer: this document will not teach you Kalman Filters. It is not intended to. Instead, it will teach you *how to learn* Kalman Filters. I will include here all of the resources and guidance that I think will be helpful for first ensuring that you have a solid grasp on the fundamentals you need, so that when you embark on learning Kalman Filters themselves, you'll be well-armed. I will also include a recommended resources for learning Kalman Filters, as well as notes about the key chapters and concepts to pay attention to in that resource.
+First off, a disclaimer: this document will not teach you Kalman Filters. It is not intended to. Instead, it will teach you *how to learn* Kalman Filters. I will include here all of the resources and guidance that I think will be helpful for first ensuring that you have a solid grasp on the fundamentals you need, so that when you embark on learning Kalman Filters themselves, you'll be well-armed. I will also include a recommended resources for learning Kalman Filters, as well as notes about the key chapters and concepts to pay attention to in that resource.<!--more-->
 
 And with that, godspeed!
 

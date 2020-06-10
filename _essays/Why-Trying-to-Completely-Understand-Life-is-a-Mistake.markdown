@@ -8,7 +8,7 @@ image: ../images/essays/overfitting_life/data_and_noiseless_generator_and_4th_or
 
 The danger of overfitting is one of the most important lessons of [machine learning](http://en.wikipedia.org/wiki/Machine_learning), a branch of artificial intelligence focused on building computer programs that can learn from data. The general concept of overfitting, however, has applications everywhere in life, and so I want to share it with you.
 
-To do that, I'm going to teach you what overfitting means from a machine learning standpoint, convince you of its importance, and then ground the machine learning concept solidly in real life applications.
+To do that, I'm going to teach you what overfitting means from a machine learning standpoint, convince you of its importance, and then ground the machine learning concept solidly in real life applications.<!--more-->
 
 First, we start with some data. This could be information about tensile strengths of aircraft alloys, traffic patterns for self driving cars, or even the movements of the stock market—anything we want to be able to predict based on past observations.
 

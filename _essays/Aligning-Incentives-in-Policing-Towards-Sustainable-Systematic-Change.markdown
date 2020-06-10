@@ -13,7 +13,7 @@ The problem isn't how these officers are being treated after the fact. The probl
 
 The problem is that after George Floyd was killed, it will be someone else. Does anyone not believe this? The list above includes people pulled over for a defective light. It includes a 12-year-old boy. A 26-year-old EMT. Who will be next? A grandmother? A journalist? Hell, maybe even an undercover cop? No one is immune.
 
-### So how do we get real change for the future, and not just reactions at the past?
+### So how do we get real change for the future, and not just reactions at the past?<!--more-->
 
 I'm a big believer in the power of incentives to shape behavior, and the power of well crafted markets to bring about net gains. And I think I finally have an idea worth sharing.
 

@@ -4,7 +4,6 @@ title: recent updates
 permalink: /
 ---
 
-<div>
 {% assign sorted = site.documents | sort: 'last_modified' | reverse | slice: 0, 10 %}
 {% for item in sorted %}
 <div class="index_left_indent">
@@ -33,7 +32,7 @@ permalink: /
 {% else %}
 {{ item.excerpt | markdownify }}
 {% endif %}
-{% assign link = '<a href="' | append: item.url | append: '"> Read More</a>' %}
+<a href="{{ item.url }}" class="read_more_link">…read more</a>
 
 {% comment %}
 {% assign wc = item.content | number_of_words %}
@@ -49,4 +48,3 @@ permalink: /
 </div>
 <hr>
 {% endfor %}
-</div>
