@@ -7,7 +7,9 @@ permalink: /about/
 
 ## This site…
 
-…is a [digital garden](https://tomcritchlow.com/2019/02/17/building-digital-garden/), which is both a fantastic concept, and a fancy way of saying it's whatever I feel like it should be. For now, we've got the categories you see in the nav-bar. Feel free to visit the homepage to get a glimpse at the latest postings from each category.
+…is a [digital garden](https://tomcritchlow.com/2019/02/17/building-digital-garden/), which is both a fantastic concept, and a fancy way of saying it's whatever I feel like it should be. For now, we've got the categories you see in the nav-bar. Feel free to visit the homepage to get a glimpse at the latest postings from across the site.
+
+As a disclaimer, this site represents my own personal opinions and work, and has no connection to, or association with, any employer, past, present, or future.
 
 ## I am…
 
