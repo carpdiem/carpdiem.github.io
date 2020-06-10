@@ -194,3 +194,31 @@ ul, ol {
 		z-index: 1;
 	}
 }
+
+.highlight {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.highlight pre {
+	border-width: 0;
+	padding: 0;
+}
+
+code table {
+	border-width: 0;
+	font-family: "Iosevka Term Slab Light";
+}
+
+code table tbody tr td {
+	border-width: 0;
+}
+
+code table tbody tr td:first-child {
+	border-right-style: solid;
+	border-left-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-width: 2px;
+	border-color: #ddd;
+}	

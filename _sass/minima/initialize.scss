@@ -6,8 +6,12 @@
 	font-family: "Crimson Text";
 	src: url("../Crimson_Text/CrimsonText-Regular.ttf");
 }
+@font-face {
+	font-family: "Iosevka Term Slab Light";
+	src: url("../Iosevka_Term_Slab_Light/iosevka-term-slab-light.ttf");
+}
 $base-font-family: "Crimson Text", "Times New Roman", serif !default;
-$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+$code-font-family: "Iosevka Term Slab Light", "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
