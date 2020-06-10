@@ -22,7 +22,7 @@ The best time to learn new things is before you need them, with bonus points if 
 
 - I finished off the last few labs I had left from [MIT's 6.02 - Digital Communications Systems Course on OCW](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/). This was a blast, and I'll have a full project page dedicated to my notes and lessons learned soon.
 
-- I went through the entirety of [MIT's Missing Semester Course](https://missing.csail.mit.edu/), which covers a number of topics not typically explicitly included in a CS degree. For me, this was both an excellent refresher on some things I know and use widely (hello Vim!), as well as a very nice learning opportunity to pick up skills with some new tools (tmux, awk, sed, and others).
+- I went through the entirety of [MIT's Missing Semester Course](https://missing.csail.mit.edu/), which covers a number of topics not typically explicitly included in a CS degree. For me, this was both an excellent refresher on some things I know and use widely (hello Vim!), as well as a nice learning opportunity to pick up skills with some new tools (tmux, awk, sed, and others).
 
 - I had never actually studied Kalman Filters before, so when I was asked to give a technical lecture on them, it seemed like a great opportunity to dive in the deep end. To that end, I studied through the entirety of the Jupyter Notebook textbook that I link to in my [project page on How to Learn (Extended) Kalman Filters]({{ site.url }}/projects/How-do-you-learn-(Extended)-Kalman-Filters.html).
 
@@ -49,9 +49,9 @@ Obviously, with all of the table tennis clubs closed, and no table at home, this
 
   ![this is almost 4ft tall…]({{ site.url }}/images/misc/cat_puzzle.jpg)
 
-- We also had the very good fortune to pick up a new board game on the last day that shops were open before the shelter-in-place order took effect. It was a spur-of-the-moment thing, driven almost entirely by the whimsical quality of the box art (ok, I'll admit it, we *did* look up reviews on BoardGameGeek before making the final decision…).
+- We also had the good fortune to pick up a new board game on the last day that shops were open before the shelter-in-place order took effect. It was a spur-of-the-moment thing, driven almost entirely by the whimsical quality of the box art (ok, I'll admit it, we *did* look up reviews on BoardGameGeek before making the final decision…).
 
-  The game is called [Root](https://boardgamegeek.com/boardgame/237182/root) and it is unique, excellent, *highly* asymmetric (seriously, among the factions, some work off of building an economic engine, others are warlike conquerors, and one is just straight-up playing an RPG), and tons of fun.
+  The game is called [Root](https://boardgamegeek.com/boardgame/237182/root) and it is unique, excellent, *highly* asymmetric (seriously, among the factions, some work by building an economic engine, others are warlike conquerors, and one is just straight-up playing an RPG), and tons of fun.
 
   ![]({{ site.url }}/images/misc/root_box_front.png)
 

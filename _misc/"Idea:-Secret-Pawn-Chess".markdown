@@ -9,7 +9,7 @@ Everything is the same as in normal chess, except that before the game begins, y
 
 Before the game begins, each player should write down the starting file of their two super soldier pawns, to avoid any potential cheating.
 
-I think it would add a very interesting element of uncertainty to the game. Play would probably be much more cautious and exploratory. Plus, even if you discover one of your opponent's super pawns, you have to keep track of it during play.
+I think it would add a interesting element of uncertainty to the game. Play would probably be much more cautious and exploratory. Plus, even if you discover one of your opponent's super pawns, you have to keep track of it during play.
 
 Who's up for a game?
 

@@ -20,7 +20,7 @@ In this case, we have five data points. Remembering our algebra, we realize that
 
 ![]({{ site.url }}/images/essays/overfitting_life/data_and_4th_order.png)
 
-And it's a perfect fit to our five data points. Really, we shouldn't be surprised, because we knew that would happen. What will surprise us, though, is that when we take our fourth order model into the wild and use it to predict new data points, we do terribly. We're wrong on almost everything, and as a result, the wings fall off of our airplane, our self driving car crashes into a stop sign, and we lose all of our money when we bet on the stock market.
+And it's a perfect fit to our five data points. Really, we shouldn't be surprised, because we knew that would happen. What will surprise us, though, is that when we take our fourth order model into the wild and use it to predict new data points, we do terribly. We're wrong on almost everything, and as a result, the wings fall off our airplane, our self driving car crashes into a stop sign, and we lose all of our money when we bet on the stock market.
 
 ## But we won't be deterred.
 
@@ -72,10 +72,10 @@ Perfectly reasonable people have bad days, and noisy data doesn't always fit a l
 
 ## The moral of the story:
 
-In life, work, and everything else, look for underlying trends, use simple explanations to understand your data, and try to ignore the noise. Accept the fact that perfect explanations are not only overrated, but dangerous. If you can satisfy yourself with merely good explanations, you'll be much more correct.
+In life, work, and everything else, look for underlying trends, use simple explanations to understand your data, and try to ignore the noise. Accept the fact that perfect explanations are not only overrated, but dangerous. If you can satisfy yourself with merely good explanations, you'll be much more accurate.
 
 ---
 
-I'd like to thank Professor Yaser Abu-Mostafa of Caltech, and all of the staff who came together to offer his [CS 156 - Machine Learning online course](https://work.caltech.edu/telecourse.html), where I had my my intuitive understanding of overfitting from physics grounded in very concrete mathematics.
+I'd like to thank Professor Yaser Abu-Mostafa of Caltech, and all of the staff who came together to offer his [CS 156 - Machine Learning online course](https://work.caltech.edu/telecourse.html), where I had my my intuitive understanding of overfitting from physics grounded in concrete mathematics.
 
 I've taken some liberties with the mathematical details behind overfitting in the intuitive explanation above. If you'd like to understand the details of the theory behind it, any many other related and exciting things, I highly recommend the CS 156 online course linked above.
