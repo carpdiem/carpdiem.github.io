@@ -174,3 +174,16 @@ li p {
 ul {
 	padding-left: 5%;
 }
+
+.collection_title {
+	display: inline-block;
+}
+
+.index_whole_title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.index_whole_title h2 {
+	opacity: 0.6;
+}

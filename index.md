@@ -4,15 +4,11 @@ title: recent updates
 permalink: /
 ---
 
-{% for c in site.collections %}
-
-{% if c.label != "posts" %}
-
-## <a href="{{ c.label }}">{{ c.label }}</a>
 <div>
-{% assign sorted = site[c.label] | sort: 'last_modified' | reverse | slice: 0, 3 %}
+{% assign sorted = site.documents | sort: 'last_modified' | reverse | slice: 0, 10 %}
 {% for item in sorted %}
 <div class="index_left_indent">
+<div class="index_whole_title">
 <div class="index_item_title">
 <h3 class="no_break_title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
 {% assign written_date = item.date | date: '%s' %}
@@ -23,6 +19,11 @@ permalink: /
 <div class="metadata">Written: {{ item.date | date: '%B %d, %Y' }}</div>
 {% endif %}
 </div>
+<div class="collection_title">
+<h2 class="no_break_title"><a href="{{ site.url }}{{ item.collection }}">{{ item.collection }}</a></h2>
+</div>
+</div>
+<div>
 {% if item.image %}
 <img src="{{ site.baseurl }}/images/{{ item.image }}" class="excerpt_image">
 {% endif %}
@@ -34,10 +35,7 @@ permalink: /
 {{ item.content | truncatewords: 70 | markdownify }}
 {% endif %}
 </div>
-{% endfor %}
-<a href="{{ c.label }}">See More</a>
-<hr>
 </div>
-{% endif %}
-
+<hr>
 {% endfor %}
+</div>
