@@ -19,7 +19,7 @@ permalink: /
 {% endif %}
 </div>
 <div class="collection_title">
-<h2 class="no_break_title"><a href="{{ site.url }}{{ item.collection }}">{{ item.collection }}</a></h2>
+<h2 class="no_break_title"><a href="{{ site.url }}/{{ item.collection }}">{{ item.collection }}</a></h2>
 </div>
 </div>
 <div>
