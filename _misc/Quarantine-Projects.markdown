@@ -1,6 +1,6 @@
 ---
 layout: misc
-title: Quaratine Projects
+title: Quarantine Projects
 date: 2020-06-06
 last_modified: 2020-06-06
 image: ../images/misc/cut_diet_june_2020_results.png
