@@ -142,6 +142,8 @@ img {
 	float: right;
 	@media screen and (max-width: $on-medium) {
 		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 }
 
