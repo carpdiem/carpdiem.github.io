@@ -2,8 +2,18 @@
 layout: project
 title: Athletics
 date: 2020-06-12
-last_modified: 2020-06-12
-image: ../images/projects/athletics/strength-to-weight.png
+last_modified: 2020-06-14
+image: ../images/projects/athletics/strength-to-weight-2020-06-14.png
+---
+
+### Update - 6/14/20
+
+Latest graphs at the end of another 6-week Tactical Barbell cycle.<!--more-->
+
+![]({{ site.url }}/images/projects/athletics/1RMs-2020-06-14.png)
+
+![]({{ site.url }}/images/projects/athletics/strength-to-weight-2020-06-14.png)
+
 ---
 
 ### Where I began
