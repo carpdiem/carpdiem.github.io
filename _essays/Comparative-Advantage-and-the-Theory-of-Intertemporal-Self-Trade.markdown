@@ -88,7 +88,7 @@ England knows that on their own, they can just adjust their focus and essentiall
 
 Portugal, likewise, finds that on their own, they could just adjust their focus and essentially "trade" 1 unit of cloth for 2 units of wine. Therefore, as long as they can get 1 unit of cloth from England for less than 2 units of wine, the trade will be profitable for Portugal, leaving them also with more total cloth and wine than they could make on their own.
 
-On, on a number line:
+On a number line:
 
 #### How many units of wine should we trade for one unit of cloth?
 {: style="text-align: center;" }
