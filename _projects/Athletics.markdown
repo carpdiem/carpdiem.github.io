@@ -24,7 +24,7 @@ My first real experience with athletics instead came from joining the cross-coun
 
 To be honest, I think my main reason for joining them was because *that's what the nerds did* at my high school. *Everyone knew* that PE sucked, and for some reason or another, there was only one alternative for nerds: cross country in the fall, and track & field in the winter and spring. So that's what my friends and I did.<!--more-->
 
-I hated cross country. Running long distances was, and still is to me, an exercise in ever-increasing boredom and pain. I learned that I could do it, as in, I could physically move my body through space for the eight or nine miles of any given run, or or the more intense but shorter 3 mile races, but I also learned that I didn't enjoy it. Not by a long shot.
+I hated cross country. Running long distances was, and still is to me, an exercise in ever-increasing boredom and pain. I learned that I could do it, as in, I could physically move my body through space for the eight or nine miles of any given run, or the more intense but shorter 3 mile races, but I also learned that I didn't enjoy it. Not by a long shot.
 
 Track was better. You could choose your events! They had sprints! I primarily ran hurdles (I was tall) and the 400m. And unlike cross country, since everyone wasn't competing simultaneously, you could actually go watch and cheer on your friends. Everthihng about this was fantastic.
 
