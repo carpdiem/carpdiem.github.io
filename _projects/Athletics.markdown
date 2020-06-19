@@ -26,7 +26,7 @@ To be honest, I think my main reason for joining them was because *that's what t
 
 I hated cross country. Running long distances was, and still is to me, an exercise in ever-increasing boredom and pain. I learned that I could do it, as in, I could physically move my body through space for the eight or nine miles of any given run, or the more intense but shorter 3 mile races, but I also learned that I didn't enjoy it. Not by a long shot.
 
-Track was better. You could choose your events! They had sprints! I primarily ran hurdles (I was tall) and the 400m. And unlike cross country, since everyone wasn't competing simultaneously, you could actually go watch and cheer on your friends. Everthihng about this was fantastic.
+Track was better. You could choose your events! They had sprints! I primarily ran hurdles (I was tall) and the 400m. And unlike cross country, since everyone wasn't competing simultaneously, you could actually go watch and cheer on your friends. Everything about this was fantastic.
 
 Track also taught me some valuable, though somewhat tangential, skills: how to cheer really, really loudly; how to mentally cope with interval sprints; and that if you intentionally lie to your friends by calling out their split times a few seconds slower than they really are, you can get your friends to try harder and thereby set new PRs, and while they'll thank you afterwards, they'll also think you're a maniac.
 
