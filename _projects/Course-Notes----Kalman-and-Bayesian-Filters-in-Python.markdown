@@ -14,3 +14,5 @@ These are my course notes from self-studying of [Kalman and Bayesian Filters in 
 
 <object data="{{ site.url }}/attachments/projects/course-notes-kalman/kalman-and-bayesian-filters-in-python-notes.pdf" type="application/pdf" style="min-height:100vh;width:100%">Fallback: this browser does not support PDFs. Please <a href="{{ site.url }}/attachments/projects/course-notes-kalman/kalman-and-bayesian-filters-in-python-notes.pdf">download the PDF</a> to view it.
 </object>
+
+[Download my course notes as a PDF.]({{ site.url }}/attachments/projects/course-notes-kalman/kalman-and-bayesian-filters-in-python-notes.pdf)
