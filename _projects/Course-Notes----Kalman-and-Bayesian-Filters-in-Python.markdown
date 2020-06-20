@@ -8,7 +8,7 @@ I do a lot of independent study of technical courses, and my favorite tool for n
 
 When I've shown my notes to others in the past, they've often told me I should find a way to share them.
 
-Well, now I've found a way.
+Well, now I've found a way.<!--more-->
 
 These are my course notes from self-studying of [Kalman and Bayesian Filters in Python](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python), the same course I recommend in my project piece [How do you learn (Extended) Kalman Filters?]({{ site.url }}/projects/How-do-you-learn-(Extended)-Kalman-Filters.html).
 
