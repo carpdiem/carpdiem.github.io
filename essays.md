@@ -10,6 +10,7 @@ permalink: /essays
 {% for e in sorted %}
 
 <div class="index_item_title">
+<br />
 <h2 class="no_break_title inline"><a href="{{ e.url }}">{{ e.title }}</a></h2>
 <div class="metadata inline">-- Last Updated: {{ e.last_modified | date: '%B %d, %Y' }}</div>
 </div>
