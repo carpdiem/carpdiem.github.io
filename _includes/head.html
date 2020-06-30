@@ -24,4 +24,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/images/favicon/site.webmanifest">  
   <meta property="og:image" content="{{ "images/favicon/android-chrome-512x512.png" | absolute_url }}" />
+
+{% if page.use_math %}
+{% include mathjax_support.html %}
+{% endif %}
+
+{% if page.use_jquery %}
+{% include jquery_support.html %}
+{% endif %}
 </head>
