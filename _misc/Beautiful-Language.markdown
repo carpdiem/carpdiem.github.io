@@ -2,7 +2,19 @@
 layout: misc
 title: Beautiful Language
 date: 2018-07-19
-last_modified: 2020-06-03
+last_modified: 2020-07-01
+---
+
+### "umwelt"
+
+From a [Hacker News discussion about org-mode in emacs](https://news.ycombinator.com/item?id=23674517). Reproduced here for ease of use. Emphasis mine.
+
+> "There's a scientific term "umwelt" that biologists use to describe the world as experienced by a particular organism. Every one of us has this "umwelt" - our "subjective view of the world." Our umwelt is limited by our physical and mental capabilities, past experiences, and social circles we grow up and live. e.g., your subjective understanding of Renaissance Art would drastically differ from when you're taken to a museum at the age of three, and when you go there as an adult, or after studying art for fifteen years."<!--more-->
+> 
+> *"Learning and understanding Lisp expands your umwelt. You will start seeing things differently. It doesn't inevitably make you a better programmer; it might, but doesn't guarantee it, just like suddenly gaining the ability to see things in the infrared spectrum [is] not guaranteed to make your life better."*
+> 
+> -- [@iLemming](https://news.ycombinator.com/user?id=iLemming) on Hacker News.
+
 ---
 
 ### "godshatter"
