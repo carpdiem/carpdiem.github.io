@@ -9,7 +9,7 @@ last_modified: 2020-07-27
 
 Curiously, while the direct link above is to the main class homepage from that session, it *doesn't* include links to the actual lecture videos themselves. Those, however, can be found on [this Youtube playlist](https://www.youtube.com/playlist?list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM).
 
-### Once I finished the lectures, it occurred to me that it might be interesting to look at the Youtube viewing statistics for the course. I figured, "hey! maybe we'll see some dropoff patterns!".
+### Once I finished the lectures, it occurred to me that it might be interesting to look at the Youtube viewing statistics for the course. I figured, "hey! maybe we'll see some dropoff patterns!".<!--more-->
 
 ![]({{ site.url }}/attachments/projects/cs162/cs162-view_statistics.png)
 
