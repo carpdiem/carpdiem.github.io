@@ -3,6 +3,7 @@ layout: project
 title: Course Notes -- UC Berkeley CS 162 - Operating Systems
 date: 2020-07-27
 last_modified: 2020-07-27
+image: ../attachments/projects/cs162/cs162-view_statistics.png
 ---
 
 ### Here's yet another set of course notes, coming at you from [UC Berkeley's CS 162 - Operating Systems](https://inst.eecs.berkeley.edu/~cs162/fa13/) course from the fall of 2013.
