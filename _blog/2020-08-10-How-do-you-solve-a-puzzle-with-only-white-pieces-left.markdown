@@ -34,3 +34,11 @@ This has been a big improvement, and while it does often get pieces exactly corr
 Assuming 10 seconds / piece for the original measurements, and again, 5 seconds / piece for testing, that leaves a total time of about 2 hours for the remaining work, a 10x speedup. O(n) algorithms for the win!
 
 I'll let you know how it goes in practice.
+
+### *Update: Finished!*
+
+![]({{ site.url }}/images/blog/finished_puzzle.jpg)
+
+The system actually worked surprisingly well, and landed pretty close to my earlier estimate in terms of total time required (~2.5 hours). One definitely noticable trend was that the number of tests necessary to find a piece, even if we only had knowledge of one side length available from the board, dropped dramatically as we placed more pieces due to the increasing sparsity of the remaining grid. This shouldn't really be a surprise, but I still didn't predict it.
+
+On the downside, the ergonomics of my setup weren't great. To get a small piece for testing, I had to physically stand up, take a few steps to reach it, and then either return to the chair, or just bend over a bit to reach the table and test its fit. This quickly became burdensome, so I began to focus first on finding missing leg slots belonging to larger pieces, because that side of the grid was close enough to reach without standing up.
