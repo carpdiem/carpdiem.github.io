@@ -210,6 +210,7 @@ ul, ol {
 .highlight pre {
 	border-width: 0;
 	padding: 0;
+	background-color: #32302f;
 }
 
 code table {
@@ -242,4 +243,12 @@ html, body {
 
 object {
 	margin-left: 5%;
+}
+
+code table {
+	margin-bottom: 0;
+}
+
+code table tbody tr td pre {
+	margin-bottom: 0;
 }
