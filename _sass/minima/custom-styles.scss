@@ -166,7 +166,11 @@ iframe {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	padding-top: $spacing-unit / 2;
+	margin-top: $spacing-unit / 2;
+}
+
+hr {
+	margin-bottom: 0;
 }
 
 li p {
@@ -174,6 +178,7 @@ li p {
 }
 
 ul, ol {
+	margin-top: $spacing-unit / 2;
 	padding-left: 5%;
 }
 
