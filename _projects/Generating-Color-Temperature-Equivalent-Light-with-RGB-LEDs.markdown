@@ -59,7 +59,10 @@ Intensity is a measure of how much "oompf¹" the light has at any given waveleng
 
 The last important thing to know is that we usually think of the intensity and wavelength of light as being related. In particular, since each different wavelength of light can have a different intensity, we think of intensity as a function of wavelength. Or, mathematically,
 
+{::comment}
 ++ intensity(wavelength) ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math0.svg)
 
 This idea (that each wavelength can have its own, unique intensity associated with it) is really important, and forms the basis of the idea of a "spectrum". In fact, a spectrum is just the particular function intensity(wavelength) associated with a particular light source.
 
@@ -153,7 +156,10 @@ Now it's time for some math⁴.
 
 First, we need the spectrum. Since we're talking about black-body light, we'll use the black-body spectrum. Note that technically this is an intensity function of two variables (both wavelength *and* temperature), but once we pick the temperature we're using, we can plug that in and we'll be left with a simple function intensity(wavelength) that we expected. Also, we use the Greek symbol 𝜆 ("lambda") for wavelength because it looks fancy and everybody else does it too.
 
+{::comment}
 ++ blackBodyIntensity(\lambda, T) = \frac{1}{\lambda^5\(e^{\frac{hc}{\lambda k_B T}} - 1\)} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math1.svg)
 
 And once we have this spectrum, how do we determine those magic three numbers that your eye produces?
 
@@ -161,21 +167,33 @@ Well, your eye has three different kinds of color-recepting molecules in its con
 
 In particular, if we have a response function for the L receptor (a function of wavelength),
 
+{::comment}
 ++ R_L(\lambda) ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math2.svg)
 
 Then the amount of response we get to a small slice (of width 𝛥𝜆) of the black body spectrum is approximiately
 
+{::comment}
 ++ blackBodyIntensity(\lambda_0, T) \cdot R_L(\lambda_0) \cdot \Delta \lambda ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math3.svg)
 
 In order to know the total response of the L-receptor to the whole black-body spectrum, then, we have to take a bunch of these slices and add them all up. To be really accurate, we should do this while letting 𝛥𝜆 → 0, and *drumroll*, that means we're taking an integral!
 
+{::comment}
 ++ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math4.svg)
 
 Let 𝜆₁ and 𝜆₂ respectively be the lower and upper bounds in wavelength of human vision, and you've got the L-receptor response to the black-body spectrum of a given temperature, T!
 
 That's it for the L-receptors, so now we have to do the samme thing for the M- and S-receptors, and while we're at it, we'll cram the whole thing into a vector to make it easy to work with later on. We'll call this resulting vector the "sense vector".
 
+{::comment}
 ++ \overrightarrow{senseVector} = \begin{bmatrix} \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math5.svg)
 
 And that's it.
 
@@ -197,29 +215,47 @@ First, we need to know the spectra of our new light sources. For my particular p
 
 In other words, for an LED of wavelength 𝜆ᵢ, the sense vector produced by it will be:
 
+{::comment}
 ++ \overrightarrow{senseVector_i} = \begin{bmatrix} \int_{\lambda_1}^{\lambda_2} c_i \cdot \delta(\lambda - \lambda_i) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2} c_i \cdot \delta(\lambda - \lambda_i) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2} c_i \cdot \delta(\lambda - \lambda_i) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math6.svg)
 
 Or, after simplifying,
 
+{::comment}
 ++ \overrightarrow{senseVector_i} = c_i \cdot \begin{bmatrix} R_L(\lambda_i) \\\ R_M(\lambda_i) \\\ R_S(\lambda_i) \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math7.svg)
 
 Where cᵢ is the intensity of our LEDᵢ. So, for three LEDs, we would add the three sense vectors together, and attempt to find the appropriate cᵢ values to match the sense vector from our black body spectra.
 
 In other words, we're trying to solve for the constants cᵢ below:
 
+{::comment}
 ++ \begin{bmatrix} \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} = c_R \cdot \begin{bmatrix} R_L(\lambda_R) \\\ R_M(\lambda_R) \\\ R_S(\lambda_R) \end{bmatrix} + c_G \cdot \begin{bmatrix} R_L(\lambda_G) \\\ R_M(\lambda_G) \\\ R_S(\lambda_G) \end{bmatrix} + c_B \cdot \begin{bmatrix} R_L(\lambda_B) \\\ R_M(\lambda_B) \\\ R_S(\lambda_B) \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math8.svg)
 
 This looks ugly, but neverfear! We rearrange terms:
 
-++ \begin{bmatrix} \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} = \begin{bmatrix} R_L(\lambda_R) & R_L(\lambda_G) & R_L(\lambda_B) \\\ R_M(\lambda_R) & R_M(\lambda_G) & R_M(\lambda_B) \\\ R_S(\lambda_R) & R_S(\lambda_G) & R_S(\lambda_B) \end{bmatrix} \cdot \begin{bmatrix} c_R \\\ c_G \\\ c_B \end{bmatrix} ++ 
+{::comment}
+++ \begin{bmatrix} \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} = \begin{bmatrix} R_L(\lambda_R) & R_L(\lambda_G) & R_L(\lambda_B) \\\ R_M(\lambda_R) & R_M(\lambda_G) & R_M(\lambda_B) \\\ R_S(\lambda_R) & R_S(\lambda_G) & R_S(\lambda_B) \end{bmatrix} \cdot \begin{bmatrix} c_R \\\ c_G \\\ c_B \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math9.svg)
 
 Now we make things even simpler-looking, by renaming our matrices so the next steps will be more clear.
 
+{::comment}
 ++ \mathbf{S} = \mathbf{R} \cdot \begin{bmatrix} c_R \\\ c_G \\\ c_B \end{bmatrix} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math10.svg)
 
 Remember, by this point, both **S** and **R** should be simple things, full of just constants. So now, assuming that det(**R**) ≠ 0, we get our answer:
 
+{::comment}
 ++ \begin{bmatrix} c_R \\\ c_G \\\ c_B \end{bmatrix} = \mathbf{R}^{-1} \cdot \mathbf{S} ++
+{:/comment}
+![]({{ site.url }}/images/projects/color_match/math11.svg)
 
 **R** and **S** are just full of constants, so we plug them in, do the math, and get out our values for the cᵢ's, telling us what the relative intensities should be for our RGB LEDs to match the color we desire.
 
