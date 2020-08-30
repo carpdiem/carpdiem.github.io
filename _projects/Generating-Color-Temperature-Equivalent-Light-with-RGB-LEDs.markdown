@@ -53,7 +53,7 @@ absolute_rgb_levels = (desired_brightness * full_brightness_limit) * relative_in
 
 "Light" is the common term for electromagnetic waves (think of these like sine or cosine waves from math, or even sound waves like from a music instrument), a self-propagating form of one of the four fundamental forces of nature. For our purposes, these waves have two properties that we care about: wavelength and intensity.
 
-Wavelength simply refers to the physical distance in between one peak of the wave, and the next. When we talk about "light", we're usually implicitly referring to "human visible light", which has a wavelength range of roughly 380nm to 740nm. nm refers to "nanometers", or 10^-9 meters. That means that the wavelength of visible light is tiny. Really tiny. Like, way smaller than even the tiniest bug you've ever seen, no matter if you were looking at it through a microscope or not.
+Wavelength simply refers to the physical distance in between one peak of the wave, and the next. When we talk about "light", we're usually implicitly referring to "human visible light", which has a wavelength range of roughly 380nm to 740nm. "nm" refers to "nanometers", or 10^-9 meters. That means that the wavelength of visible light is tiny. Really tiny. Like, way smaller than even the tiniest bug you've ever seen, no matter if you were looking at it through a microscope or not.
 
 Intensity is a measure of how much "oompf¹" the light has at any given wavelength. In reality, this usually has units related to energy, but for our purposes, you can just think of it as the brightness of the light.
 
@@ -68,15 +68,30 @@ This idea (that each wavelength can have its own, unique intensity associated wi
 
 Many different light sources have equally different spectra. Here are a few examples:
 
-< hydrogen emission lines >
+![]({{ site.url }}/images/projects/color_match/LymanSeries.svg)
+*Hydrogen Emissions Spectrum from the [wikipedia article on Lyman Series](https://en.wikipedia.org/wiki/Hydrogen_spectral_series)*
 
-< LED >
+<br/><br/>
 
-< flourescent light >
+![]({{ site.url }}/images/projects/color_match/RGB_LED_Spectrum.svg)
+*Red, Green, and Blue LED Spectra from [Tijl Schepens, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=69091874)*
 
-< candle light >
+<br/><br/>
 
-< daylight >
+![]({{ site.url }}/images/projects/color_match/Fluorescent_spectrum.png)
+*Fluorescent light spectrum from the [wikipedia article on fluorescent lamps](https://en.wikipedia.org/wiki/Fluorescent_lamp)*
+
+<br/><br/>
+
+![]({{ site.url }}/images/projects/color_match/candle_spectrum.png)
+*Candle light spectrum*
+
+<br/><br/>
+
+![]({{ site.url }}/images/projects/color_match/daylight_spectrum.png)
+*Daylight spectrum, 5500K*
+
+<br/>
 
 Did you notice how the spectra for candle light and daylight look a lot like each other? Let's talk a bit more about that.
 
@@ -96,7 +111,7 @@ A true "color" then, from the perspective of physics, is just a combination of t
 
 For example, if we have a bright LED shining in the same direction as a candle, we can find the true color of the resulting light by simply scaling their spectra to their relative intensities (remember, intensity == brightness), and adding them together!
 
-< LED + candle spectrum >
+![]({{ site.url }}/images/projects/color_match/candle_and_LED_spectrum.png)
 
 Now, there's one more important thing to know about true, physical colors: they involve a shit-ton² of information.
 
@@ -122,9 +137,9 @@ Unfortunately, our puny minds—ok, and the nature of physical reality itself…
 
 The way this works is that when light of a given spectrum enters your eyes, it interacts simultaneously with all of these different molecules, and each kind of molecule acts like a certain kind of filter, responding selectively to different wavelengths within the spectrum. The greater the intensity of the spectrum at those wavelengths, the greater the signal produced by that particular kind of molecule in your eye. Your optic nerve, then, takes the signals from these molecules, and shuffles them off into your brain.
 
-< flow diagram of spectra into eyeballs >
+![]({{ site.url }}/images/projects/color_match/flowchart.png)
 
-This whole process is a form of lossy compression. An infinite-dimensional spectrum comes in the front of your eyes, it gets sampled by a finite number of different kinds of molecules, and each kind of molecule essentially produces a number and send that onward to your brain.
+This whole process is a form of lossy compression. An infinite-dimensional spectrum comes in the front of your eyes, it gets sampled by a finite number of different kinds of molecules, and each kind of molecule essentially produces a number and sends that onward to your brain.
 
 Since we're going from an infinite-dimensional spectrum to a finite-dimensional set of filters, we're going to lose (read: "compress") a lot of information along the way.
 
