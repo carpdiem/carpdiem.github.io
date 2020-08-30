@@ -17,7 +17,7 @@ Well, I'm here to tell you that there's a better way, and hopefully we'll learn 
 
 ## First, the tl;dr
 
-I wrote a python module called Color_Match. You can find it [here](https://pypi.org/project/Color-Match/).
+I wrote a python module called Color_Match. You can find it [here](https://github.com/carpdiem/Color-Match).
 
 Once you've installed it, go look up the emission wavelengths of your RGB LEDs on their datasheet. If you can't find them, you can try starting with something like 623nm, 528nm, and 470nm (some example wavelength values from some RGB LEDs I happen to have on hand right now), but your results may be a little off and require some tuning of the specific wavelengths.
 
@@ -30,7 +30,8 @@ import Color_Match as cm
 # first, generate the expected sense vector for the color temperature in question
 sv = cm.sense_vector(cm.planck_spectrum(1900))
 
-# using the sample wavelength values from above, converted into units of meters
+# using the sample wavelength values from above, converted into units of meters,
+#   we can get the needed relative intensities of our RGB LEDs
 relative_intensities = cm.rgb_composition(623e-9, 528e-9, 470e-9, sv)
 
 # full_brightness_limit is whatever value corresponds to a maximum output on an
@@ -51,9 +52,9 @@ absolute_rgb_levels = (desired_brightness * full_brightness_limit) * relative_in
 
 ### What is light, really?
 
-"Light" is the common term for electromagnetic waves (think of these like sine or cosine waves from math, or even sound waves like from a music instrument), a self-propagating form of one of the four fundamental forces of nature. For our purposes, these waves have two properties that we care about: wavelength and intensity.
+"Light" is the common term for electromagnetic waves (think of these like sine or cosine waves from math, or even like sound waves from a musical instrument), a self-propagating form of one of the four fundamental forces of nature. For our purposes, these waves have two properties that we care about: wavelength and intensity.
 
-Wavelength simply refers to the physical distance in between one peak of the wave, and the next. When we talk about "light", we're usually implicitly referring to "human visible light", which has a wavelength range of roughly 380nm to 740nm. "nm" refers to "nanometers", or 10^-9 meters. That means that the wavelength of visible light is tiny. Really tiny. Like, way smaller than even the tiniest bug you've ever seen, no matter if you were looking at it through a microscope or not.
+Wavelength simply refers to the physical distance in between one peak of the wave, and the next. When we talk about "light", we're usually implicitly referring to "human visible light", which has a wavelength range of roughly 380nm to 740nm. "nm" refers to "nanometers", or 10<sup>-9</sup> meters. That means that the wavelength of visible light is tiny. Really tiny. Like, way smaller than even the tiniest bug you've ever seen, no matter if you were looking at it through a microscope or not.
 
 Intensity is a measure of how much "oompf¹" the light has at any given wavelength. In reality, this usually has units related to energy, but for our purposes, you can just think of it as the brightness of the light.
 
@@ -84,7 +85,7 @@ Many different light sources have equally different spectra. Here are a few exam
 <br/><br/>
 
 ![]({{ site.url }}/images/projects/color_match/candle_spectrum.png)
-*Candle light spectrum*
+*Candle light spectrum, 1900K*
 
 <br/><br/>
 
@@ -103,7 +104,7 @@ Now, that probably sounded complicated, but here's the simple way to think about
 
 This is also why the spectra for candle light and daylight above look so similar: they're both black body spectra! The candle has a temperature of ~1900K, and the noon sun is ~5500K, but otherwise, their spectra come from the same physical phenomenon.
 
-For convenience, when we talk about 1900K (or similar) light, we're talking about light with a spectrum equivalent to that produced by a black body source with a temperature of 1900K. In this use, we say that the "color temperature of the light is 1900K".
+For convenience, when we talk about 1900K (or similar) light, we're talking about light with a spectrum equivalent to that produced by a black body source with a temperature of 1900K. In this use, we say that "the color temperature of the light is 1900K".
 
 ### Then what are colors?
 
@@ -117,7 +118,7 @@ Now, there's one more important thing to know about true, physical colors: they 
 
 What do I mean by that? Well, since each wavelength within a spectrum has its own intensity, if we wanted to write down all of the information in a spectrum, we'd have to write down one intensity number for each wavelength number in the spectrum!
 
-And how many different wavelengths are in a spectrum? Well, we might try counting, starting from 380nm on the low side. That might make us think that there were only 320 different wavelength numbers (380nm, 381nm, 382nm, …).
+And how many different wavelengths are in a spectrum? Well, we might try counting, starting from 380nm on the low side. That might make us think that there were only 360 different wavelength numbers (380nm, 381nm, 382nm, …).
 
 But what about in-between 380nm and 381nm? Are there any wavelength numbers in between those?
 
@@ -127,7 +128,7 @@ And... how about in between 380.0nm and 380.1nm?
 
 Sure! There's 380.01nm, 380.02nm, 380.03nm, etc.
 
-At this point, you might be seeing a pattern. No matter how far we have "zoomed in", we can always "zoom in" a little further and find more wavelength numbers. In fact, this means that there are an infinite number of wavelength numbers available in visible light spectra!³. That means that we'd need to write down an infinite number of intensity numbers to write down all the information in a spectrum!
+At this point, you might be seeing a pattern. No matter how far we have "zoomed in", we can always "zoom in" a little further and find more wavelength numbers. In fact, this means that there are an infinite number of wavelength numbers available in visible light spectra!³ That means that we'd need to write down an infinite number of intensity numbers to write down all the information in a spectrum!
 
 In physics terms, then, a spectrum is an infinite-dimensional vector (one dimension for each wavelength!). That means that it contains an infinite amount of information! That's a lot of information.
 
@@ -203,7 +204,7 @@ In order to know the total response of the L-receptor to the whole black-body sp
 
 Let 𝜆₁ and 𝜆₂ respectively be the lower and upper bounds in wavelength of human vision, and you've got the L-receptor response to the black-body spectrum of a given temperature, T!
 
-That's it for the L-receptors, so now we have to do the samme thing for the M- and S-receptors, and while we're at it, we'll cram the whole thing into a vector to make it easy to work with later on. We'll call this resulting vector the "sense vector".
+That's it for the L-receptors, so now we have to do the same thing for the M- and S-receptors, and while we're at it, we'll cram the whole thing into a vector to make it easy to work with later on. We'll call this resulting vector the "sense vector".
 
 {::comment}
 ++ \overrightarrow{senseVector} = \begin{bmatrix} \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_L(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_M(\lambda) \cdot d\lambda \\\ \int_{\lambda_1}^{\lambda_2}blackBodyIntensity(\lambda, T) \cdot R_S(\lambda) \cdot d\lambda \end{bmatrix} ++
@@ -311,7 +312,7 @@ Remember how this whole discussion was based on the idea that true, physical col
 Well, turns out that's true for humans⁸. It isn't, however, true for pigeons.
 
 ![]({{ site.url }}/images/projects/color_match/pigeon_portrait.jpg)
-*Image from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pigeon_portrait_4861.jpg)*
+*Pigeon portrait from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pigeon_portrait_4861.jpg)*
 
 See those beady little eyes? They're hiding [pentachromaticity](https://kops.uni-konstanz.de/bitstream/handle/123456789/20276/Delius_Wavelength.pdf). That's a fancy way of saying that when our little winged friend here looks at a color, her eyes turn each color into *five* numbers. And you know what? 5 > 3. BOOM. Pigeons.
 
@@ -337,13 +338,13 @@ Snakes have extra sensors that can "see" up to 30,000nm.
 
 Hell, insects can even see the [polarization direction of light](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4614-7320-6_334-5)!
 
-And all that isn't even to mention the fact that electromagnetic waves can have wavelengths outside of still-tiny range visible to any animals at all (roughly 300nm - 30,000nm).
+And all that isn't even to mention the fact that electromagnetic waves can have wavelengths outside of the still-tiny range visible to any animals at all (roughly 300nm - 30,000nm).
 
 Just how big is the range of electromagnetic waves? The technical term is *ginormous*.
 
 On the small side, x-rays range from rouguhly 1nm to 0.01nm in wavelength. Smaller still than those are gamma rays, around 0.001nm. And beyond that, we've observed VHEGRs⁹ with wavelengths down to about 0.00000000001nm. Can they go even smaller that that? Sure! We just haven't observed any yet.
 
-On the other end of the spectrum, infrared light covers the region of wavelengths between about 1,000nm, and 100,000nm. After that, we have things like microwaves at 1,000,000nm to 1,000,000,000nm, followed by just bucketing everything larger than that into the category of "radio waves" which has some overlap with microwaves, and stretching from about 1,000,000nm all the way up to about 880,000,000,000,000,000,000,000,000,000,000,000nm¹⁰.
+On the other end of the spectrum, infrared light covers the region of wavelengths between about 1,000nm and 100,000nm. After that, we have things like microwaves at 1,000,000nm to 1,000,000,000nm, followed by just bucketing everything larger than that into the category of "radio waves" which has some overlap with microwaves, and stretches from about 1,000,000nm all the way up to about 880,000,000,000,000,000,000,000,000,000,000,000nm¹⁰.
 
 And yes, I'm saying that radio waves have a color. Microwaves have a color. X-rays have a color. All of it is color, in the truest, physical sense. And you, human, you get none of it but the barest, tiniest glimpse through the smallest pinprick in an ultimate filter.
 
@@ -359,7 +360,7 @@ Better build more telescopes, observation satellites, night vision goggles, part
 
 2. Again, also the technical term for it.
 
-3. This is a lie, but it's close enough to the truth. If you want to understand the whole truth, go study Quantum Field Theory and the (Planck Length)[https://en.wikipedia.org/wiki/Planck_length].
+3. This is a lie, but it's close enough to the truth. If you want to understand the whole truth, go study Quantum Field Theory and the [Planck Length](https://en.wikipedia.org/wiki/Planck_length).
 
 4. My favorite part.
 
@@ -371,6 +372,6 @@ Better build more telescopes, observation satellites, night vision goggles, part
 
 8. Seriously, [tetrachromats](https://en.wikipedia.org/wiki/Tetrachromacy#Humans), stop ruining all of my simple explanations with your edge-case existence.
 
-9. VHEGR stands for [Very-high-energy gamma ray](https://en.wikipedia.org/wiki/Very-high-energy_gamma_ray). Seriously, I'm not making this up. And if you think this is uncreative naming, wait until you find out about the amazingly-named [VLT](https://en.wikipedia.org/wiki/Very_Large_Telescope) and some of its proposed successors, the [ELT](https://en.wikipedia.org/wiki/Extremely_Large_Telescope), and [OWL](https://en.wikipedia.org/wiki/Overwhelmingly_Large_Telescope).
+9. VHEGR stands for [Very-high-energy gamma ray](https://en.wikipedia.org/wiki/Very-high-energy_gamma_ray). I promise I'm not making this up. And if you think this is uncreative naming, wait until you find out about the amazingly-named [VLT](https://en.wikipedia.org/wiki/Very_Large_Telescope) and some of its proposed successors, the [ELT](https://en.wikipedia.org/wiki/Extremely_Large_Telescope), and [OWL](https://en.wikipedia.org/wiki/Overwhelmingly_Large_Telescope).
 
 10. This is not a typo. The only upper limit on the wavelength of radio waves is the size of the universe.
