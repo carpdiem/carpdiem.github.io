@@ -7,7 +7,7 @@ last_modified: 2020-09-01
 
 We're starting to see a new stage in the evolution of storytelling.
 
-Storytelling has always adapted itself to the means of its audience. In particular, the kinds of stories told are molded by both the technological and cultural context of the readers. In pre-Gutenberg times, when essentially all storytelling was oral, stories were simpler, with few characters to forget, and few plot points to remember. Books, and the simultaneous ability to discuss and analyze them in writing, brought detail. The great struggles of ideology in the 1900s brought a focus on good-vs-evil. Visual media, from comic books to cartoons, practically invented fantastical costumes. And now, with social media as our backdrop of choice, we're starting to see the emergence of memephilic narratives.
+Storytelling has always adapted itself to the means of its audience. In particular, the kinds of stories told are molded by both the technological and cultural context of the readers. In pre-Gutenberg times, when essentially all storytelling was oral, stories were simpler, with few characters to forget, and few plot points to remember. Books, and the simultaneous ability to discuss and analyze them in writing, brought detail. The great struggles of ideology in the 1900s brought a focus on good-vs-evil. Visual media, from comic books to cartoons, practically invented fantastical costumes. And now, with social media as our backdrop of choice, we're starting to see the emergence of memephilic narratives.<!--more-->
 
 What do I mean by this? Simply that the stories being told, being talked about, and becoming popular are increasingly shifting towards those that better support associated social media memes and content.
 
