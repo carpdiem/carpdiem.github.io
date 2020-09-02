@@ -344,7 +344,7 @@ Just how big is the range of electromagnetic waves? The technical term is *ginor
 
 On the small side, x-rays range from rouguhly 1nm to 0.01nm in wavelength. Smaller still than those are gamma rays, around 0.001nm. And beyond that, we've observed VHEGRs⁹ with wavelengths down to about 0.00000000001nm. Can they go even smaller that that? Sure! We just haven't observed any yet.
 
-On the other end of the spectrum, infrared light covers the region of wavelengths between about 1,000nm and 100,000nm. After that, we have things like microwaves at 1,000,000nm to 1,000,000,000nm, followed by just bucketing everything larger than that into the category of "radio waves" which has some overlap with microwaves, and stretches from about 1,000,000nm all the way up to about 880,000,000,000,000,000,000,000,000,000,000,000nm¹⁰.
+On the other end of the spectrum, infrared light covers the region of wavelengths between about 1,000nm and 100,000nm. After that, we have things like microwaves at 1,000,000nm to 1,000,000,000nm, followed by just bucketing everything larger than that into the category of "radio waves" which has some overlap with microwaves, and stretches from about 1,000,000nm all the way up to about 880,000,000,000,000,000,000,000,000,000,000,000nm<sup>10</sup>.
 
 And yes, I'm saying that radio waves have a color. Microwaves have a color. X-rays have a color. All of it is color, in the truest, physical sense. And you, human, you get none of it but the barest, tiniest glimpse through the smallest pinprick in an ultimate filter.
 
