@@ -21,4 +21,4 @@ More recently, we have the Stormlight Archive series from Brandon Sanderson, and
 
 Now, don't get me wrong. I'm not complaining about this shift in storytelling, just observing it.
 
-Observing it, and predicting the further demise of the last gneration, good-vs-evil tropes, and the continued ascendance of multi-faction, find-your-reflection-somewhere-and-share-it-on-facebook stories.
+Observing it, and predicting the further demise of the last generation, good-vs-evil tropes, and the continued ascendance of multi-faction, find-your-reflection-somewhere-and-share-it-on-facebook stories.
