@@ -2,9 +2,20 @@
 layout: project
 title: Athletics
 date: 2020-06-12
-last_modified: 2020-06-14
-image: ../images/projects/athletics/strength-to-weight-2020-06-14.png
+last_modified: 2020-09-02
+image: ../images/projects/athletics/strength-to-weight-2020-09-02.png
 ---
+
+### Update - 9/2/20
+
+Latest graphs at the end of another 6-week Tactical Barbell cycle.
+
+My bench press dropped a bit due to sustaining and recovering from a minor shoulder injury.<!--more-->
+
+![]({{ site.url }}/images/projects/athletics/1RMs-2020-09-02.png)
+
+![]({{ site.url }}/images/projects/athletics/strength-to-weight-2020-09-02.png)
+
 
 ### Update - 6/14/20
 
