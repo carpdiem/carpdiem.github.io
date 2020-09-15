@@ -13,6 +13,6 @@ Sometimes you want to want something.
 > 
 > Maybe it's the rough winters, or the lack of good jobs, or a million other things you might use to justify your inaction, but when push comes to shove, this proclaimed desire—that's completely within your grasp!—goes unfulfilled.
 
-You didn't actually want it afterall.
+You didn't actually want it after all.
 
 You just wanted to want it.
