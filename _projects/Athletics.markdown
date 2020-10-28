@@ -14,7 +14,7 @@ Bench press 1RM stayed the same, but my shoulder injury is almost totally healed
 
 Not pictured here is my progress with kettlebells which I've added as a recurring part of my routine (because really, who computes 1RMs for kettlebell swings?). In any case, I've worked my way up to 2-hand swings with a 24kg bell, 1-handed swings with a 20kg bell, and Turkish Get-Ups with a 20kg bell. Unfortunately, I'll pretty soon be maxed out with the kettlebells that I have (only have up to 24kg), so I've started to keep an eye on the usual suspects (Rogue and Vulcan, I'm looking at you!) for their next restock.<!--more-->
 
-![]({{ site.url }}/images/projects/athletics/!RMs-2020-10-27.png)
+![]({{ site.url }}/images/projects/athletics/1RMs-2020-10-27.png)
 
 ![]({{ site.url }}/images/projects/athletics/strength-to-weight-2020-10-27.png)
 
