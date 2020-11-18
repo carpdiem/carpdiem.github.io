@@ -8,11 +8,10 @@ last_modified: 2020-11-17
 > *This is a repost from a question on Quora (["What does it feel like to attend a world-renowned university?"](https://www.quora.com/What-does-it-feel-like-to-attend-a-world-renowned-university)) that I originally answered in January of 2012. It remains one of my best and most true pieces of writing, so I've reposted it here to save it from eventual platform-rot. My experience dates from the mid-2000s.*
 {: style="text-align: center;"}
 
-----
 
 ### Going through undergrad at Caltech is the hardest thing you'll ever do.
 
-Before I can talk about anything else, you have to understand what I mean by this.
+Before I can talk about anything else, you have to understand what I mean by this.<!--more-->
 
 Caltech is a place that was built up to take the best scientific minds in the country and push them harder, faster, and further than they'd ever experienced before. It manages this through a couple key points:
 
