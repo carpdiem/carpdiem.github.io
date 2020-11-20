@@ -39,6 +39,6 @@ An academic solution gives you a delicate, optimized answer.
 
 A practical solution, on the other hand, gives you a robust process for arriving at good enough answers.
 
-Academic solutions open new frontiers. Practical solutions enable civizilation to inhabit them.
+Academic solutions open new frontiers. Practical solutions enable civilization to inhabit them.
 
 And practical solutions are glorious in their full *"Table R602.3(1) FASTENING SCHEDULE, footnote d: Four-foot by 8-foot or 4-foot by 9-foot panels shall be applied vertically"* splendor. Painstaking checklists designed to be bullet-proof against rushed schedules, tired contractors, and lazy architects alike.
