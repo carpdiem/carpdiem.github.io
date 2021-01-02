@@ -11,4 +11,4 @@ So be careful when crafting resolutions. The death of a resolution is to be comp
 
 Instead of resolving to get a gym membership and go for an hour every day, resolve to develop two or three healthy habits—maybe one that you do daily, and two more on a weekly cadence—that can fit into your life with low friction, and that which you'll be able to maintain.
 
-Don't make difficult resolutions. Instead, resolve to find the easiest steps that will bring you meaningfully closer to your goals.
+Don't make difficult resolutions. Instead, resolve to find the easiest steps that will bring you meaningfully closer to your goals.<!--more-->
