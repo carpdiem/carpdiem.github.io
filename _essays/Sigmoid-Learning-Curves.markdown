@@ -15,7 +15,11 @@ There are **two different kinds of learning**: **stamp collecting**, and **devel
 
 ### In particular, many STEM subjects follow a three part progression:
 
-> stamp collecting → developing an art → stamp collecting
+> stamp collecting  
+> ↓  
+> developing an art  
+> ↓  
+> stamp collecting
 > {: style="text-align: center; font-size: 1.17rem;" }
 
 For example, this happens all the time in engineering courses where the beginning of the course consists of an overview of topics you're probably already familiar with; the middle of the course introduces new mathematical methods, formulae, or perspectives; and then the end of the course becomes a survey of how you might apply those new techniques to a variety of problems.
