@@ -1,14 +1,14 @@
 ---
 layout: essay
 title: Communication, Management, and Leadership in Startups
-date: 2021-06-28
-last_modified: 2021-06-28
+date: 2021-07-01
+last_modified: 2021-07-01
 ---
 
 > *-- tl;dr --*
 > {: style="text-align: center;" }
 >
-> To **communicate** well, apply techniques of error-correcting conversations, especially whenever someone says something that sounds dumb, or otherwise doesn't make sense, to you:
+> To **communicate** well, apply techniques of error-correcting conversations, especially whenever someone says something that sounds dumb, or otherwise doesn't make sense:
 >
 > 1. Make sure you've heard their words correctly. "Did you just say *\<the words you heard\>*?"
 >
@@ -109,13 +109,13 @@ To judge their efforts, simply suggest some sort of presentation on the learning
 
 ### A note on hiring...
 
-The goal in hiring is to bring in new teaem mmembers who have sets of compartaive advantages that serve as good complements to those possessed by your current team members. The problem is that while you may know what tasks need doing today—and so you can interview for them—you will not generally know what tasks need doing tomorrow.
+The goal in hiring is to bring in new team members who have sets of compartaive advantages that serve as good complements to those possessed by your current team members. The problem is that while you may know what tasks need doing today—and so you can interview for them—you will not generally know what tasks need doing tomorrow.
 
-The solution is to try to pick candidates who have significant comparative advantages outside of the set that you directly need for your current tasks. [Koosh ball](https://en.wikipedia.org/wiki/Koosh_ball) people instead of [T-shaped people](https://en.wikipedia.org/wiki/T-shaped_skills).
+The solution is to try to pick candidates who have significant additional comparative advantages outside of the set that you directly need for your current tasks. [Koosh ball](https://en.wikipedia.org/wiki/Koosh_ball) people instead of [T-shaped people](https://en.wikipedia.org/wiki/T-shaped_skills).
 
 The way I do this is to ask candidates in interviews to "teach me something technical". I tell them to pick a topic they're very comfortable with, and then as they teach me about it, I will ask questions about related ideas or corner cases that hopefully they haven't encountered directly before. I even tell them exactly what I'm looking for: not particularly *correct* answers (because I'm not likely to be a good judge of correctness on a topic I'm probably unfamiliar with), but instead that I'm looking to understand their thought process and approach when I throw them a curveball.
 
-Once they pick a topic and dive in, I let them talk for maybe ten minutes or so, asking only clarifying questions at first, so that I understand what they're telling me. Then I take a moment and come up with my curveball. This is almost always just asking them to reconsider the topic with some change to one of their fundamental assumptions: either a difference in constraint, a difference in the scale of some number, or similar.
+Once they pick a topic and dive in, I let them talk for maybe fifteen minutes or so, asking only clarifying questions at first, so that I understand what they're telling me. Then I take a moment and come up with my curveball. This is almost always just asking them to reconsider the topic with some change to one of their fundamental assumptions: either a difference in constraint, a difference in the scale of some number, or similar.
 
 > For example, here are some descriptions of actual interviews:
 >
@@ -143,7 +143,7 @@ The metric for this trust is the question "Would they take a bullet for me?". Th
 
 This means managers taking the heat when one of their team screws up. It means colleagues giving credit to otherwise invisible advice from others when it helps their project succeed. And it means the CEO rolling up their sleves and turning a god damned wrench if it's truly "all hands on deck".
 
-As a leader, you need to evaluate everything around you for whether it encourages or diminishes this kind of trust. Get it right and prosper with engaged colleagues, good retention, and full engagement. Get it wrong and suffer.
+As a leader, you need to evaluate everything around you for whether it encourages or diminishes this kind of trust. Get it right and prosper with engaged colleagues, good retention, and full buy-in to the mission. Get it wrong and suffer.
 
 For example, if you want to make sure that your remote employees feel like a full part of the team, don't bring them into HQ for a bonding offsite, but send your HQ team on an offsite to the remote location.
 
