@@ -21,9 +21,9 @@ So I saw the words "7-day free trial", and read them as a challenge. All I'd hav
 
 If this sounds insane, that's because it probably was (at least a little bit?). It was also only conceivable through the confluence of several factors: my previously-established deep familiarity with mathematics, my fluency with the python programming language (which was also the language of choice for the courses), the fact that the courses in the specialization sequence were shorter than is usual for semester-length classes (~2-4 weeks of material each, rather than ~12), and the browser console one-liner `$('video').playbackRate = 3.5` to override the default maximum playback speeds of the lecture videos.
 
-So I targeted a weekend, took a couple days off on either side, canceled or turned down all of my other plans, and got to work.
+### So I targeted a weekend, took a couple days off on either side, canceled or turned down all of my other plans, and got to work.
 
-<object data="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf" type="application/pdf" style="min-height:100vh;width:100%">Fallback: this browser does not support PDFs. Please <a href="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf">download the PDF</a> to view it.
+<object data="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf" type="application/pdf" style="min-height:30vh;width:100%">Fallback: this browser does not support PDFs. Please <a href="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf">download the PDF</a> to view it.
 </object>
 
 [Download my course notes as a PDF.]({{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf)
