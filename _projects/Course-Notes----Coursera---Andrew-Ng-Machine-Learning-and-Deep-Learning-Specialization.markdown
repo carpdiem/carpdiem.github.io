@@ -23,7 +23,7 @@ If this sounds insane, that's because it probably was (at least a little bit?). 
 
 ### So I targeted a weekend, took a couple days off on either side, canceled or turned down all of my other plans, and got to work.
 
-<object data="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf" type="application/pdf" style="min-height:30vh;width:100%">Fallback: this browser does not support PDFs. Please <a href="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf">download the PDF</a> to view it.
+<object data="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf" type="application/pdf" style="min-height:100vh;width:100%">Fallback: this browser does not support PDFs. Please <a href="{{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf">download the PDF</a> to view it.
 </object>
 
 [Download my course notes as a PDF.]({{ site.url }}/attachments/projects/course-notes-andrew-ng/Coursera-Andrew_Ng_Machine_Learning.pdf)
