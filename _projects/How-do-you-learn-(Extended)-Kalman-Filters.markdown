@@ -30,7 +30,7 @@ If not, read [this primer on python syntax from Learn X in Y Minutes](https://le
 
 As a side note, if you haven't encountered it before, [Learn X in Y Minutes](https://learnxinyminutes.com/) is a fantastic resource for quickly coming up to speed on—or for reminding yourself about!—the syntax for just about every programming and programming-esque language under the sun.
 
-### Do ou know how to install Jupyter Notebook?
+### Do you know how to install Jupyter Notebook?
 
 If not, just get [Anaconda](https://www.anaconda.com/products/individual), the premier scientific computing distribution for python.
 
@@ -40,7 +40,7 @@ If not, I highly recommend doing [this course](https://ocw.mit.edu/courses/mathe
 
 As for that course itself, Gilbert Strang is [somewhat of a legend](https://en.wikipedia.org/wiki/Gilbert_Strang), especially in the linear algebra community, and I cannot recommend highly enough pouring your time and energy into investing in a deep understanding of the fundamentals, like this linear algebra course. I have personally taken courses in linear algebra seven or eight times in my career, at least three of which have been repeated self-study of this very OCW course.
 
-Plus, it's convenient. There are about 24 lectures (read: episodes), and each is about an hour long (or only 30-40min, if you watch them on 1.5-2x speed, which I highly recommend; doing so makes the lectures much more exciting, and makes you much less likely to fall asleep during them! download and watch them with as fast of a plaback speed as you can manage!). Now, 24 episodes is about one season of a TV show (or two, if they have shorter seasons like Stranger Things), and I *know* you're capable of watching your way through one of those, so get to this! Watch the lectures. Do the problem sets. Learn linear algebra.
+Plus, it's convenient. There are about 24 lectures (read: episodes), and each is about an hour long (or only 30-40min, if you watch them on 1.5-2x speed, which I highly recommend; doing so makes the lectures much more exciting, and makes you much less likely to fall asleep during them! download and watch them with as fast of a playback speed as you can manage!). Now, 24 episodes is about one season of a TV show (or two, if they have shorter seasons like Stranger Things), and I *know* you're capable of watching your way through one of those, so get to this! Watch the lectures. Do the problem sets. Learn linear algebra.
 
 ### Are gaussians your friends?
 
@@ -99,7 +99,7 @@ If you're not used to them, the math will look like alphabet soup.
 
 Kalman Filters are a technique for taking noisy measurements from many sources and combining them in a mathematically optimal way.
 
-They produce an *estimate* of some *state*, as well as *uncertainties* representitng error associated with the *estimate*.
+They produce an *estimate* of some *state*, as well as *uncertainties* representing error associated with the *estimate*.
 
 In this way, Kalman Filters are kind of like the opposite of deep learning.
 
@@ -111,7 +111,7 @@ Kalman Filters take a minimum amount of data, and produce an *optimal* result; b
 
 You mean [this one](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)?
 
-- Chapters 1-3 cover the basic ideas behind the whohle field.
+- Chapters 1-3 cover the basic ideas behind the whole field.
 
 - Chapter 4 introduces the basic Kalman Filter. Get comfortable with the notation here!
 
