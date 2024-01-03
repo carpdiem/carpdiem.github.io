@@ -15,7 +15,7 @@ Nothing particularly special here. At this high of a level of abstraction, every
 
 Not too much controversial in here (I hope!). I like the emphasis on strict delineation of codebases between apps, and factoring out shared code into separate libraries under dependency management.
 
-### Section 2: Dependencies
+### Section 2: Dependencies<!--more-->
 
 This one requires some rigor and automated test tools for enforcement!
 
