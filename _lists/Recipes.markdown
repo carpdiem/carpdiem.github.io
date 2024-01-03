@@ -2,7 +2,7 @@
 layout: list
 title: Recipes
 date: 2024-01-02
-last_modified: 
+last_modified: 2024-01-02
 ---
 
 ### Banana Bread ###
