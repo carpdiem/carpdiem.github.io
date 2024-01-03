@@ -5,7 +5,7 @@ date: 2024-01-02
 last_modified: 2024-01-02
 ---
 
-### Shortbread Cookies ###
+### Shortbread Cookies
 _Makes about 3-4 dozen cookies_
 - 226g unsalted butter
 - 90g powdered sugar
@@ -20,7 +20,7 @@ Mix together and refrigerate dough.
 
 Bake at 350degF (175degC) in a preheated oven for about 13-15min or until slightly golden brown.
 
-### Sernik (Polish Cheesecake) ###<!--more-->
+### Sernik (Polish Cheesecake)<!--more-->
 
 - 1.37kg twarog (farmer's cheese)
 - 100g sugar
@@ -40,7 +40,7 @@ Bake at 170degC (340degF) for 90 minutes (or until light brown on top).
 After 90 min, turn the oven OFF.
 Do not open the oven until it cools down!
 
-### Cornbread ###
+### Cornbread
 _Makes one small lodge griddle_
 
 - 4 tbsp unsalted butter
@@ -56,10 +56,10 @@ _Makes one small lodge griddle_
 
 Preheat oven (425F) and brown butter, mix ingredients by hand (no blender), and bake for ~20min. Works great in a cast iron griddle.
 
-### Banana Bread ###
+### Banana Bread
 
 _Work in progress._
 
-### Mochi Waffles ###
+### Mochi Waffles
 
 _Work in progress._
