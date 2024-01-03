@@ -5,14 +5,6 @@ date: 2024-01-02
 last_modified: 2024-01-02
 ---
 
-### Banana Bread ###
-
-_Work in progress._
-
-### Mochi Waffles ###
-
-_Work in progress._
-
 ### Shortbread Cookies ###
 _Makes about 3-4 dozen cookies_
 - 226g unsalted butter
@@ -28,7 +20,7 @@ Mix together and refrigerate dough.
 
 Bake at 350degF (175degC) in a preheated oven for about 13-15min or until slightly golden brown.
 
-### Sernik (Polish Cheesecake) ###
+### Sernik (Polish Cheesecake) ###<!--more-->
 
 - 1.37kg twarog (farmer's cheese)
 - 100g sugar
@@ -63,3 +55,11 @@ _Makes one small lodge griddle_
 - 6 oz buttermilk
 
 Preheat oven (425F) and brown butter, mix ingredients by hand (no blender), and bake for ~20min. Works great in a cast iron griddle.
+
+### Banana Bread ###
+
+_Work in progress._
+
+### Mochi Waffles ###
+
+_Work in progress._
