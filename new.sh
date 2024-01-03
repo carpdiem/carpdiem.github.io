@@ -21,6 +21,7 @@ new () {
 					echo "date: $d";
 					echo "last_modified: $d";
 					echo "---";
+					echo "<!--more-->";
 				} >> $fname
 				vim $fname
 			else
@@ -41,6 +42,7 @@ new () {
 					echo "date: $d";
 					echo "last_modified: $d";
 					echo "---";
+					echo "<!--more-->";
 				} >> $fname
 				vim $fname
 			else
@@ -61,6 +63,7 @@ new () {
 					echo "date: $d";
 					echo "last_modified: $d";
 					echo "---";
+					echo "<!--more-->";
 				} >> $fname
 				vim $fname
 			else
@@ -81,6 +84,7 @@ new () {
 					echo "date: $d";
 					echo "last_modified: $d";
 					echo "---";
+					echo "<!--more-->";
 				} >> $fname
 				vim $fname
 			else
@@ -101,6 +105,7 @@ new () {
 					echo "date: $d";
 					echo "last_modified: $d";
 					echo "---";
+					echo "<!--more-->";
 				} >> $fname
 				vim $fname
 			else
