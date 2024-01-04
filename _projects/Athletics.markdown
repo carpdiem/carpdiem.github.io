@@ -2,9 +2,23 @@
 layout: project
 title: Athletics
 date: 2020-06-12
-last_modified: 2020-10-27
+last_modified: 2024-01-04
 image: ../images/projects/athletics/strength-to-weight-2020-10-27.png
 ---
+
+### Update - 1/04/24
+
+Well, this is a few years out of date. The whole pandemic lasted a lot longer than I think anyone really expected. Especially with the California lockdowns.
+
+I wish I could say that left me with smooth and continuous progress, but it wouldn't be true. We moved, had a kid, and I encountered a small host of minor, but lengthy, injuries. Along the way, I ended up making some changes to my routine.
+
+For lifting, I switched out of the tactical barbell program (with its focus on 1RM testing), and into a more "bodybuilding" style of lifting. 5 week long phases, with a lot more volume (sets of 10+), and a gradual peaking followed by a recovery week. I started this new routine in mid-December, 2020, and am currently halfway through Phase 19. At 5 nominal weeks / phase, that means I've been about 60% efficient with my lifting compared to an ideal schedule.
+
+I've also ended up with a better table tennis setup at home. I've now got a table, robot, and most importantly, enough room to use it, so drills with that have become a regular part of my routine. I'll write about my shot accuracy tracking system in a later update.
+
+Overall, my best guess has me in pretty good overall shape. I definitely don't have the level of conditioning that I did when I was spending 10+ hours a week at the table tennis clubs pre-pandemic, and I definitely don't have the level of raw, 1RM strength that I did at the peak of that training, but I'm at an acceptable middle on both of those, with a clear improvement in strength-endurance (from the focus on greater volume of reps) as well as body composition.
+
+In the meantime, I've got clear directions to go for improvement, and the most important step is the next one.
 
 ### Update - 10/27/20
 
@@ -55,7 +69,7 @@ Track also taught me some valuable, though somewhat tangential, skills: how to c
 
 Once sophomore year was over, I had fulfilled my 2-year "PE" requirement, and I dropped the organized athletics entirely to focus on the more important math and science competitions in my life.
 
-Throughout this period, I had only minimial exposure to strength training. I had seen the inside of a weight room before, and of course I had seen any manner of targeted weight machine, but I did not understand them, nor did I feel even remotely comfortable with them.
+Throughout this period, I had only minimal exposure to strength training. I had seen the inside of a weight room before, and of course I had seen any manner of targeted weight machine, but I did not understand them, nor did I feel even remotely comfortable with them.
 
 ### College years
 
@@ -121,7 +135,7 @@ After that, I also adjusted my strength training routines to accommodate my McGi
 
 The last few years have seen, by far, the greatest progress in athletics of my life. This comes down to three things:
 
-1. A change in my responsibilties with my job meant that I no longer had to travel to Florida one week out of every four. Hello improved consistency!
+1. A change in my responsibilities with my job meant that I no longer had to travel to Florida one week out of every four. Hello improved consistency!
 
 2. I changed strength training programs. After much searching, and some trial and error on my own, I settled into a routine following the progressive training templates in [Tactical Barbell](http://www.tacticalbarbell.com/). The problem prior to this is that the energy demands of my lifting and table tennis training in parallel had grown to be too large, and so I would often find myself either tired at table tennis from my lifting the night before, or experiencing slower gains in lifting due to the long sessions of table tennis. The Tactical Barbell program is the best I've encountered yet for structuring strength training as a supplementary activity to your main sport, and has supported my progress in both, wonderfully.
 
