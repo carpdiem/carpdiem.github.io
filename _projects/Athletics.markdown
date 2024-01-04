@@ -14,7 +14,7 @@ I wish I could say that left me with smooth and continuous progress, but it woul
 
 For lifting, I switched out of the tactical barbell program (with its focus on 1RM testing), and into a more "bodybuilding" style of lifting. 5 week long phases, with a lot more volume (sets of 10+), and a gradual peaking followed by a recovery week. I started this new routine in mid-December, 2020, and am currently halfway through Phase 19. At 5 nominal weeks / phase, that means I've been about 60% efficient with my lifting compared to an ideal schedule.
 
-I've also ended up with a better table tennis setup at home. I've now got a table, robot, and most importantly, enough room to use it, so drills with that have become a regular part of my routine. I'll write about my shot accuracy tracking system in a later update.
+I've also ended up with a better table tennis setup at home. I've now got a table, robot, and most importantly, enough room to use it, so drills with that have become a regular part of my routine. I'll write about my shot accuracy tracking system in a later update.<!--more-->
 
 Overall, my best guess has me in pretty good overall shape. I definitely don't have the level of conditioning that I did when I was spending 10+ hours a week at the table tennis clubs pre-pandemic, and I definitely don't have the level of raw, 1RM strength that I did at the peak of that training, but I'm at an acceptable middle on both of those, with a clear improvement in strength-endurance (from the focus on greater volume of reps) as well as body composition.
 
