@@ -64,22 +64,25 @@ _Work in progress._
 _Makes 4 waffles / one 'square' waffle-maker load_
 
 Dry Mix:
-- 1/2 cup oat flour
-- 1 cup mochiko
-- 1 1/2 tsp baking powder
+- 1/4 cup oat flour
+- 1/4 cup AP flour
+- 1-1/4 cup mochiko
+- 2 tsp baking powder
 - 1 1/2 tsp salt
 - 1/2 tsp cornstarch
 
 Wet Mix:
 - 1/2 cup grass-fed whey isolate
-- 1 cup whole milk
+- 1-1/4 cup whole milk
 (mix the above and let the protein powder hydrate)
 then...
 - 1/2 banana
 - 1 egg
 - a dash of vanilla extract
+- 1 tsp lemon juice
+- 2 tbsp melted coconut oil (or butter)
 (blend all of the above)
 
 Fold the resulting wet ingredient blend into the dry ingredients and mix until just combined. Pour into hot waffle maker and enjoy.
 
-_Notes: this recipe came out a little dry, and maybe a little less chewy than I had hoped for, but had an excellent surface crunch. I almost want slightly lower density and slightly more fluffiness alongside a little more chewiness?_
+_Notes: Adjusting this again, to try to improve moisture while maintaining chewiness_
