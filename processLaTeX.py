@@ -1,3 +1,6 @@
+## TODO:
+## - investigate whether I need to implement a "re-process" functionality
+
 import sys
 import requests
 from tempfile import mkstemp
@@ -46,5 +49,7 @@ def replace(file_path, image_dest, prefix="\LARGE "):
     #Move new file
     move(abs_path, file_path)
 
+## when invoking from command line:
+## `python3 processLaTeX.py <path-to-file> <path-to-image-dir>`
 if __name__=="__main__":
     replace(sys.argv[1], sys.argv[2])
