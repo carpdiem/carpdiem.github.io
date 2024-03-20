@@ -22,4 +22,5 @@ I'll be using this space to track and update any particularly interesting things
 - [ipywidgets.interact](https://i]pywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html) is another major quality of life improvement. However, as a reminder to myself, this *is not enabled by default* in jupyterlab.
 - [python decorators](LINK HERE), which have been on my "to-learn" list *forever*, and have finally drifted to the top.
 - The use of [* and /](https://realpython.com/python-asterisk-and-slash-special-parameters/) in python argument lists in order to enforce the allowable order of positional vs keyword arguments.
-- 
+- Nice to use $log$ for reducing the domain of distributions. (But more important to just be aware of, and interrogate, your data distributions!)
+-  
