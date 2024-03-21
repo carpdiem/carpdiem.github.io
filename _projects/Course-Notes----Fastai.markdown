@@ -27,4 +27,7 @@ I'll be using this space to track and update any particularly interesting things
 - Nice to use `log()` for reducing the domain of distributions. (But more important to just be aware of, and interrogate, your data distributions!)
 - Somehow, I missed that list comprehensions in python also extend to dictionaries and sets! Cute.
 - I had not encountered the book [Python for Data Analysis](https://wesmckinney.com/book/) before, but it's a solid resource on some of the internals and tools (especially in pandas) that I was less familiar with.
+- I was not previously familiar with [SymPy](https://www.sympy.org/en/index.html) at all. Seems legit.
+- **Random Forests:** I had *heard* of these before, but never actually *learned* them. To be honest, I'm a little disappointed. The process is cute, elegant, and simple. But damnit, it's about as crude as a blunt rock. Chop your dataset into random subsets, each with a random subset of all of the features, and train a bunch of decision trees (one on each subset of your data). For predicting, take the average value of all of them. Or maybe the mode, depending on whether you want a quantized result or not. It works, but it's literally just duct-taping random shit together. Though sometimes, that's all you need.
+- [Test Time Augmentation](https://arxiv.org/pdf/2011.11156v1.pdf) is a cute trick that seems especially amenable to image models for potentially improving output accuracy.
 - 
