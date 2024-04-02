@@ -30,4 +30,122 @@ I'll be using this space to track and update any particularly interesting things
 - I was not previously familiar with [SymPy](https://www.sympy.org/en/index.html) at all. Seems legit.
 - **Random Forests:** I had *heard* of these before, but never actually *learned* them. To be honest, I'm a little disappointed. The process is cute, elegant, and simple. But damnit, it's about as crude as a blunt rock. Chop your dataset into random subsets, each with a random subset of all of the features, and train a bunch of decision trees (one on each subset of your data). For predicting, take the average value of all of them. Or maybe the mode, depending on whether you want a quantized result or not. It works, but it's literally just duct-taping random shit together. Though sometimes, that's all you need.
 - [Test Time Augmentation](https://arxiv.org/pdf/2011.11156v1.pdf) is a cute trick that seems especially amenable to image models for potentially improving output accuracy.
-- 
+ 
+### Part 1 - Project
+
+<div style="margin-left: 5%; display: flex; justify-content: center; align-items: start; gap: 5%;">
+    <canvas id="userInput" style="display: flex; flex-direction: column; gap: 10px; border: 2px solid black; aspect-ratio: 1 / 1; width: 60%;"></canvas>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button id="clearButton">Clear</button>
+        <button id="saveButton">Save</button>
+        <div id="prob0">
+            0: 0%
+        </div>
+        <div id="prob1">1: </div>
+        <div id="prob2">2: </div>
+        <div id="prob3">3: </div>
+        <div id="prob4">4: </div>
+        <div id="prob5">5: </div>
+        <div id="prob6">6: </div>
+        <div id="prob7">7: </div>
+        <div id="prob8">8: </div>
+        <div id="prob9">9: </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // create canvas element and append it to document body
+    const canvas = document.getElementById("userInput");
+    canvas.width = 560;
+    canvas.height = 560;
+
+    // get canvas 2D context
+    const context = canvas.getContext('2d');
+    
+    document.addEventListener('mousemove', draw);
+    document.addEventListener('mousedown', startDrawing);
+    document.addEventListener('mouseout', stopDrawing);
+    document.addEventListener('mouseup', stopDrawing);
+    document.addEventListener('touchstart', startDrawing);
+    document.addEventListener('touchmove', draw);
+    document.addEventListener('touchend', stopDrawing);
+
+    let isDrawing = false;
+
+    function getMousePos(canvas, event) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: (event.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
+            y: (event.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
+        };
+    }
+
+    function startDrawing(event) {
+        isDrawing = true;
+        //var pos = getMousePos(canvas, event);
+        // context.fillStyle = "#000000";
+        // context.fillRect(pos.x, pos.y, 4, 4);
+        draw(event);
+    }
+
+    function draw(event) {
+        if (!isDrawing) return;
+
+        context.lineWidth = 20;
+        context.lineCap = 'round';
+
+        var pos = getMousePos(canvas, event);
+        context.lineTo(pos.x, pos.y);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(pos.x, pos.y);
+    }
+
+    function stopDrawing() {
+        isDrawing = false;
+        context.beginPath();
+        updateProbabilities();
+    }
+
+    function updateProbabilities() {
+        // prob0 = document.getElementById("prob0");
+        // prob0.textContent = "0: " + Math.random().toFixed(2) + "%";
+
+        for (let i = 0; i <= 9; i++) {
+            let divId = `prob${i}`;
+            console.log(divId);
+            let divElem = document.getElementById(divId);
+
+            if (divElem) {
+                divElem.textContent = `${i}: ` + Math.random().toFixed(2) + "%";
+            }
+        }
+    }
+
+    // Implement "Clear" button
+    const clearButton = document.getElementById("clearButton");
+    clearButton.addEventListener("click", function() { 
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+    // Implement "Save" button for testing
+    const saveButton = document.getElementById("saveButton");
+    saveButton.addEventListener("click", function() {
+        var tmpCanvas = document.createElement('canvas');
+        var tmpCtx = tmpCanvas.getContext('2d');
+
+        tmpCanvas.width = 28;
+        tmpCanvas.height = 28;
+
+        tmpCtx.drawImage(canvas, 0, 0, tmpCanvas.width, tmpCanvas.height);
+
+        var imgDataURL = tmpCanvas.toDataURL('image/png');
+
+        var downloadLink = document.createElement('a');
+        downloadLink.href = imgDataURL;
+        downloadLink.download = 'canvasImage.png';
+
+        downloadLink.click();
+    })
+
+</script>
