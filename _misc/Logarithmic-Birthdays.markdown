@@ -9,7 +9,7 @@ use_jquery: true
 
 ### Birthdays are crap.
 
-Now, don't get me wrong. I love a party. And I think it's a great idea to bring people together in celebration, so I'm not saying that *the concept of regluarly celebrating the evolution of one's life* is crap, just that trying to measure the evolution of your life in time periods defined by how long it takes a particular rock to orbit around a particular ball of fusion-plasma is crap.
+Now, don't get me wrong. I love a party. And I think it's a great idea to bring people together in celebration, so I'm not saying that *the concept of regularly celebrating the evolution of one's life* is crap, just that trying to measure the evolution of your life in time periods defined by how long it takes a particular rock to orbit around a particular ball of fusion-plasma is crap.
 
 In practice, paying a lot of attention to each particular birthday gets swapped with gradually focusing your attention on birthdays that fall on nice, round number sort of years. Like numbers divisible by 5, or 10. And, let's be honest, this is a cudgel, and the only reason it's not totally ridiculous is because humans currently only live for about 100 years, max, so we don't really have to deal with the breakdown of this system as t→∞.
 
