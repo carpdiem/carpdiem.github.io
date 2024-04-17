@@ -33,11 +33,14 @@ I'll be using this space to track and update any particularly interesting things
  
 ### Part 1 - Project
 
+*This is a transformer-based number-classifier, trained on MNIST. More details about the specific architecture I experimented with below. To use, draw a digit 0-9, and click submit.*
+
 <div style="margin-left: 5%; display: flex; justify-content: center; align-items: start; gap: 5%;">
     <canvas id="userInput" style="display: flex; flex-direction: column; gap: 10px; border: 2px solid black; aspect-ratio: 1 / 1; width: 60%;"></canvas>
     <div style="display: flex; flex-direction: column; gap: 10px;">
         <button id="clearButton">Clear</button>
         <button id="saveButton">Save</button>
+        <button id="submitButton">Submit</button>
         <div id="prob0">
             0: 0%
         </div>
@@ -91,7 +94,7 @@ I'll be using this space to track and update any particularly interesting things
     function draw(event) {
         if (!isDrawing) return;
 
-        context.lineWidth = 20;
+        context.lineWidth = 30;
         context.lineCap = 'round';
 
         var pos = getMousePos(canvas, event);
@@ -104,21 +107,63 @@ I'll be using this space to track and update any particularly interesting things
     function stopDrawing() {
         isDrawing = false;
         context.beginPath();
-        updateProbabilities();
+    }
+
+    function getTinyImageURL() {
+        var tmpCanvas = document.createElement('canvas');
+        var tmpCtx = tmpCanvas.getContext('2d');
+
+        tmpCanvas.width = 560;
+        tmpCanvas.height = 560;
+
+        var w = tmpCanvas.width;
+        var h = tmpCanvas.height;
+
+        var tmpCanvas2 = document.createElement('canvas');
+        var tmpCtx2 = tmpCanvas2.getContext('2d');
+        tmpCanvas2.width = 560;
+        tmpCanvas2.height = 560;
+
+        var destCanvas = document.createElement('canvas');
+        var destCtx = destCanvas.getContext('2d');
+        destCanvas.width = 28;
+        destCanvas.height = 28;
+
+        tmpCtx.drawImage(canvas, 0, 0, w / 2, h / 2);
+        tmpCtx2.drawImage(tmpCanvas, 0, 0, w / 2, h / 2, 0, 0, w / 4, h / 4);
+        tmpCtx.clearRect(0, 0, w, h);
+        tmpCtx.drawImage(tmpCanvas2, 0, 0, w / 4, h / 4, 0, 0, w / 8, h / 8);
+        tmpCtx2.clearRect(0, 0, w, h);
+        tmpCtx2.drawImage(tmpCanvas, 0, 0, w / 8, h / 8, 0, 0, w / 16, h / 16);
+        destCtx.drawImage(tmpCanvas2, 0, 0, w / 16, h / 16, 0, 0, w / 20, h / 20);
+
+        return destCanvas.toDataURL('image/png');
     }
 
     function updateProbabilities() {
-        // prob0 = document.getElementById("prob0");
-        // prob0.textContent = "0: " + Math.random().toFixed(2) + "%";
+        const dataURL = getTinyImageURL();
+        const payload = {data: dataURL};
+        fetch('https://mnistbyhand-carpdiem.replit.app/predict/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(response => response.json())
+            .then(data => {
+                const probabilities = data.output;
+                updateProbabilitiesOnPage(probabilities);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 
+    function updateProbabilitiesOnPage(probabilities) {
         for (let i = 0; i <= 9; i++) {
-            let divId = `prob${i}`;
-            console.log(divId);
-            let divElem = document.getElementById(divId);
-
-            if (divElem) {
-                divElem.textContent = `${i}: ` + Math.random().toFixed(2) + "%";
-            }
+            const probElem = document.getElementById(`prob${i}`);
+            probElem.textContent = `${i}: ${(probabilities[i] * 100).toFixed(1)}%`;
         }
     }
 
@@ -131,15 +176,7 @@ I'll be using this space to track and update any particularly interesting things
     // Implement "Save" button for testing
     const saveButton = document.getElementById("saveButton");
     saveButton.addEventListener("click", function() {
-        var tmpCanvas = document.createElement('canvas');
-        var tmpCtx = tmpCanvas.getContext('2d');
-
-        tmpCanvas.width = 28;
-        tmpCanvas.height = 28;
-
-        tmpCtx.drawImage(canvas, 0, 0, tmpCanvas.width, tmpCanvas.height);
-
-        var imgDataURL = tmpCanvas.toDataURL('image/png');
+        var imgDataURL = getTinyImageURL();
 
         var downloadLink = document.createElement('a');
         downloadLink.href = imgDataURL;
@@ -147,5 +184,12 @@ I'll be using this space to track and update any particularly interesting things
 
         downloadLink.click();
     })
+
+    // Implement "Submit" button
+    const submitButton = document.getElementById("submitButton");
+    submitButton.addEventListener("click", function() {
+        updateProbabilities();
+    })
+
 
 </script>
