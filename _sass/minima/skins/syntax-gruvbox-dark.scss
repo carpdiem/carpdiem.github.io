@@ -1,3 +1,15 @@
+/* this is dumb hacky stuff to make code blocks kind of work until I can figure out what's really broken about them and the rouge highlighter */
+
+$code-background-color: #fbf1c7;
+.language-plaintext {
+  color: #3c3836;
+}
+
+code {
+  color: #3c3836;
+  background-color: $code-background-color;
+}
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
@@ -105,10 +117,6 @@
 
 .highlight .nf {
 	color: #fb4934;
-}
-
-.highlight pre {
-	color: #fbf1c7;
 }
 
 .highlight pre {
