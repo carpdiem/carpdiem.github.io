@@ -22,7 +22,7 @@ I'll be using this space to track and update any particularly interesting things
 - [timm](https://timm.fast.ai/) is a pytorch-based deep learning library collecting a number of pre-existing image models.
 - I cannot believe I hadn't encountered [python's functools.partial()](https://docs.python.org/3/library/functools.html#functools.partial) before. I've been used to this sort of functionality since my days messing around with making a solver for [hateris](https://qntm.org/files/hatetris/hatetris.html) in haskell ages ago, and I've always rolled my own in python using lambda functions. *But of course* there's a built-in for that now.
 - [ipywidgets.interact](https://i]pywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html) is another major quality of life improvement. However, as a reminder to myself, this *is not enabled by default* in jupyterlab.
-- [python decorators](LINK HERE), which have been on my "to-learn" list *forever*, and have finally drifted to the top.
+- [Python decorators]({{ site.url }}{% link _blog/2024-04-22-Python-decorators-for-fun-and-profit.markdown %}), which have been on my "to-learn" list *forever*, and have finally drifted to the top.
 - The use of [* and /](https://realpython.com/python-asterisk-and-slash-special-parameters/) in python argument lists in order to enforce the allowable order of positional vs keyword arguments.
 - Nice to use `log()` for reducing the domain of distributions. (But more important to just be aware of, and interrogate, your data distributions!)
 - Somehow, I missed that list comprehensions in python also extend to dictionaries and sets! Cute.
