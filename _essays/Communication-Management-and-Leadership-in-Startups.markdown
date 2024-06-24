@@ -109,7 +109,7 @@ To judge their efforts, simply suggest some sort of presentation on the learning
 
 ### A note on hiring...
 
-The goal in hiring is to bring in new team members who have sets of compartaive advantages that serve as good complements to those possessed by your current team members. The problem is that while you may know what tasks need doing today—and so you can interview for them—you will not generally know what tasks need doing tomorrow.
+The goal in hiring is to bring in new team members who have sets of comparative advantages that serve as good complements to those possessed by your current team members. The problem is that while you may know what tasks need doing today—and so you can interview for them—you will not generally know what tasks need doing tomorrow.
 
 The solution is to try to pick candidates who have significant additional comparative advantages outside of the set that you directly need for your current tasks. [Koosh ball](https://en.wikipedia.org/wiki/Koosh_ball) people instead of [T-shaped people](https://en.wikipedia.org/wiki/T-shaped_skills).
 
