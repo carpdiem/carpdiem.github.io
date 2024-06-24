@@ -141,7 +141,7 @@ No one actually cares if you have ping pong tables, dogs in the office, weekly h
 
 The metric for this trust is the question "Would they take a bullet for me?". This doesn't need to be literal, but the gist is that anyone in your company, thinking of anyone else in the company that they interact with, should feel assured that the other person would be willing to take risk, flak, or trouble onto themselves for the sake of the questioner.
 
-This means managers taking the heat when one of their team screws up. It means colleagues giving credit to otherwise invisible advice from others when it helps their project succeed. And it means the CEO rolling up their sleves and turning a god damned wrench if it's truly "all hands on deck".
+This means managers taking the heat when one of their team screws up. It means colleagues giving credit to otherwise invisible advice from others when it helps their project succeed. And it means the CEO rolling up their sleeves and turning a god damned wrench if it's truly "all hands on deck".
 
 As a leader, you need to evaluate everything around you for whether it encourages or diminishes this kind of trust. Get it right and prosper with engaged colleagues, good retention, and full buy-in to the mission. Get it wrong and suffer.
 
