@@ -12,8 +12,7 @@ new () {
 			fname="drafts/blog/draft_blog.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
-				d=$(date --rfc-3339=s)
-				d=${d:0:10}
+				d=$(date +%Y-%m-%d)
 				echo "---" > $fname
 				{
 					echo "layout: blog_post";
@@ -33,8 +32,7 @@ new () {
 			fname="drafts/essays/draft_essay.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
-				d=$(date --rfc-3339=s)
-				d=${d:0:10}
+				d=$(date +%Y-%m-%d)
 				echo "---" > $fname
 				{
 					echo "layout: essay";
@@ -54,8 +52,7 @@ new () {
 			fname="drafts/lists/draft_list.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
-				d=$(date --rfc-3339=s)
-				d=${d:0:10}
+				d=$(date +%Y-%m-%d)
 				echo "---" > $fname
 				{
 					echo "layout: list";
@@ -75,8 +72,7 @@ new () {
 			fname="drafts/misc/draft_misc.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
-				d=$(date --rfc-3339=s)
-				d=${d:0:10}
+				d=$(date +%Y-%m-%d)
 				echo "---" > $fname
 				{
 					echo "layout: misc";
@@ -96,8 +92,7 @@ new () {
 			fname="drafts/projects/draft_project.markdown"
 			if [[ ! -e $fname ]]; then
 				touch $fname
-				d=$(date --rfc-3339=s)
-				d=${d:0:10}
+				d=$(date +%Y-%m-%d)
 				echo "---" > $fname
 				{
 					echo "layout: project";
