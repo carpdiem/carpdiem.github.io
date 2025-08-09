@@ -42,9 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < numDots; i++) {
         let attempts = 0;
         while (attempts < MAX_ATTEMPTS) {
+            // Define a margin to keep dots from the edge (1 diameter buffer + dot radius)
+            const margin = (dotRadius * 2) + dotRadius;
+            const safeAreaWidth = width - 2 * margin;
+            const safeAreaHeight = height - 2 * margin;
+
             const newDot = {
-                x: Math.random() * width,
-                y: Math.random() * height,
+                x: Math.random() * safeAreaWidth + margin,
+                y: Math.random() * safeAreaHeight + margin,
                 radius: dotRadius
             };
 
