@@ -48,21 +48,21 @@ publish () {
         done
     fi
 
-    local title_line=$(grep -m 1 "^title:" "$selected_draft")
+    local title_line; title_line=$(grep -m 1 "^title:" "$selected_draft")
     if [[ -z "$title_line" || "$title_line" == *"--title here--"* ]]; then
         echo "Warning: The draft '$(basename "$selected_draft")' has a placeholder title."
-        read -p "Publishing it will result in a generic filename. Continue? (y/N) " confirm
+        read -r -p "Publishing it will result in a generic filename. Continue? (y/N) " confirm
         if [[ "${confirm,,}" != "y" ]]; then
             echo "Publishing aborted."
             return 1
         fi
     fi
 
-    local t=$(echo "$title_line" | sed 's/^title: *//' | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
+    local t; t=$(echo "$title_line" | sed 's/^title: *//' | tr ' ' '-' | tr -d '*."/\[]:;|=,?')
     local final_path
 
     if [[ "$category" == "blog" ]]; then
-        local d=$(grep -m 1 "^date:" "$selected_draft" | cut -d' ' -f2)
+        local d; d=$(grep -m 1 "^date:" "$selected_draft" | cut -d' ' -f2)
         final_path="$publish_dir/$d-$t.markdown"
     else
         final_path="$publish_dir/$t.markdown"

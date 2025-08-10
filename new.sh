@@ -35,7 +35,7 @@ new () {
         return 1
     fi
 
-    local d=$(date +%Y-%m-%d)
+    local d; d=$(date +%Y-%m-%d)
     
     echo "Creating new draft: $fname"
     touch "$fname"
