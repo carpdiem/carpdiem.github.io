@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotRadius = (DOT_DIAMETER_INCHES * DPI) / (2 * dpr); // Final dot radius in logical pixels
 
     // Dynamically determine dot count based on screen area
-    const DOT_DENSITY_FACTOR = 60000; // Lower number = more dots per area
+    const DOT_DENSITY_FACTOR = 45000; // Lower number = more dots per area
     const screenArea = width * height;
     const targetDotCount = Math.floor(screenArea / DOT_DENSITY_FACTOR);
 
