@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const DPI = 96 * (window.devicePixelRatio || 1);
     const DOT_DIAMETER_INCHES = DOT_DIAMETER_MM / 25.4;
     const dotRadius = (DOT_DIAMETER_INCHES * DPI) / (2 * dpr);
-    const MAX_GRID_DIM = 12;
+
+    // Set max grid dimension based on screen size
+    const isMobile = width < 768;
+    const MAX_GRID_DIM = isMobile ? 5 : 12;
 
     // 3. LOGIC: Grid Calculation
     // Define a margin to keep dots from the edge
@@ -23,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const safeAreaWidth = width - 2 * margin;
     const safeAreaHeight = height - 2 * margin;
 
-    // Randomize the internal spacing of the grid
-    const spacingMultiplierX = 1.5 + Math.random() * 1.5; // Spacing is 1.5x to 3x dot diameter
-    const spacingMultiplierY = 1.5 + Math.random() * 1.5;
+    // Randomize the internal spacing of the grid for more variability
+    const spacingMultiplierX = 1.5 + Math.random() * 2.5; // Spacing is 1.5x to 4x dot diameter
+    const spacingMultiplierY = 1.5 + Math.random() * 2.5;
     const xSpacing = dotRadius * 2 * spacingMultiplierX;
     const ySpacing = dotRadius * 2 * spacingMultiplierY;
 
