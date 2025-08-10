@@ -36,9 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const max_x_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaWidth / xSpacing) + 1);
     const max_y_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaHeight / ySpacing) + 1);
 
-    // Choose random grid dimensions
-    const x_count = Math.floor(Math.random() * (max_x_count - 2 + 1)) + 2;
-    const y_count = Math.floor(Math.random() * (max_y_count - 2 + 1)) + 2;
+    // Choose random grid dimensions, allowing for 1xN or Nx1 grids
+    let x_count = Math.floor(Math.random() * max_x_count) + 1;
+    let y_count = Math.floor(Math.random() * max_y_count) + 1;
+
+    // Prevent 1x1 grids, as they aren't useful for multiplication
+    if (x_count === 1 && y_count === 1) {
+        if (Math.random() > 0.5 && max_x_count > 1) {
+            x_count = Math.floor(Math.random() * (max_x_count - 1)) + 2;
+        } else if (max_y_count > 1) {
+            y_count = Math.floor(Math.random() * (max_y_count - 1)) + 2;
+        } else {
+            // Fallback for tiny screens where only 1x1 is possible
+            x_count = 1; y_count = 1;
+        }
+    }
 
     // Calculate the total size of the grid block
     const gridWidth = (x_count - 1) * xSpacing;
