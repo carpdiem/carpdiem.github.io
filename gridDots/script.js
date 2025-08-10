@@ -36,9 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const max_x_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaWidth / xSpacing) + 1);
     const max_y_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaHeight / ySpacing) + 1);
 
-    // Choose random grid dimensions, allowing for 1xN or Nx1 grids
-    let x_count = Math.floor(Math.random() * max_x_count) + 1;
-    let y_count = Math.floor(Math.random() * max_y_count) + 1;
+    // Helper function to reduce the chance of 1D grids
+    const getRandomDimension = (max) => {
+        let count = Math.floor(Math.random() * max) + 1;
+        // If the result is 1 (and it's possible to have > 1),
+        // give it a 75% chance to be re-rolled to a value from 2 to max.
+        if (count === 1 && max > 1 && Math.random() < 0.75) {
+            count = Math.floor(Math.random() * (max - 1)) + 2;
+        }
+        return count;
+    };
+
+    // Choose random grid dimensions, using the helper to reduce 1D grids
+    let x_count = getRandomDimension(max_x_count);
+    let y_count = getRandomDimension(max_y_count);
 
     // Prevent 1x1 grids, as they aren't useful for multiplication
     if (x_count === 1 && y_count === 1) {

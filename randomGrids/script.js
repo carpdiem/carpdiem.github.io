@@ -36,8 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const angle2 = angle1 + skewAngle;
         const v_y = { x: Math.cos(angle2) * ySpacing, y: Math.sin(angle2) * ySpacing };
 
-        let x_count = Math.floor(Math.random() * MAX_GRID_DIM) + 1;
-        let y_count = Math.floor(Math.random() * MAX_GRID_DIM) + 1;
+        const getRandomDimension = (max) => {
+            let count = Math.floor(Math.random() * max) + 1;
+            // If the result is 1 (and it's possible to have > 1),
+            // give it a 75% chance to be re-rolled to a value from 2 to max.
+            if (count === 1 && max > 1 && Math.random() < 0.75) {
+                count = Math.floor(Math.random() * (max - 1)) + 2;
+            }
+            return count;
+        };
+
+        let x_count = getRandomDimension(MAX_GRID_DIM);
+        let y_count = getRandomDimension(MAX_GRID_DIM);
 
         while (x_count > 0 && y_count > 0) { // Inner loop to shrink and check
             if (x_count === 1 && y_count === 1) {
