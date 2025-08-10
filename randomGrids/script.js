@@ -37,37 +37,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const angle2 = angle1 + skewAngle;
     const v_y = { x: Math.cos(angle2) * ySpacing, y: Math.sin(angle2) * ySpacing };
 
-    // Approximate max grid dimensions and choose random counts
-    const max_x_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaWidth / xSpacing) + 1);
-    const max_y_count = Math.min(MAX_GRID_DIM, Math.floor(safeAreaHeight / ySpacing) + 1);
-    let x_count = Math.floor(Math.random() * max_x_count) + 1;
-    let y_count = Math.floor(Math.random() * max_y_count) + 1;
+    // Start with a candidate grid size and iteratively check if it fits.
+    let x_count = Math.floor(Math.random() * MAX_GRID_DIM) + 1;
+    let y_count = Math.floor(Math.random() * MAX_GRID_DIM) + 1;
+    let dotPositions, minX, minY, maxX, maxY, boundingBoxWidth, boundingBoxHeight;
 
-    // Prevent 1x1 grids
-    if (x_count === 1 && y_count === 1) {
-        if (Math.random() > 0.5 && max_x_count > 1) x_count++; else if (max_y_count > 1) y_count++;
-    }
-
-    // Calculate all dot positions relative to (0,0) and find the bounding box
-    const dotPositions = [];
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-    for (let j = 0; j < y_count; j++) {
-        for (let i = 0; i < x_count; i++) {
-            const pos = {
-                x: i * v_x.x + j * v_y.x,
-                y: i * v_x.y + j * v_y.y
-            };
-            dotPositions.push(pos);
-            if (pos.x < minX) minX = pos.x;
-            if (pos.x > maxX) maxX = pos.x;
-            if (pos.y < minY) minY = pos.y;
-            if (pos.y > maxY) maxY = pos.y;
+    while (x_count > 0 && y_count > 0) {
+        // Prevent 1x1 grids
+        if (x_count === 1 && y_count === 1) {
+            if (Math.random() > 0.5) x_count++; else y_count++;
+            if (x_count > MAX_GRID_DIM) x_count = MAX_GRID_DIM;
+            if (y_count > MAX_GRID_DIM) y_count = MAX_GRID_DIM;
         }
+
+        // Calculate all dot positions relative to (0,0) and find the bounding box
+        dotPositions = [];
+        minX = Infinity; minY = Infinity; maxX = -Infinity; maxY = -Infinity;
+        for (let j = 0; j < y_count; j++) {
+            for (let i = 0; i < x_count; i++) {
+                const pos = { x: i * v_x.x + j * v_y.x, y: i * v_x.y + j * v_y.y };
+                dotPositions.push(pos);
+                if (pos.x < minX) minX = pos.x;
+                if (pos.x > maxX) maxX = pos.x;
+                if (pos.y < minY) minY = pos.y;
+                if (pos.y > maxY) maxY = pos.y;
+            }
+        }
+
+        boundingBoxWidth = maxX - minX;
+        boundingBoxHeight = maxY - minY;
+
+        if (boundingBoxWidth <= safeAreaWidth && boundingBoxHeight <= safeAreaHeight) {
+            break; // This grid fits, so we're done.
+        }
+
+        // If it doesn't fit, shrink the grid and try again.
+        if (boundingBoxWidth > safeAreaWidth) x_count--;
+        if (boundingBoxHeight > safeAreaHeight) y_count--;
     }
 
     // Calculate the final placement offset
-    const boundingBoxWidth = maxX - minX;
-    const boundingBoxHeight = maxY - minY;
     const offsetX = margin - minX + Math.random() * (safeAreaWidth - boundingBoxWidth);
     const offsetY = margin - minY + Math.random() * (safeAreaHeight - boundingBoxHeight);
 
