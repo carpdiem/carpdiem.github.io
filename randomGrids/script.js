@@ -68,8 +68,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 break; // Grid fits, exit inner loop
             }
 
-            if (boundingBoxWidth > safeAreaWidth) x_count--;
-            if (boundingBoxHeight > safeAreaHeight) y_count--;
+            const isTooWide = boundingBoxWidth + dotRadius * 2 > safeAreaWidth;
+            const isTooTall = boundingBoxHeight + dotRadius * 2 > safeAreaHeight;
+
+            if (isTooWide && isTooTall) {
+                // If it's too big in both dimensions, shrink the one that's proportionally larger.
+                const gridAspectRatio = boundingBoxWidth / boundingBoxHeight;
+                const safeAreaAspectRatio = safeAreaWidth / safeAreaHeight;
+                if (gridAspectRatio > safeAreaAspectRatio) {
+                    x_count--;
+                } else {
+                    y_count--;
+                }
+            } else if (isTooWide) {
+                x_count--;
+            } else if (isTooTall) {
+                y_count--;
+            }
         }
 
         if (x_count > 0 && y_count > 0) {
