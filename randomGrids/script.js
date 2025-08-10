@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         boundingBoxWidth = maxX - minX;
         boundingBoxHeight = maxY - minY;
 
-        if (boundingBoxWidth <= safeAreaWidth && boundingBoxHeight <= safeAreaHeight) {
+        if ((boundingBoxWidth + dotRadius * 2) <= safeAreaWidth && (boundingBoxHeight + dotRadius * 2) <= safeAreaHeight) {
             break; // This grid fits, so we're done.
         }
 
