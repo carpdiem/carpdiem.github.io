@@ -25,13 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const screenArea = width * height;
     const targetDotCount = Math.floor(screenArea / DOT_DENSITY_FACTOR);
 
-    // Generate a random number of dots centered around the target
+    // Generate a random number of dots centered around the target, capped for large screens
     const getDotCount = () => {
+        const MAX_DOTS = 28; // Set a ceiling for the number of dots on any screen
         const min = Math.max(1, Math.floor(targetDotCount * 0.5));
         const max = Math.ceil(targetDotCount * 1.5);
         const r1 = Math.floor(Math.random() * (max - min + 1)) + min;
         const r2 = Math.floor(Math.random() * (max - min + 1)) + min;
-        return Math.floor((r1 + r2) / 2);
+        const generatedCount = Math.floor((r1 + r2) / 2);
+        return Math.min(generatedCount, MAX_DOTS);
     };
 
     const numDots = getDotCount();
