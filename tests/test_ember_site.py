@@ -166,8 +166,9 @@ class EmberSiteTests(unittest.TestCase):
                     self.assertIsNone(
                         re.search(r"\ssrc=", tag), f"eager image in {relative}: {tag}"
                     )
-            if "<noscript>" in html:
-                fallback = html.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
+            for fallback in re.findall(
+                r"<noscript>(.*?)</noscript>", html, flags=re.IGNORECASE | re.DOTALL
+            ):
                 fallbacks += len(
                     re.findall(r"<img\b[^>]*\ssrc=", fallback, flags=re.IGNORECASE)
                 )

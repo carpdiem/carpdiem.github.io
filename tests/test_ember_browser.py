@@ -107,14 +107,15 @@ class CDP:
             raise AssertionError(result["exceptionDetails"])
         return result.get("value")
 
-    def navigate(self, url: str) -> None:
+    def navigate(self, url: str, *, settle: bool = True) -> None:
         self.events.clear()
         self.call("Page.navigate", {"url": url})
         self.wait_event("Page.loadEventFired")
-        self.evaluate(
-            "document.fonts.ready.then(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))",
-            await_promise=True,
-        )
+        if settle:
+            self.evaluate(
+                "document.fonts.ready.then(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))",
+                await_promise=True,
+            )
 
     def close(self) -> None:
         self.socket.close()
@@ -316,6 +317,39 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertTrue(mobile["contained"])
         self.assertFalse(mobile["overflow"])
         self.assertTrue(all(height >= 44 for height in mobile["buttons"]))
+
+        self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": True})
+        self.cdp.navigate(self.base_url + PHOTO_PAGE, settle=False)
+        no_script_requests = [
+            event["params"]["request"]["url"]
+            for event in self.cdp.events
+            if event.get("method") == "Network.requestWillBeSent"
+        ]
+        self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": False})
+        no_script_state = json.loads(
+            self.cdp.evaluate(
+                "JSON.stringify((()=>{const visible=element=>getComputedStyle(element).display!=='none'&&element.getBoundingClientRect().width>0&&element.getBoundingClientRect().height>0;return {jsVisible:visible(document.querySelector('.ember-js-content')),fallbackVisible:visible(document.querySelector('.ember-noscript-content')),visiblePosts:[...document.querySelectorAll('.post')].filter(visible).length,visibleImages:[...document.querySelectorAll('main img')].filter(visible).length}})())"
+            )
+        )
+        self.assertEqual(
+            no_script_state,
+            {
+                "jsVisible": False,
+                "fallbackVisible": True,
+                "visiblePosts": 1,
+                "visibleImages": 4,
+            },
+        )
+        no_script_image_requests = [
+            url
+            for url in no_script_requests
+            if "/images/" in url
+            and url.lower().endswith((".jpg", ".jpeg", ".png", ".svg"))
+        ]
+        self.assertEqual(len(no_script_image_requests), 4)
+        self.assertTrue(
+            all("/images/ember-1200k/" not in url for url in no_script_image_requests)
+        )
 
 
 if __name__ == "__main__":
