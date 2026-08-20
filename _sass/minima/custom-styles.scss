@@ -103,19 +103,26 @@ img {
 	padding-left: 0;
 }
 
+.footer-tagline {
+	margin-bottom: 0.25rem;
+}
+
 .footer-ember-credit {
 	color: var(--ember-fg-2);
 	font-size: $small-font-size;
 }
 
 .footer-ember-credit a,
-.footer-ember-credit a:link,
+.footer-ember-credit a:link {
+	color: var(--site-link);
+}
+
 .footer-ember-credit a:visited {
-	color: inherit;
+	color: var(--site-link-visited);
 }
 
 .footer-ember-credit a:hover {
-	color: var(--ember-fg-1);
+	color: var(--site-link);
 }
 
 @media screen and (max-width: $on-medium) {

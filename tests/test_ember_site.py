@@ -74,6 +74,7 @@ class EmberSiteTests(unittest.TestCase):
         self.assertIn("/assets/ember/ember.css", head)
         self.assertIn("/js/ember-site.js", head)
         self.assertIn('class="ember-palette-switcher"', header)
+        self.assertIn('class="footer-tagline"', footer)
         self.assertIn('class="footer-ember-credit"', footer)
         self.assertIn('href="https://www.usuallypragmatic.com/ember/"', footer)
         self.assertIn("Ember: redshift safe color palettes", footer)
