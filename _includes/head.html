@@ -12,8 +12,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFF7D6">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let temperature = "3400k";
+      try {
+        if (localStorage.getItem("usuallypragmatic.ember-temperature") === "1200k") {
+          temperature = "1200k";
+        }
+      } catch (_) {
+        // Storage can be unavailable in privacy-restricted contexts.
+      }
+      root.dataset.emberTemperature = temperature;
+      root.dataset.emberPalette = temperature === "1200k"
+        ? "1200k-dark"
+        : (matchMedia("(prefers-color-scheme: dark)").matches ? "3400k-dark" : "3400k-light");
+    })();
+  </script>
   {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/ember/ember.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <script defer src="{{ "/js/ember-site.js" | relative_url }}"></script>
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}

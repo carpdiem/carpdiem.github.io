@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="/js/infinite-jekyll.js"></script>
-
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" data-ember-temperature="3400k" data-ember-palette="3400k-light">
   {%- include head.html -%}
 
   <body>
@@ -10,13 +7,22 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+      {%- capture ember_content -%}{{ content }}{%- endcapture -%}
+      {%- assign ember_content = ember_content | replace: '<img src="', '<img data-ember-original-src="' -%}
+      <div class="wrapper ember-js-content">
+        {{ ember_content }}
       </div>
+      <noscript>
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </noscript>
     </main>
 
     {%- include footer.html -%}
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/js/infinite-jekyll.js"></script>
 
 	<script data-goatcounter="https://usuallypragmatic.goatcounter.com/count"
         	async src="//gc.zgo.at/count.js"></script>

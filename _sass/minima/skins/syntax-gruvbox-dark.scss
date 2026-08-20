@@ -1,124 +1,147 @@
-/* this is dumb hacky stuff to make code blocks kind of work until I can figure out what's really broken about them and the rouge highlighter */
+/* Rouge syntax highlighting mapped onto active Ember terminal and surface roles. */
 
-$code-background-color: #fbf1c7;
 .language-plaintext {
-  color: #3c3836;
+  color: var(--ember-fg-0);
 }
 
 code {
-  color: #3c3836;
-  background-color: $code-background-color;
+  color: var(--ember-fg-0);
+  background-color: var(--ember-bg-2);
 }
 
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #fbf1c7;
-  background-color: #32302f;
+.highlight,
+.highlight .w {
+  color: var(--ember-fg-0);
+  background-color: var(--ember-bg-0);
 }
 .highlight .err {
-  color: #fb4934;
-  background-color: #32302f;
+  color: var(--ember-terminal-red);
+  background-color: var(--ember-bg-3);
   font-weight: bold;
 }
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #928374;
+.highlight .c,
+.highlight .cd,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: var(--ember-fg-2);
   font-style: italic;
 }
 .highlight .cp {
-  color: #8ec07c;
+  color: var(--ember-terminal-green);
 }
 .highlight .nt {
-  color: #fb4934;
+  color: var(--ember-terminal-red);
 }
-.highlight .o, .highlight .ow {
-  color: #fbf1c7;
-}
-.highlight .p, .highlight .pi {
-  color: #fbf1c7;
+.highlight .o,
+.highlight .ow,
+.highlight .p,
+.highlight .pi,
+.highlight .n {
+  color: var(--ember-fg-0);
 }
 .highlight .gi {
-  color: #b8bb26;
-  background-color: #32302f;
+  color: var(--ember-terminal-green);
+  background-color: var(--ember-bg-3);
+}
+.highlight .gi .x {
+  color: inherit;
+  background-color: inherit;
 }
 .highlight .gd {
-  color: #fb4934;
-  background-color: #32302f;
+  color: var(--ember-terminal-red);
+  background-color: var(--ember-bg-3);
+}
+.highlight .gd .x {
+  color: inherit;
+  background-color: inherit;
 }
 .highlight .gh {
-  color: #b8bb26;
+  color: var(--ember-terminal-green);
   font-weight: bold;
 }
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #d3869b;
-}
+.highlight .k,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv,
 .highlight .kc {
-  color: #d3869b;
+  color: var(--ember-terminal-magenta);
 }
 .highlight .kt {
-  color: #fabd2f;
+  color: var(--ember-terminal-yellow);
 }
-.highlight .kd {
-  color: #fe8019;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #b8bb26;
-  font-style: italic;
-}
-.highlight .si {
-  color: #b8bb26;
-  font-style: italic;
-}
-.highlight .sr {
-  color: #b8bb26;
-  font-style: italic;
-}
+.highlight .kd,
 .highlight .se {
-  color: #fe8019;
+  color: var(--ember-terminal-yellow);
 }
-.highlight .nn {
-  color: #8ec07c;
+.highlight .gr,
+.highlight .gt,
+.highlight .ne {
+  color: var(--ember-terminal-red);
 }
-.highlight .nc {
-  color: #8ec07c;
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .s1,
+.highlight .si,
+.highlight .sr {
+  color: var(--ember-terminal-green);
+  font-style: italic;
 }
-.highlight .no {
-  color: #d3869b;
+.highlight .nn,
+.highlight .nc,
+.highlight .nb,
+.highlight .nf {
+  color: var(--ember-terminal-cyan);
+}
+.highlight .no,
+.highlight .ni,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mb,
+.highlight .mx {
+  color: var(--ember-terminal-magenta);
 }
 .highlight .na {
-  color: #b8bb26;
+  color: var(--ember-terminal-green);
 }
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #d3869b;
+.highlight .ss,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: var(--ember-terminal-blue);
 }
-.highlight .ss {
-  color: #83a598;
+.highlight .go,
+.highlight .gp,
+.highlight .gu,
+.highlight .bp {
+  color: var(--ember-fg-2);
 }
-
-.highlight .n {
-	color: #fbf1c7;
+.highlight .ge {
+  font-style: italic;
 }
-
-.highlight .nb {
-	color: #458588;
+.highlight .gs {
+  font-weight: bold;
 }
-
-.highlight .nv {
-	color: #83a598;
-}
-
 .highlight .lineno {
-	color: #928374;
+  color: var(--ember-fg-2);
 }
-
 .highlight .gutter {
-	border-color: #504945;
+  border-color: var(--ember-bg-4);
 }
-
-.highlight .nf {
-	color: #83a598;
-}
-
 .highlight pre {
-	color: #fbf1c7;
+  color: var(--ember-fg-0);
+  background-color: var(--ember-bg-0);
 }

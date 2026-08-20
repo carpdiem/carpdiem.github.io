@@ -10,7 +10,7 @@ blockquote {
 	padding-bottom: 2.5%;
 	color: $text-color;
 	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-	background-color: #F5F5F5;
+	background-color: var(--ember-bg-2);
 }
 
 p {
@@ -31,19 +31,19 @@ blockquote > p {
 }
 
 a:visited {
-	color: #993322;
+	color: var(--site-link-visited);
 }
 
 a:link {
-	color: #cc3300;
+	color: var(--site-link);
 }
 
 .active_page {
 //	font-weight: bold;
 	text-decoration: underline;
-	text-decoration-color: #777;
-	-webkit-text-decoration-color: #777;
-	-blink-text-decoration-color: #777;
+	text-decoration-color: var(--ember-fg-2);
+	-webkit-text-decoration-color: var(--ember-fg-2);
+	-blink-text-decoration-color: var(--ember-fg-2);
 	display: inline;
 	flex: 1;
 }
@@ -210,7 +210,7 @@ ul, ol {
 .highlight pre {
 	border-width: 0;
 	padding: 0;
-	background-color: #32302f;
+	background-color: var(--ember-bg-0);
 }
 
 code table {
@@ -228,7 +228,7 @@ code table tbody tr td:first-child {
 	border-top-style: none;
 	border-bottom-style: none;
 	border-width: 2px;
-	border-color: #ddd;
+	border-color: var(--ember-bg-4);
 }	
 
 .read_more_link {
@@ -251,4 +251,247 @@ code table {
 
 code table tbody tr td pre {
 	margin-bottom: 0;
+}
+
+/* Ember palette integration for the normal Jekyll browsing shell. */
+:root[data-ember-palette="3400k-light"] {
+	--site-link: var(--ember-terminal-red);
+	--site-link-visited: var(--ember-terminal-magenta);
+	color-scheme: light;
+}
+
+:root[data-ember-palette="3400k-dark"] {
+	--site-link: var(--ember-terminal-red);
+	--site-link-visited: var(--ember-category-six);
+	color-scheme: dark;
+}
+
+:root[data-ember-palette="1200k-dark"] {
+	--site-link: var(--ember-terminal-red);
+	--site-link-visited: var(--ember-category-one);
+	color-scheme: dark;
+}
+
+html {
+	background: var(--ember-bg-0);
+	scroll-padding-top: 7rem;
+}
+
+html,
+body {
+	height: auto;
+	min-height: 100%;
+}
+
+body {
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-0);
+}
+
+::selection {
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-5);
+}
+
+:focus-visible {
+	outline: 2px solid var(--ember-terminal-red);
+	outline-offset: 2px;
+}
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-0);
+	border-top-color: var(--site-link);
+	border-bottom-color: var(--ember-bg-4);
+}
+
+.site-header .wrapper {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-rows: auto auto;
+	align-items: center;
+}
+
+.site-title,
+.site-title:link,
+.site-title:visited,
+.site-nav .page-link,
+.site-nav .page-link:link,
+.site-nav .page-link:visited {
+	color: var(--ember-fg-0);
+}
+
+.site-title {
+	grid-column: 1;
+	grid-row: 1;
+	float: none;
+}
+
+.site-nav {
+	position: static;
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: end;
+	float: none;
+	background: var(--ember-bg-0);
+	border-color: var(--ember-bg-4);
+}
+
+.site-nav .menu-icon > svg path {
+	fill: var(--ember-fg-1);
+}
+
+.site-nav input:checked ~ .trigger {
+	background: var(--ember-bg-0);
+}
+
+.active_page .page-link {
+	text-decoration-color: var(--site-link);
+}
+
+.ember-palette-switcher {
+	grid-column: 2;
+	grid-row: 2;
+	justify-self: end;
+	clear: none;
+	display: flex;
+	width: auto;
+	min-height: 44px;
+	align-items: flex-start;
+	justify-content: flex-end;
+	color: var(--ember-fg-2);
+	font-size: 0.68rem;
+	line-height: 1;
+	letter-spacing: 0.04em;
+}
+
+.ember-palette-switcher button {
+	all: unset;
+	display: inline-flex;
+	min-width: 44px;
+	min-height: 44px;
+	box-sizing: border-box;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: 0.25rem;
+	color: var(--ember-fg-2);
+	cursor: pointer;
+}
+
+.ember-palette-switcher button:hover {
+	color: var(--ember-fg-1);
+	text-decoration: underline;
+	text-underline-offset: 0.22em;
+}
+
+/* Keep both temperature choices subordinate to the primary menu: active uses
+   fg_1 plus an underline, while inactive uses fg_2. */
+.ember-palette-switcher button[aria-pressed="true"] {
+	color: var(--ember-fg-1);
+	text-decoration: underline;
+	text-decoration-color: var(--ember-fg-2);
+	text-underline-offset: 0.22em;
+}
+
+.ember-palette-switcher button:focus-visible {
+	outline-offset: -4px;
+}
+
+.page-content,
+.site-footer {
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-0);
+}
+
+.site-footer {
+	border-top-color: var(--ember-bg-4);
+}
+
+.footer-col-wrapper,
+.social-links,
+.metadata,
+.post-meta,
+.collection_title,
+figcaption {
+	color: var(--ember-fg-2);
+}
+
+hr {
+	border-color: var(--ember-bg-4);
+}
+
+blockquote {
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-2);
+	border-color: var(--ember-bg-4);
+}
+
+pre,
+code,
+.highlight,
+.highlighter-rouge .highlight {
+	color: var(--ember-fg-0);
+	background: var(--ember-bg-1);
+	border-color: var(--ember-bg-4);
+}
+
+code {
+	background: var(--ember-bg-2);
+}
+
+pre > code,
+.highlight pre,
+.highlight code {
+	background: transparent;
+}
+
+table {
+	color: var(--ember-fg-0);
+	border-color: var(--ember-bg-4);
+}
+
+table tr:nth-child(even) {
+	background: var(--ember-bg-1);
+}
+
+table th {
+	background: var(--ember-bg-2);
+	border-color: var(--ember-bg-4);
+}
+
+table td {
+	border-color: var(--ember-bg-4);
+}
+
+.orange,
+.grey {
+	color: var(--site-link);
+}
+
+@media screen and (max-width: $on-medium) {
+	html {
+		scroll-padding-top: 8rem;
+	}
+
+	.site-nav input:checked ~ .trigger {
+		position: absolute;
+		top: calc(100% + 1px);
+		right: 0;
+		min-width: 10rem;
+		padding: 0.35rem 0 0.5rem;
+		background: var(--ember-bg-0);
+		border: 1px solid var(--ember-bg-4);
+	}
+
+	.ember-palette-switcher {
+		min-height: 44px;
+	}
+
+	.ember-palette-switcher button {
+		min-height: 44px;
+	}
 }
