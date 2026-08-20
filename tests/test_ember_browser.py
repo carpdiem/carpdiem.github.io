@@ -212,7 +212,7 @@ class EmberBrowserTests(unittest.TestCase):
 
         state = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,temperature:document.documentElement.dataset.emberTemperature,images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),original:img.dataset.emberOriginalSrc,state:img.dataset.emberImageState,loaded:img.complete&&img.naturalWidth>0,width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),buttons:[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>{const rect=button.getBoundingClientRect();return {width:rect.width,height:rect.height}})})"
+                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,temperature:document.documentElement.dataset.emberTemperature,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),original:img.dataset.emberOriginalSrc,state:img.dataset.emberImageState,loaded:img.complete&&img.naturalWidth>0,width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),buttons:[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>{const rect=button.getBoundingClientRect();return {width:rect.width,height:rect.height}})})"
             )
         )
         self.assertEqual(state["palette"], "1200k-dark")
@@ -243,12 +243,15 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertLessEqual(
             abs(header_geometry["between"] - header_geometry["top"] / 2), 2.0
         )
+        self.assertGreaterEqual(header_geometry["bottom"], header_geometry["between"])
         self.assertLessEqual(
-            abs(header_geometry["bottom"] - header_geometry["between"]), 2.0
+            header_geometry["bottom"] - header_geometry["between"], 3.0
+        )
+        self.assertGreaterEqual(
+            header_geometry["separatorHeight"], header_geometry["controlHeight"] * 0.75
         )
         self.assertLessEqual(
-            abs(header_geometry["separatorHeight"] - header_geometry["controlHeight"]),
-            1.0,
+            header_geometry["separatorHeight"], header_geometry["controlHeight"]
         )
         self.assertLessEqual(header_geometry["separatorCenterDelta"], 1.0)
 
@@ -283,10 +286,11 @@ class EmberBrowserTests(unittest.TestCase):
         )
         restored = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height}))})"
+                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height}))})"
             )
         )
         self.assertEqual(restored["palette"], "3400k-light")
+        self.assertEqual(restored["paragraphLineHeight"], state["paragraphLineHeight"])
         self.assertEqual(restored["states"], ["source"])
         self.assertTrue(
             all(

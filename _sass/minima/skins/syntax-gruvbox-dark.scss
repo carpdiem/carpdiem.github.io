@@ -6,7 +6,7 @@
 
 code {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-2);
+  background-color: var(--ember-bg-3);
 }
 
 .highlight table td { padding: 5px; }
@@ -14,7 +14,7 @@ code {
 .highlight,
 .highlight .w {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-1);
+  background-color: var(--ember-bg-2);
 }
 .highlight .err {
   color: var(--ember-terminal-red);
@@ -143,5 +143,5 @@ code {
 }
 .highlight pre {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-1);
+  background-color: var(--ember-bg-2);
 }

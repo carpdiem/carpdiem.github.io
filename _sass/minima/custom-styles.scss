@@ -210,7 +210,7 @@ ul, ol {
 .highlight pre {
 	border-width: 0;
 	padding: 0;
-	background-color: var(--ember-bg-1);
+	background-color: var(--ember-bg-2);
 }
 
 code table {
@@ -305,7 +305,7 @@ body {
 	min-height: 0;
 	line-height: 1.3;
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-1);
+	background: var(--ember-bg-2);
 	border-top: 0;
 	border-bottom-color: var(--ember-bg-4);
 }
@@ -317,7 +317,7 @@ body {
 	grid-template-rows: auto;
 	align-items: start;
 	padding-top: 0.55rem;
-	padding-bottom: 0.21rem;
+	padding-bottom: 0.34rem;
 }
 
 .site-title,
@@ -342,7 +342,7 @@ body {
 	grid-row: 1;
 	justify-self: end;
 	float: none;
-	background: var(--ember-bg-1);
+	background: var(--ember-bg-2);
 	border-color: var(--ember-bg-4);
 }
 
@@ -351,7 +351,7 @@ body {
 }
 
 .site-nav input:checked ~ .trigger {
-	background: var(--ember-bg-1);
+	background: var(--ember-bg-2);
 }
 
 .active_page .page-link {
@@ -385,7 +385,7 @@ body {
 .ember-palette-separator {
 	display: block;
 	width: 1px;
-	height: 1.3em;
+	height: 1.1em;
 	flex: 0 0 1px;
 	align-self: center;
 	background: var(--ember-fg-2);
@@ -416,6 +416,10 @@ body {
 	background: var(--ember-bg-0);
 }
 
+.page-content p {
+	line-height: $base-line-height;
+}
+
 .site-footer {
 	border-top-color: var(--ember-bg-4);
 }
@@ -435,7 +439,7 @@ hr {
 
 blockquote {
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-2);
+	background: var(--ember-bg-3);
 	border-color: var(--ember-bg-4);
 }
 
@@ -444,12 +448,12 @@ code,
 .highlight,
 .highlighter-rouge .highlight {
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-1);
+	background: var(--ember-bg-2);
 	border-color: var(--ember-bg-4);
 }
 
 code {
-	background: var(--ember-bg-2);
+	background: var(--ember-bg-3);
 }
 
 pre > code,
@@ -519,7 +523,7 @@ table td {
 		right: 0;
 		min-width: 10rem;
 		padding: 0.35rem 0 0.5rem;
-		background: var(--ember-bg-1);
+		background: var(--ember-bg-2);
 		border: 1px solid var(--ember-bg-4);
 	}
 

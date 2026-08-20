@@ -115,7 +115,7 @@ class EmberSiteTests(unittest.TestCase):
         for role in (
             "--ember-fg-0",
             "--ember-fg-2",
-            "--ember-bg-1",
+            "--ember-bg-2",
             "--ember-bg-3",
             "--ember-terminal-red",
             "--ember-terminal-green",
