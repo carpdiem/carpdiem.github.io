@@ -1,6 +1,11 @@
 (() => {
   "use strict";
 
+  const contentTemplate = document.getElementById("ember-content-template");
+  if (contentTemplate) {
+    contentTemplate.replaceWith(contentTemplate.content.cloneNode(true));
+  }
+
   const root = document.documentElement;
   const storageKey = "usuallypragmatic.ember-temperature";
   const supportedImageExtensions = /\.(?:jpe?g|png|webp|gif|svg)$/i;

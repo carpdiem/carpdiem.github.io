@@ -9,9 +9,11 @@
     <main class="page-content" aria-label="Content">
       {%- capture ember_content -%}{{ content }}{%- endcapture -%}
       {%- assign ember_content = ember_content | replace: '<img src="', '<img data-ember-original-src="' -%}
-      <div class="wrapper ember-js-content">
-        {{ ember_content }}
-      </div>
+      <template id="ember-content-template">
+        <div class="wrapper ember-js-content">
+          {{ ember_content }}
+        </div>
+      </template>
       <noscript>
         <div class="wrapper ember-noscript-content">
           {{ content }}

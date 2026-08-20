@@ -65,8 +65,11 @@ class EmberSiteTests(unittest.TestCase):
         head = (ROOT / "_includes" / "head.html").read_text()
         header = (ROOT / "_includes" / "header.html").read_text()
         dots_layout = (ROOT / "_layouts" / "dots_layout.html").read_text()
+        runtime = (ROOT / "js" / "ember-site.js").read_text()
 
         self.assertIn('data-ember-palette="3400k-light"', default)
+        self.assertIn('id="ember-content-template"', default)
+        self.assertIn("contentTemplate.replaceWith", runtime)
         self.assertIn("/assets/ember/ember.css", head)
         self.assertIn("/js/ember-site.js", head)
         self.assertIn('class="ember-palette-switcher"', header)

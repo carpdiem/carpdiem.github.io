@@ -358,8 +358,23 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertTrue(mobile["sameRow"])
         self.assertTrue(all(height >= 44 for height in mobile["buttons"]))
 
+        self.cdp.call(
+            "Emulation.setDeviceMetricsOverride",
+            {"width": 1280, "height": 720, "deviceScaleFactor": 1, "mobile": False},
+        )
+        self.cdp.navigate(self.base_url + "/blog.html")
+        infinite = json.loads(
+            self.cdp.evaluate(
+                "new Promise((resolve,reject)=>{window.scrollTo(0,document.body.scrollHeight);const deadline=Date.now()+5000,timer=setInterval(()=>{const posts=document.querySelectorAll('.post-list .post').length;if(posts>=10){clearInterval(timer);const images=[...document.querySelectorAll('.post-list img')];resolve(JSON.stringify({posts,states:[...new Set(images.map(img=>img.dataset.emberImageState))],loaded:images.every(img=>img.complete&&img.naturalWidth>0)}))}else if(Date.now()>deadline){clearInterval(timer);reject(new Error('infinite scroll timeout'))}},50)})",
+                await_promise=True,
+            )
+        )
+        self.assertGreaterEqual(infinite["posts"], 10)
+        self.assertEqual(infinite["states"], ["1200k"])
+        self.assertTrue(infinite["loaded"])
+
         self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": True})
-        self.cdp.navigate(self.base_url + PHOTO_PAGE, settle=False)
+        self.cdp.navigate(self.base_url + PHOTO_PAGE + "#update-finished", settle=False)
         no_script_requests = [
             event["params"]["request"]["url"]
             for event in self.cdp.events
@@ -368,18 +383,16 @@ class EmberBrowserTests(unittest.TestCase):
         self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": False})
         no_script_state = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify((()=>{const visible=element=>getComputedStyle(element).display!=='none'&&element.getBoundingClientRect().width>0&&element.getBoundingClientRect().height>0;return {jsVisible:visible(document.querySelector('.ember-js-content')),fallbackVisible:visible(document.querySelector('.ember-noscript-content')),visiblePosts:[...document.querySelectorAll('.post')].filter(visible).length,visibleImages:[...document.querySelectorAll('main img')].filter(visible).length}})())"
+                "JSON.stringify((()=>{const visible=element=>element&&getComputedStyle(element).display!=='none'&&element.getBoundingClientRect().width>0&&element.getBoundingClientRect().height>0,jsContent=document.querySelector('.ember-js-content'),fallback=document.querySelector('.ember-noscript-content'),target=document.getElementById('update-finished'),targetRect=target.getBoundingClientRect();return {jsVisible:visible(jsContent),fallbackVisible:visible(fallback),visiblePosts:[...document.querySelectorAll('.post')].filter(visible).length,visibleImages:[...document.querySelectorAll('main img')].filter(visible).length,fragmentTargets:document.querySelectorAll('#update-finished').length,fragmentInView:targetRect.top>=-1&&targetRect.top<innerHeight,fragmentScrollY:scrollY}})())"
             )
         )
-        self.assertEqual(
-            no_script_state,
-            {
-                "jsVisible": False,
-                "fallbackVisible": True,
-                "visiblePosts": 1,
-                "visibleImages": 4,
-            },
-        )
+        self.assertFalse(no_script_state["jsVisible"])
+        self.assertTrue(no_script_state["fallbackVisible"])
+        self.assertEqual(no_script_state["visiblePosts"], 1)
+        self.assertEqual(no_script_state["visibleImages"], 4)
+        self.assertEqual(no_script_state["fragmentTargets"], 1)
+        self.assertTrue(no_script_state["fragmentInView"])
+        self.assertGreater(no_script_state["fragmentScrollY"], 1000)
         no_script_image_requests = [
             url
             for url in no_script_requests

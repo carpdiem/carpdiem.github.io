@@ -68,7 +68,14 @@ $(function() {
     var postURL = postURLs[index];
 		
     $.get(postURL, function(data) {
-      $(data).find(".post").appendTo(".post-list");
+      var documentFragment = new DOMParser().parseFromString(data, "text/html"),
+          template = documentFragment.getElementById("ember-content-template"),
+          searchRoot = template ? template.content : documentFragment,
+          post = searchRoot.querySelector(".post");
+
+      if (post) {
+        $(".post-list").append(post.cloneNode(true));
+      }
       callback();
     });
   }
