@@ -103,6 +103,21 @@ img {
 	padding-left: 0;
 }
 
+.footer-ember-credit {
+	color: var(--ember-fg-2);
+	font-size: $small-font-size;
+}
+
+.footer-ember-credit a,
+.footer-ember-credit a:link,
+.footer-ember-credit a:visited {
+	color: inherit;
+}
+
+.footer-ember-credit a:hover {
+	color: var(--ember-fg-1);
+}
+
 @media screen and (max-width: $on-medium) {
 	p img {
 		max-width: 94.7%;

@@ -64,6 +64,7 @@ class EmberSiteTests(unittest.TestCase):
         default = (ROOT / "_layouts" / "default.html").read_text()
         head = (ROOT / "_includes" / "head.html").read_text()
         header = (ROOT / "_includes" / "header.html").read_text()
+        footer = (ROOT / "_includes" / "footer.html").read_text()
         dots_layout = (ROOT / "_layouts" / "dots_layout.html").read_text()
         runtime = (ROOT / "js" / "ember-site.js").read_text()
 
@@ -73,6 +74,9 @@ class EmberSiteTests(unittest.TestCase):
         self.assertIn("/assets/ember/ember.css", head)
         self.assertIn("/js/ember-site.js", head)
         self.assertIn('class="ember-palette-switcher"', header)
+        self.assertIn('class="footer-ember-credit"', footer)
+        self.assertIn('href="https://www.usuallypragmatic.com/ember/"', footer)
+        self.assertIn("Ember: redshift safe color palettes", footer)
         self.assertLess(
             header.index('class="site-nav"'),
             header.index('class="ember-palette-switcher"'),
