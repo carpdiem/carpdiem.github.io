@@ -102,7 +102,7 @@ class EmberSiteTests(unittest.TestCase):
         ).read_text()
 
         self.assertIn("position: sticky", custom)
-        self.assertIn("grid-template-rows: auto auto", custom)
+        self.assertIn("grid-template-rows: auto", custom)
         self.assertIn("--site-link: var(--ember-terminal-red)", custom)
         self.assertRegex(
             custom,
@@ -115,7 +115,7 @@ class EmberSiteTests(unittest.TestCase):
         for role in (
             "--ember-fg-0",
             "--ember-fg-2",
-            "--ember-bg-0",
+            "--ember-bg-1",
             "--ember-bg-3",
             "--ember-terminal-red",
             "--ember-terminal-green",
@@ -129,9 +129,14 @@ class EmberSiteTests(unittest.TestCase):
     def test_generated_image_manifest_is_complete_and_grounded(self) -> None:
         manifest_path = ROOT / "images" / "ember-1200k" / "manifest.json"
         manifest = json.loads(manifest_path.read_text())
+        builder = (ROOT / "tools" / "build_ember_images.py").read_text()
+        self.assertIn("ImageOps.exif_transpose", builder)
+        self.assertNotIn("np.quantile", builder)
+        self.assertIn("normalized = np.clip(lightness, 0.0, 1.0)", builder)
         self.assertEqual(manifest["palette"], "1200k-dark")
         self.assertEqual(manifest["mapping"]["source_coordinate"], "Oklab L")
-        self.assertEqual(manifest["mapping"]["stretch_quantiles"], [0.01, 0.99])
+        self.assertEqual(manifest["mapping"]["normalization"], "none")
+        self.assertEqual(manifest["mapping"]["source_range"], [0.0, 1.0])
         self.assertEqual(len(manifest["images"]), 69)
         self.assertLessEqual(manifest["budgets"]["actual_total_bytes"], 25_000_000)
 

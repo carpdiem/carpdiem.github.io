@@ -14,7 +14,7 @@ code {
 .highlight,
 .highlight .w {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-0);
+  background-color: var(--ember-bg-1);
 }
 .highlight .err {
   color: var(--ember-terminal-red);
@@ -143,5 +143,5 @@ code {
 }
 .highlight pre {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-0);
+  background-color: var(--ember-bg-1);
 }

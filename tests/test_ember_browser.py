@@ -212,7 +212,7 @@ class EmberBrowserTests(unittest.TestCase):
 
         state = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,temperature:document.documentElement.dataset.emberTemperature,images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),original:img.dataset.emberOriginalSrc,state:img.dataset.emberImageState,loaded:img.complete&&img.naturalWidth>0})),buttons:[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>{const rect=button.getBoundingClientRect();return {width:rect.width,height:rect.height}})})"
+                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,temperature:document.documentElement.dataset.emberTemperature,images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),original:img.dataset.emberOriginalSrc,state:img.dataset.emberImageState,loaded:img.complete&&img.naturalWidth>0,width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),buttons:[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>{const rect=button.getBoundingClientRect();return {width:rect.width,height:rect.height}})})"
             )
         )
         self.assertEqual(state["palette"], "1200k-dark")
@@ -229,10 +229,28 @@ class EmberBrowserTests(unittest.TestCase):
         )
         self.assertTrue(
             all(
-                button["width"] >= 44 and button["height"] >= 44
+                button["width"] >= 44 and 10 <= button["height"] <= 20
                 for button in state["buttons"]
             )
         )
+        header_geometry = json.loads(
+            self.cdp.evaluate(
+                "JSON.stringify((()=>{const header=document.querySelector('.site-header'),headerRect=header.getBoundingClientRect(),about=[...document.querySelectorAll('.page-link')].find(link=>link.textContent.trim()==='About'),active=document.querySelector('.ember-palette-switcher button[aria-pressed=\"true\"]'),separator=document.querySelector('.ember-palette-separator'),range=element=>{const value=document.createRange();value.selectNodeContents(element);return value.getBoundingClientRect()},aboutRect=range(about),controlRect=range(active),separatorRect=separator.getBoundingClientRect();return {headerBg:getComputedStyle(header).backgroundColor,bodyBg:getComputedStyle(document.body).backgroundColor,borderTop:getComputedStyle(header).borderTopWidth,top:aboutRect.top-headerRect.top,between:controlRect.top-aboutRect.bottom,bottom:headerRect.bottom-controlRect.bottom,separatorHeight:separatorRect.height,controlHeight:controlRect.height,separatorCenterDelta:Math.abs((separatorRect.top+separatorRect.bottom-controlRect.top-controlRect.bottom)/2)}})())"
+            )
+        )
+        self.assertNotEqual(header_geometry["headerBg"], header_geometry["bodyBg"])
+        self.assertEqual(header_geometry["borderTop"], "0px")
+        self.assertLessEqual(
+            abs(header_geometry["between"] - header_geometry["top"] / 2), 2.0
+        )
+        self.assertLessEqual(
+            abs(header_geometry["bottom"] - header_geometry["between"]), 2.0
+        )
+        self.assertLessEqual(
+            abs(header_geometry["separatorHeight"] - header_geometry["controlHeight"]),
+            1.0,
+        )
+        self.assertLessEqual(header_geometry["separatorCenterDelta"], 1.0)
 
         requests = [
             event["params"]["request"]["url"]
@@ -259,16 +277,30 @@ class EmberBrowserTests(unittest.TestCase):
         self.cdp.evaluate(
             "document.querySelector('[data-ember-temperature-choice=\"3400k\"]').click()"
         )
+        self.cdp.evaluate(
+            "Promise.all([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.complete&&img.naturalWidth>0?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true})})))",
+            await_promise=True,
+        )
         restored = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],sources:[...document.querySelectorAll('main .ember-js-content img')].map(img=>img.getAttribute('src'))})"
+                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height}))})"
             )
         )
         self.assertEqual(restored["palette"], "3400k-light")
         self.assertEqual(restored["states"], ["source"])
         self.assertTrue(
-            all("/images/ember-1200k/" not in source for source in restored["sources"])
+            all(
+                "/images/ember-1200k/" not in image["src"]
+                for image in restored["images"]
+            )
         )
+        self.assertEqual(len(restored["images"]), len(state["images"]))
+        for mapped, source in zip(state["images"], restored["images"], strict=True):
+            self.assertLessEqual(abs(mapped["width"] - source["width"]), 1.0)
+            self.assertLessEqual(abs(mapped["height"] - source["height"]), 1.0)
+            self.assertEqual(
+                mapped["width"] >= mapped["height"], source["width"] >= source["height"]
+            )
 
         self.cdp.call(
             "Emulation.setEmulatedMedia",
@@ -309,13 +341,17 @@ class EmberBrowserTests(unittest.TestCase):
             "Emulation.setDeviceMetricsOverride",
             {"width": 375, "height": 812, "deviceScaleFactor": 1, "mobile": True},
         )
+        self.cdp.evaluate(
+            "document.querySelector('label[for=\"nav-trigger\"]').click()"
+        )
         mobile = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify((()=>{const h=document.querySelector('.site-header').getBoundingClientRect(),p=document.querySelector('.ember-palette-switcher').getBoundingClientRect();return {contained:p.bottom<=h.bottom+0.5,overflow:document.documentElement.scrollWidth>innerWidth,buttons:[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>button.getBoundingClientRect().height)}})())"
+                "JSON.stringify((()=>{const h=document.querySelector('.site-header').getBoundingClientRect(),p=document.querySelector('.ember-palette-switcher').getBoundingClientRect(),about=[...document.querySelectorAll('.page-link')].find(link=>link.textContent.trim()==='About').getBoundingClientRect(),buttons=[...document.querySelectorAll('.ember-palette-switcher button')].map(button=>button.getBoundingClientRect());return {contained:p.top>=about.bottom-0.5,overflow:document.documentElement.scrollWidth>innerWidth,sameRow:Math.abs(buttons[0].top-buttons[1].top)<0.5,buttons:buttons.map(rect=>rect.height)}})())"
             )
         )
         self.assertTrue(mobile["contained"])
         self.assertFalse(mobile["overflow"])
+        self.assertTrue(mobile["sameRow"])
         self.assertTrue(all(height >= 44 for height in mobile["buttons"]))
 
         self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": True})

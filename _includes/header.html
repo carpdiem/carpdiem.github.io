@@ -31,14 +31,13 @@
 			<div class="not_active_page nav_div"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></div>
             {%- endif -%}
           {%- endfor -%}
+          <div class="ember-palette-switcher" role="group" aria-label="Color temperature">
+            <button type="button" data-ember-temperature-choice="3400k" aria-pressed="true">3400K</button>
+            <span class="ember-palette-separator" aria-hidden="true"></span>
+            <button type="button" data-ember-temperature-choice="1200k" aria-pressed="false">1200K</button>
+          </div>
         </div>
       </nav>
     {%- endif -%}
-
-    <div class="ember-palette-switcher" role="group" aria-label="Color temperature">
-      <button type="button" data-ember-temperature-choice="3400k" aria-pressed="true">3400K</button>
-      <span aria-hidden="true">|</span>
-      <button type="button" data-ember-temperature-choice="1200k" aria-pressed="false">1200K</button>
-    </div>
   </div>
 </header>

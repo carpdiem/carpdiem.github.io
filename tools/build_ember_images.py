@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 import resvg_py  # pyright: ignore[reportMissingImports]
-from PIL import Image
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTE_PATH = ROOT / "assets" / "ember" / "1200k-dark-image-palette.json"
@@ -151,7 +151,10 @@ def load_source_rgb(path: Path) -> tuple[np.ndarray, tuple[int, int]]:
         image = Image.open(path)
 
     with image:
-        rgba = image.convert("RGBA")
+        oriented = ImageOps.exif_transpose(image)
+        if oriented is None:
+            oriented = image
+        rgba = oriented.convert("RGBA")
         # Existing content was authored for the site's original light canvas. Composite
         # transparency over white before measuring Oklab L so SVG equations and diagrams
         # preserve their browser-visible tonal structure rather than mapping invisible RGB.
@@ -179,11 +182,8 @@ def palette_png(indices: np.ndarray, palette: np.ndarray) -> bytes:
 def render(path: Path, palette: np.ndarray) -> tuple[bytes, dict[str, object]]:
     source_rgb, size = load_source_rgb(path)
     lightness = srgb_to_oklab(source_rgb)[..., 0]
-    low, high = np.quantile(lightness, (0.01, 0.99))
-    if high - low < 1e-12:
-        normalized = np.full_like(lightness, 0.5)
-    else:
-        normalized = np.clip((lightness - low) / (high - low), 0.0, 1.0)
+    low, high = float(lightness.min()), float(lightness.max())
+    normalized = np.clip(lightness, 0.0, 1.0)
 
     endpoint_lightness = srgb_to_oklab(palette[[0, -1]])[:, 0]
     if endpoint_lightness[0] > endpoint_lightness[1]:
@@ -201,7 +201,7 @@ def render(path: Path, palette: np.ndarray) -> tuple[bytes, dict[str, object]]:
     metadata: dict[str, object] = {
         "width": size[0],
         "height": size[1],
-        "source_oklab_l_quantiles": [round(float(low), 10), round(float(high), 10)],
+        "source_oklab_l_range": [round(low, 10), round(high, 10)],
         "source_output_oklab_l_correlation": round(correlation, 10),
     }
     return data, metadata

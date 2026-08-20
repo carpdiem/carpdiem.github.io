@@ -1552,9 +1552,10 @@
   },
   "image_mapping": {
     "source_coordinate": "Oklab L",
-    "stretch_quantiles": [
-      0.01,
-      0.99
+    "normalization": "none",
+    "source_range": [
+      0.0,
+      1.0
     ],
     "endpoint_order": "darkest-to-lightest by Oklab L"
   }
