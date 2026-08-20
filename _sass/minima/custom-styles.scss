@@ -115,6 +115,9 @@ img {
 .footer-ember-credit a,
 .footer-ember-credit a:link {
 	color: var(--site-link);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.16em;
 }
 
 .footer-ember-credit a:visited {

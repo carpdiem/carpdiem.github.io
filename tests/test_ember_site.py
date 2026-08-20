@@ -115,6 +115,13 @@ class EmberSiteTests(unittest.TestCase):
         self.assertRegex(
             custom,
             re.compile(
+                r"\.footer-ember-credit a,.*?text-decoration: underline;",
+                re.DOTALL,
+            ),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(
                 r'\.ember-palette-switcher button\[aria-pressed="true"\]\s*\{[^}]*color: var\(--ember-fg-1\)',
                 re.DOTALL,
             ),
