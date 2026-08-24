@@ -3,9 +3,9 @@
   "palette": "1200k-dark",
   "palette_source": {
     "repository": "https://github.com/carpdiem/ember",
-    "commit": "6d86f44fd5e02e2950f26e5bd1f44cde0543d345",
+    "commit": "70f4efbb3d97954e49ecf2f120d3fa477b14526f",
     "manifest": "palettes/ember.json",
-    "ember_schema_version": 13
+    "ember_schema_version": 14
   },
   "mapping": {
     "source_coordinate": "Oklab L",
@@ -28,7 +28,7 @@
       "source": "attachments/projects/cs162/cs162-view_statistics.png",
       "source_sha256": "4c4db46e88057a976046c7ebffea8dc510e9a5ed8387d4a3bcb044099817c039",
       "output": "images/ember-1200k/attachments/projects/cs162/cs162-view_statistics.png",
-      "output_sha256": "8a17423c532b49c7b960379eb36227a4f3ab7444e0900e49106f0de5a22053ea",
+      "output_sha256": "ec8161dceec3299f7ef07ff95e55caa965e86fcbe79a4644a6bf8543f72168a7",
       "output_bytes": 41993,
       "width": 1200,
       "height": 900,
@@ -36,13 +36,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9986238453
+      "source_output_oklab_l_correlation": 0.9979076309
     },
     {
       "source": "images/blog/finished_puzzle.jpg",
       "source_sha256": "f1e175493a5617b0409f68f9525eb4258b136627b4640c513cad1fe9e33dca55",
       "output": "images/ember-1200k/blog/finished_puzzle.png",
-      "output_sha256": "a64ee3d738875080b97d87ad9f5d45eaae994c257091d87f540cb0e8b6bebd0f",
+      "output_sha256": "43f9b1845f7053a0b1278b79ad6add25beaaef4fe2a942e2f91687b7ff57c76f",
       "output_bytes": 867204,
       "width": 1200,
       "height": 900,
@@ -50,13 +50,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9978665689
+      "source_output_oklab_l_correlation": 0.9974485516
     },
     {
       "source": "images/blog/grayscale_graph_hell.jpg",
       "source_sha256": "5d71a1ffb9e4a4507076ce5057bd808e489ecd67e021f08bf956466c51a069a2",
       "output": "images/ember-1200k/blog/grayscale_graph_hell.png",
-      "output_sha256": "482cdbf3852307b589e655a5028d5ce693a1201a8657c992cf67c19588713131",
+      "output_sha256": "cc988c8a8b7ad91b9a5aafa7d44075c15328c0b8553771ba738bd282f6a25bb2",
       "output_bytes": 474063,
       "width": 1200,
       "height": 900,
@@ -64,13 +64,13 @@
         0.0650529067,
         0.8441771696
       ],
-      "source_output_oklab_l_correlation": 0.9981238877
+      "source_output_oklab_l_correlation": 0.9983388328
     },
     {
       "source": "images/blog/great_wave_puzzle.jpg",
       "source_sha256": "6024f8f100a526268f1502c2180298f87c9e6436643a1d3b9bec193efa308039",
       "output": "images/ember-1200k/blog/great_wave_puzzle.png",
-      "output_sha256": "1ca91cef171e1fa2790b2b6cfc49243be1bcab4b09d705d2e259b119dc5e4f60",
+      "output_sha256": "d78b7fdfeda58fd5ce4d2c73507d3ca72d3cf8fcc9737835a1fb7458f0aebef6",
       "output_bytes": 854437,
       "width": 1200,
       "height": 900,
@@ -78,13 +78,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9979664395
+      "source_output_oklab_l_correlation": 0.9975949339
     },
     {
       "source": "images/blog/memorial_trees.jpg",
       "source_sha256": "3cde906c75aceb868532096540f5d35e6bf626e208fc4c14e9edb68f90c2ecc2",
       "output": "images/ember-1200k/blog/memorial_trees.png",
-      "output_sha256": "5c9098f9aeaf8116cee0411644eae0881b381136c550fcca18167e9c37de687e",
+      "output_sha256": "d029b4c8147d16818610965662f6699aa59ddf41dfcedbffe22490c00ed53656",
       "output_bytes": 918774,
       "width": 1200,
       "height": 900,
@@ -92,13 +92,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9970404294
+      "source_output_oklab_l_correlation": 0.9966643671
     },
     {
       "source": "images/blog/monument_to_wellington.jpg",
       "source_sha256": "62b6d9d58110b872eeb8dbc25a52bb264c4d43e3ead3c8da6a864faaee25c697",
       "output": "images/ember-1200k/blog/monument_to_wellington.png",
-      "output_sha256": "ff4752e6e0361fa8c9a49d95c5510c2ed864503926e86cad3f0d3f8746919c95",
+      "output_sha256": "62eb106efd271b74408de3f2c2f5e63173f118dc027805abc198dc38c8050e5d",
       "output_bytes": 533073,
       "width": 1200,
       "height": 900,
@@ -106,13 +106,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9988064426
+      "source_output_oklab_l_correlation": 0.9983433273
     },
     {
       "source": "images/blog/piece_measurements.jpg",
       "source_sha256": "1793a135c488cdc2b096672fcd661011fa918a6a116d534d0e08828211667a19",
       "output": "images/ember-1200k/blog/piece_measurements.png",
-      "output_sha256": "f417b5e88e16fcfafc7331c52959d67777ce6cdd52e99a372bb8ad20b50bdbcf",
+      "output_sha256": "686a98acb3c6b7d16802c2c0170465adefe38f0166ac9fc6b10455be1561872a",
       "output_bytes": 410711,
       "width": 1200,
       "height": 797,
@@ -120,13 +120,13 @@
         0.2509869164,
         0.9866758935
       ],
-      "source_output_oklab_l_correlation": 0.9982936997
+      "source_output_oklab_l_correlation": 0.9986724577
     },
     {
       "source": "images/blog/piece_sorting.jpg",
       "source_sha256": "d0dd758bac566193be83b0af4684f50b312b31bfdef69bf6d99539421d24b5a4",
       "output": "images/ember-1200k/blog/piece_sorting.png",
-      "output_sha256": "0a8849fa64a1fa26c67f2be2072451ac18fe68d5b8333eee68e88846273e957f",
+      "output_sha256": "d8d6f75b0e383c1e2b12897b15285b5bf83b184cfa72ee58eba2ae2eed223147",
       "output_bytes": 723847,
       "width": 1200,
       "height": 835,
@@ -134,13 +134,13 @@
         0.0,
         0.9964958667
       ],
-      "source_output_oklab_l_correlation": 0.9981066043
+      "source_output_oklab_l_correlation": 0.9978221256
     },
     {
       "source": "images/blog/st_patricks.jpg",
       "source_sha256": "1e4280d101172d5f83343f22ba07c455eb55b08454a549e5b78e4f42bfbb94a2",
       "output": "images/ember-1200k/blog/st_patricks.png",
-      "output_sha256": "35bf6b1d0f83b5b7826629c1b1c36c07911e8ce7cb4d44ff19b458834c8f8374",
+      "output_sha256": "0b838d73877a7ae568f5d3ab52c2465d2a71b4035cfe2b4e655ea1f2365636e9",
       "output_bytes": 639562,
       "width": 1200,
       "height": 900,
@@ -148,13 +148,13 @@
         0.0382731361,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9978993363
+      "source_output_oklab_l_correlation": 0.9954106879
     },
     {
       "source": "images/blog/tart_yogurt.jpg",
       "source_sha256": "e2568da532b66e801ed7bcecebceb44db4f270b4edb90d979d493f69e2451db4",
       "output": "images/ember-1200k/blog/tart_yogurt.png",
-      "output_sha256": "cce0ebe4c32fb3e4f132f7c25c5c318d875d485b7381de5b07a5ea608ab8c1c5",
+      "output_sha256": "cd65e234aecd43731e298b6c74e433f838f87c5ee296fbf14916271d068d6c36",
       "output_bytes": 701621,
       "width": 1200,
       "height": 900,
@@ -162,13 +162,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9984131213
+      "source_output_oklab_l_correlation": 0.9979005464
     },
     {
       "source": "images/blog/unit_vector_orthogonality.png",
       "source_sha256": "238159b64e357081b9c0603779650d9f976d4b953ff431d8435a37786ae75293",
       "output": "images/ember-1200k/blog/unit_vector_orthogonality.png",
-      "output_sha256": "b4f999c6ca852b9218d3a6b1573d6dedabdaf0b08dbb7f0e9ca0ee6b1691afce",
+      "output_sha256": "1bf4e2d88a4f75001a812337cfbc5eae9840eb46532b4848060116a05af4c52d",
       "output_bytes": 43878,
       "width": 1200,
       "height": 851,
@@ -176,13 +176,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9985092965
+      "source_output_oklab_l_correlation": 0.9976978077
     },
     {
       "source": "images/blog/wellington_inscription.jpg",
       "source_sha256": "b8bc80f31aaaef7e0eb0cee411d89b1f17c5fbfb547f11c1b38f3f535f9b1fef",
       "output": "images/ember-1200k/blog/wellington_inscription.png",
-      "output_sha256": "1a97edc9b9aa768b846fc4d67c09e279a9081a4ba31df7d447c25b24971107cd",
+      "output_sha256": "d638ffb7f8e2f8eac4689cf9a3eff4a0d4e73e8ff21bc885a94b274fba243a07",
       "output_bytes": 788405,
       "width": 1200,
       "height": 900,
@@ -190,13 +190,13 @@
         0.0,
         0.9847054921
       ],
-      "source_output_oklab_l_correlation": 0.9975083661
+      "source_output_oklab_l_correlation": 0.9972818824
     },
     {
       "source": "images/essays/cml_in_startups/error_correcting_conversations.png",
       "source_sha256": "94a106236fbe9eb036c463084e6f096bb0f389fa1b557dbe2e6f3c15ec20e954",
       "output": "images/ember-1200k/essays/cml_in_startups/error_correcting_conversations.png",
-      "output_sha256": "dd53a892fc18801e93e6cdca85b4bcf1c45a9db70a39c6f4802df649ddc6044e",
+      "output_sha256": "9916eb6e93ded94cd20606e51577ce3a9165e3228a056f3d3978872b17633eb7",
       "output_bytes": 65636,
       "width": 1200,
       "height": 917,
@@ -204,13 +204,13 @@
         0.3363091514,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9996820547
+      "source_output_oklab_l_correlation": 0.9995751532
     },
     {
       "source": "images/essays/overfitting_life/data_and_2nd_order.png",
       "source_sha256": "04e04c00f78d073173c82f445e1769a60934a4b79fcd206fba703566ba758781",
       "output": "images/ember-1200k/essays/overfitting_life/data_and_2nd_order.png",
-      "output_sha256": "9953d1aded05a64dbdecaf39fdde6a5f509e8a0c41f4252d06961e0dd2e31546",
+      "output_sha256": "fa28c3d3e5881e0448c2045915c38c6d44b5b50024c99a4b80a4b4a14a954b35",
       "output_bytes": 4021,
       "width": 640,
       "height": 262,
@@ -218,13 +218,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9997711968
+      "source_output_oklab_l_correlation": 0.9995474534
     },
     {
       "source": "images/essays/overfitting_life/data_and_4th_order.png",
       "source_sha256": "eb66e10c3a81e52d6b19b9544805d3d598b9c27a20a2e416e9d8a897698ced18",
       "output": "images/ember-1200k/essays/overfitting_life/data_and_4th_order.png",
-      "output_sha256": "47c14c81fea82b29d24206ef2b3bd0968a9eefda61bdb4d70869b6a37da542d4",
+      "output_sha256": "1684b127bc3c5fe712f57f0a7b30b5ed3a9f9453585e0e964cccf51d5d84ab27",
       "output_bytes": 4629,
       "width": 640,
       "height": 299,
@@ -232,13 +232,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9998922149
+      "source_output_oklab_l_correlation": 0.9997724181
     },
     {
       "source": "images/essays/overfitting_life/data_and_noiseless_generator_and_2nd_order.png",
       "source_sha256": "e4b026bb8d64d8029f2b3f792948448b9b69781cd9158e5065c44c7e407f5c10",
       "output": "images/ember-1200k/essays/overfitting_life/data_and_noiseless_generator_and_2nd_order.png",
-      "output_sha256": "825bf3ae938d3d80a1130b041dea6c763faaef063e215eabcf4ae698faee45c3",
+      "output_sha256": "46d30cace7db5b012e71e6d5d29b3998352701d3c6b0318df5bde2e692b0f9ca",
       "output_bytes": 5575,
       "width": 640,
       "height": 262,
@@ -246,13 +246,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9997164922
+      "source_output_oklab_l_correlation": 0.9995047207
     },
     {
       "source": "images/essays/overfitting_life/data_and_noiseless_generator_and_4th_order.png",
       "source_sha256": "01aeb2229d48444301f07a6e7185a2368ec518e6760131bee390467d265d22ba",
       "output": "images/ember-1200k/essays/overfitting_life/data_and_noiseless_generator_and_4th_order.png",
-      "output_sha256": "8119a9789109a728c1c84b86e6c7a3d88065df694066bee8097be4beaed809d9",
+      "output_sha256": "42689a4d02793f732fdc381923b460e50bb9b69a3c978040e1d02d6601878bf2",
       "output_bytes": 6701,
       "width": 640,
       "height": 299,
@@ -260,13 +260,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9996161945
+      "source_output_oklab_l_correlation": 0.9994253569
     },
     {
       "source": "images/essays/overfitting_life/data_only.png",
       "source_sha256": "fb2d0c4453eb191c84e2b1e5ac940eeeae138b547cf3cee0b885d330fab34f25",
       "output": "images/ember-1200k/essays/overfitting_life/data_only.png",
-      "output_sha256": "25360a6093f0072414f602ee14c570a10ed551d102630d95d4732b02cacf8471",
+      "output_sha256": "124514478253c52dc139025383b379f7fc7417a0a7ecf870812e920b04f1435e",
       "output_bytes": 1659,
       "width": 640,
       "height": 269,
@@ -274,13 +274,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9997753254
+      "source_output_oklab_l_correlation": 0.9996333171
     },
     {
       "source": "images/essays/overfitting_life/data_with_noiseless_generator.png",
       "source_sha256": "e58bb44551f7605f8fd5af8e739e4eb17045757f6c3b475a605bc32f746f3600",
       "output": "images/ember-1200k/essays/overfitting_life/data_with_noiseless_generator.png",
-      "output_sha256": "9cc5efeeb9a6aceb7ca19700217f3f5807f7ab87e1f46a3709926fa624a260d9",
+      "output_sha256": "6ed2f6b118befce99d213ba055652ff5bebdf273f79c2ee0ba2e31f0492316f8",
       "output_bytes": 3921,
       "width": 640,
       "height": 258,
@@ -288,13 +288,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9996436209
+      "source_output_oklab_l_correlation": 0.9993950827
     },
     {
       "source": "images/essays/overfitting_life/double_graphs_4th_order.png",
       "source_sha256": "7e3b651d800952043e8020e6097f56839de1649b0e3eed1c656a0e27b6228cba",
       "output": "images/ember-1200k/essays/overfitting_life/double_graphs_4th_order.png",
-      "output_sha256": "4084cb2d1aff4f0904347b3eb5e6f7d191be209145f29f30b716b91f29e3fe44",
+      "output_sha256": "354dc06f19bbb09aa1e79e54808852b4a428f05c4b3e01984ac0457c8f8a0e08",
       "output_bytes": 11931,
       "width": 1200,
       "height": 280,
@@ -302,13 +302,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.999659816
+      "source_output_oklab_l_correlation": 0.9994265256
     },
     {
       "source": "images/essays/overfitting_life/noiseless_data_and_4th_order.png",
       "source_sha256": "f646e675cc5ecac3814cce7adc277cc6aede0476f8228156f13cb8baecce9668",
       "output": "images/ember-1200k/essays/overfitting_life/noiseless_data_and_4th_order.png",
-      "output_sha256": "4289c1ffeb0116f484d2e4898d2ee51ca689f3e7fc29561fed0a331c061d9b31",
+      "output_sha256": "e903a50497b9dc6ba3dbbb10699a7f592d1396d3b7c16a76d67859a4e28c0f8b",
       "output_bytes": 3588,
       "width": 640,
       "height": 220,
@@ -316,13 +316,13 @@
         0.4520137184,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9998780009
+      "source_output_oklab_l_correlation": 0.9997543877
     },
     {
       "source": "images/essays/self-trade/comp_and_abs_adv.png",
       "source_sha256": "0e63ac23283cf389d69f14538cbd9b1d449eac28a1c868ac001ddd97575e2428",
       "output": "images/ember-1200k/essays/self-trade/comp_and_abs_adv.png",
-      "output_sha256": "397cc932568ab81d12a8332b65ce96847a028dbc360264973e61cb97ed3bada7",
+      "output_sha256": "a29125429597ccbf52ad5a0128607bb0b590ab40d7c622cbaa9b9b913b5da42d",
       "output_bytes": 374493,
       "width": 1200,
       "height": 886,
@@ -330,13 +330,13 @@
         0.3629894843,
         0.9761387843
       ],
-      "source_output_oklab_l_correlation": 0.999486014
+      "source_output_oklab_l_correlation": 0.9995283834
     },
     {
       "source": "images/essays/self-trade/comp_and_abs_adv_2.png",
       "source_sha256": "19c9f2dcb2143f57c5fed321b3d22c0a4e85b0e49c04b5a7dfabe76f14d392ef",
       "output": "images/ember-1200k/essays/self-trade/comp_and_abs_adv_2.png",
-      "output_sha256": "b1b1d1f111bd1bc6e7ffae386a5ae124f158e83f044428fc2e0dd76605c3cec9",
+      "output_sha256": "3485888a7b21078ea57c9390d4364484a6b701cb1405f9c4fcf8027cfaa979f1",
       "output_bytes": 382601,
       "width": 1200,
       "height": 886,
@@ -344,13 +344,13 @@
         0.3591563412,
         0.9791293496
       ],
-      "source_output_oklab_l_correlation": 0.9994911095
+      "source_output_oklab_l_correlation": 0.9995369226
     },
     {
       "source": "images/essays/self-trade/comp_and_abs_adv_3.png",
       "source_sha256": "8b480507a8bac6350c755758fae79cd0c11ff523e7e0e2f91c1766cf1f3e2961",
       "output": "images/ember-1200k/essays/self-trade/comp_and_abs_adv_3.png",
-      "output_sha256": "33d6907144c780f434863fde38828c7998635340b036736678e9501a5c667915",
+      "output_sha256": "741669e55462febac3cf6afb71a7d29a9bc2a50bb269de9e937585b96640f454",
       "output_bytes": 377903,
       "width": 1200,
       "height": 886,
@@ -358,13 +358,13 @@
         0.3629894843,
         0.9840663676
       ],
-      "source_output_oklab_l_correlation": 0.9994660033
+      "source_output_oklab_l_correlation": 0.9995162062
     },
     {
       "source": "images/essays/self-trade/comp_and_no_abs_adv.png",
       "source_sha256": "337b74f22d348bd93acdf08bd301611784432c74fbed1b6c2d3ece84eef06bb0",
       "output": "images/ember-1200k/essays/self-trade/comp_and_no_abs_adv.png",
-      "output_sha256": "2f0770dd59fbf3422b04acc731be13ca0f1a5e929faf01f6c56ef74a51f4ae1d",
+      "output_sha256": "67dd0e77f47f2b914982ebed7878c39ea0b03abdc5d7471bc7ca3ffc6629a6c8",
       "output_bytes": 567428,
       "width": 1200,
       "height": 1366,
@@ -372,13 +372,13 @@
         0.3619462735,
         0.9780905058
       ],
-      "source_output_oklab_l_correlation": 0.9994779515
+      "source_output_oklab_l_correlation": 0.9995139287
     },
     {
       "source": "images/essays/self-trade/comp_and_no_abs_adv_2.png",
       "source_sha256": "4ae1ec625b973c800acf0176ae389fe34ea6946f2075594965a115e4c9d1751a",
       "output": "images/ember-1200k/essays/self-trade/comp_and_no_abs_adv_2.png",
-      "output_sha256": "d217ed3b754d9feb890d7e590195e1c2d4b52fc3c96fcfe2f6620811fb58c938",
+      "output_sha256": "b6782aad3daa9239abb98611d5cd3205b75fc2e39d085a416f05d51577d33f9c",
       "output_bytes": 572940,
       "width": 1200,
       "height": 1366,
@@ -386,13 +386,13 @@
         0.3619462735,
         0.9932913786
       ],
-      "source_output_oklab_l_correlation": 0.9994471984
+      "source_output_oklab_l_correlation": 0.9994921746
     },
     {
       "source": "images/essays/self-trade/prices_that_make_both_happy.png",
       "source_sha256": "9c869d80c1039c0cce51738697ed89e59242fa4b9698c8e2a6cf9ddd633c218f",
       "output": "images/ember-1200k/essays/self-trade/prices_that_make_both_happy.png",
-      "output_sha256": "1100e3b66a963269f93ef0bc53f02f348de838a47da46a30848c39939864ae82",
+      "output_sha256": "a9d481ee6a27f160648421117aa4dd5cbfc5e574079a444d49cec4c3b1772586",
       "output_bytes": 130441,
       "width": 1200,
       "height": 280,
@@ -400,13 +400,13 @@
         0.3619462735,
         0.9856407629
       ],
-      "source_output_oklab_l_correlation": 0.9994468663
+      "source_output_oklab_l_correlation": 0.9995111668
     },
     {
       "source": "images/essays/self-trade/prices_that_make_england_happy.png",
       "source_sha256": "61766d5f4be6cd009ca840b8bf93e8066bba0f9f42fbbc1c951d47a31cfd010b",
       "output": "images/ember-1200k/essays/self-trade/prices_that_make_england_happy.png",
-      "output_sha256": "06c242142fba9ee4140994bb715c2fd4a98220c0d570570dde974f62e1ef3b1b",
+      "output_sha256": "1c13a85da25b83f4200c2b3c8c772938d9a5ced6a80df9f20770841f60044d7e",
       "output_bytes": 132440,
       "width": 1200,
       "height": 280,
@@ -414,13 +414,13 @@
         0.35673936,
         0.9880558969
       ],
-      "source_output_oklab_l_correlation": 0.9994901559
+      "source_output_oklab_l_correlation": 0.9995454551
     },
     {
       "source": "images/essays/self-trade/prices_that_make_portugal_happy.png",
       "source_sha256": "67fda9c786055112a95f383ccad8590a0e3a0231f891c1b3ff115b2aadcfc16c",
       "output": "images/ember-1200k/essays/self-trade/prices_that_make_portugal_happy.png",
-      "output_sha256": "fcef38079e8115a23181516e498076c000a4e9b1ae0372c4d16c6c1d57d1dd2d",
+      "output_sha256": "7e2f1bb6bec3b6c3d912ba08f67cdfeb436bc3f2d71c161e316f9c0e22bc68d2",
       "output_bytes": 133903,
       "width": 1200,
       "height": 280,
@@ -428,13 +428,13 @@
         0.3595209077,
         0.9768368976
       ],
-      "source_output_oklab_l_correlation": 0.9995737883
+      "source_output_oklab_l_correlation": 0.9996157658
     },
     {
       "source": "images/essays/sigmoid_learning/effort_vs_time.png",
       "source_sha256": "ec848d9700d9e5f6c1a4f7002b42b86fe583bc367c2e3352b8c1b7582a0b1a9f",
       "output": "images/ember-1200k/essays/sigmoid_learning/effort_vs_time.png",
-      "output_sha256": "a020569d1a654c83c27f50f9cdaf1375f1792f51e5a49bc5ba78f43b16ea2cc0",
+      "output_sha256": "9c53ac58b07be5198548e9afa3110aa6835db7ec476d56b032ad936ac694e548",
       "output_bytes": 58557,
       "width": 1127,
       "height": 935,
@@ -442,13 +442,13 @@
         0.4035179965,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9994879314
+      "source_output_oklab_l_correlation": 0.9992069977
     },
     {
       "source": "images/misc/cat_puzzle.jpg",
       "source_sha256": "70216c6713384969b744ce5e996e2ba661ba539983892cb1fe38f33ccedc361b",
       "output": "images/ember-1200k/misc/cat_puzzle.png",
-      "output_sha256": "4ac139b84012de25f4c5217aad1750a89c06103291578240a83f68dfbf805adc",
+      "output_sha256": "5a4eaa51743942e1c04dd171dadf20ca07ab54becdde031f8caa7cb7b6d0bb3e",
       "output_bytes": 1704651,
       "width": 1200,
       "height": 1600,
@@ -456,13 +456,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9977810816
+      "source_output_oklab_l_correlation": 0.9973789729
     },
     {
       "source": "images/misc/cut_diet_june_2020_results.png",
       "source_sha256": "4fd2100053fdb91f7ff581d008d9d0c54ea2aaf022bcfec3bf4ed36b3110ec64",
       "output": "images/ember-1200k/misc/cut_diet_june_2020_results.png",
-      "output_sha256": "54bd0a87e3ae33cf53c099e0c520859cd593575935117740f2514b5f181fc1e4",
+      "output_sha256": "fb15722e639be6b7006c5592b6561f71bd60b61c02271aab72d0a5fa3de08b2d",
       "output_bytes": 72779,
       "width": 1200,
       "height": 1319,
@@ -470,13 +470,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9975605297
+      "source_output_oklab_l_correlation": 0.9947175513
     },
     {
       "source": "images/misc/raster_chess_pieces.png",
       "source_sha256": "1eb8f92b52ecbde01640707ce52b12090ab84c669f1f05315cf8e5e066afefe8",
       "output": "images/ember-1200k/misc/raster_chess_pieces.png",
-      "output_sha256": "894ed754d1286880cd2b5753467f2d6dcc1c9a5e5ca39fd00c318f16c301410c",
+      "output_sha256": "8fc207ddc036e17492442edd31bef582dade610df25418ea2daa8f35d62652ef",
       "output_bytes": 32229,
       "width": 1200,
       "height": 489,
@@ -484,13 +484,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9989769973
+      "source_output_oklab_l_correlation": 0.9983894041
     },
     {
       "source": "images/misc/root_box_front.png",
       "source_sha256": "d5cc577e0bd7dc9cfab35362f5a39c8fa8918bfbdda4d624d6a3e70bd8850c59",
       "output": "images/ember-1200k/misc/root_box_front.png",
-      "output_sha256": "39af0fe8bf94a91fcc4fd3164ba5f675e6ffa0f1935e0452e88e919dd0d254ec",
+      "output_sha256": "ce9e8b69cbec0c02d0cf3ee312ef6dade151d4050c71358e11eabc21bb792328",
       "output_bytes": 838303,
       "width": 1200,
       "height": 919,
@@ -498,13 +498,13 @@
         0.0,
         0.8780813102
       ],
-      "source_output_oklab_l_correlation": 0.9975094091
+      "source_output_oklab_l_correlation": 0.9969565414
     },
     {
       "source": "images/misc/vector_chess_pieces.svg",
       "source_sha256": "1c35a01c322903461100f20635ce1707014ffc48413cd5e1d22f3815e952a77f",
       "output": "images/ember-1200k/misc/vector_chess_pieces.png",
-      "output_sha256": "9e4e450c6e814dbb2f93516aeeeb5d9a45f1cf234e72ae1d055c1ca09c40ba75",
+      "output_sha256": "3b7e82f768c1f46e54b52442d611d9675a819cea7a3fe7a893f1a54da4bbdde0",
       "output_bytes": 31862,
       "width": 1200,
       "height": 489,
@@ -512,13 +512,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.998970554
+      "source_output_oklab_l_correlation": 0.9983628085
     },
     {
       "source": "images/projects/athletics/1RMs-2020-06-14.png",
       "source_sha256": "45edef190ed543b03d639658474be50b2c0e2fa16da87f28de1c98fbb657142a",
       "output": "images/ember-1200k/projects/athletics/1RMs-2020-06-14.png",
-      "output_sha256": "d069ff59c6188f4beeb762138da9efe4656d70f67d644c1feba8e2d6a15d41a1",
+      "output_sha256": "94ba53cd714c108f8b923adf41c13a1780a793882e928ef6bcd85829ca62f8bc",
       "output_bytes": 40139,
       "width": 1200,
       "height": 620,
@@ -526,13 +526,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9980965263
+      "source_output_oklab_l_correlation": 0.997120667
     },
     {
       "source": "images/projects/athletics/1RMs-2020-09-02.png",
       "source_sha256": "c0a8016b0b06552ab7f66958cae10bc0f4bb0e788ed72af1ae6e86bbbc150f40",
       "output": "images/ember-1200k/projects/athletics/1RMs-2020-09-02.png",
-      "output_sha256": "2e1228fe9ab4e170c231e1ae11e4457c4b74cfc040f89d6ab91f842496130788",
+      "output_sha256": "67d83629daef61a73e6c9e2910914e788f6cfb6a16b831b9247180abdf5abd65",
       "output_bytes": 44104,
       "width": 1200,
       "height": 620,
@@ -540,13 +540,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982249779
+      "source_output_oklab_l_correlation": 0.9972994789
     },
     {
       "source": "images/projects/athletics/1RMs-2020-10-27.png",
       "source_sha256": "bedcc70c9f4c4dbcca65cbbd0ea5c1ee53a952bb6b6c48a8d7f46828f9a9d3ec",
       "output": "images/ember-1200k/projects/athletics/1RMs-2020-10-27.png",
-      "output_sha256": "a11ebcf72a387d45dc07aa5caa26de16c1fc64b40c18fdd93c12c58e4958ad5f",
+      "output_sha256": "af29e6412b20edd05531d574e9e7de7782eb2741a84258245b5ddca1491d8b74",
       "output_bytes": 49626,
       "width": 1200,
       "height": 706,
@@ -554,13 +554,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9983058945
+      "source_output_oklab_l_correlation": 0.9973923069
     },
     {
       "source": "images/projects/athletics/1RMs.png",
       "source_sha256": "992c17fcc2eba51d30cdd285fc33179b5a8b071763946368088bfc5b3141ea44",
       "output": "images/ember-1200k/projects/athletics/1RMs.png",
-      "output_sha256": "624be263aeda062091c09a76bd974255c933c0b4baad0366dcc919e2cc0c00fe",
+      "output_sha256": "6156617b7e262b410caab278cde316bea91166a48a35a82a72a4a5afe5015785",
       "output_bytes": 36500,
       "width": 1200,
       "height": 620,
@@ -568,13 +568,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9980880437
+      "source_output_oklab_l_correlation": 0.9971007667
     },
     {
       "source": "images/projects/athletics/strength-to-weight-2020-06-14.png",
       "source_sha256": "e39a118a804e36041d8a039548d5e6afd002f1eb1526aba9c23bce8f9218543a",
       "output": "images/ember-1200k/projects/athletics/strength-to-weight-2020-06-14.png",
-      "output_sha256": "4661e0d6cbc73247d635f280b8a9da89e69c6d0f2c6e714eda868ab25b966b21",
+      "output_sha256": "220d49b02cfd8fdf292451b5284fa8e39cdc7de77f78c79aae7f7617d92a2d98",
       "output_bytes": 42561,
       "width": 1200,
       "height": 624,
@@ -582,13 +582,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9985035523
+      "source_output_oklab_l_correlation": 0.9976557829
     },
     {
       "source": "images/projects/athletics/strength-to-weight-2020-09-02.png",
       "source_sha256": "4a78fc1275d3a2e8a204a173f6549f8bac045e0f112e4088692a83aeeb4f32b1",
       "output": "images/ember-1200k/projects/athletics/strength-to-weight-2020-09-02.png",
-      "output_sha256": "d972fb98cef638796f82c3a31a49f3a15cea0ae7968b80289a9b28064e6ec3e5",
+      "output_sha256": "b4d84687ffa90d82d6941ddba17879d323d47ab431cac60edf7cce56fa1d2b68",
       "output_bytes": 46331,
       "width": 1200,
       "height": 624,
@@ -596,13 +596,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9985395656
+      "source_output_oklab_l_correlation": 0.9977375869
     },
     {
       "source": "images/projects/athletics/strength-to-weight-2020-10-27.png",
       "source_sha256": "18a4ddd66e97689c1a4a6a04d95c764fe26c1ef7e45aa9d56e67cec48c0e5215",
       "output": "images/ember-1200k/projects/athletics/strength-to-weight-2020-10-27.png",
-      "output_sha256": "037bb358233a0027b83ee8a9ca98236bf757b3527b13e9b08ad84e4e671c1f5c",
+      "output_sha256": "51c82567d3adccfc77744bb19def4ad0cfa9adce926b608357f5e7fff8d2b80b",
       "output_bytes": 51449,
       "width": 1200,
       "height": 710,
@@ -610,13 +610,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9984606785
+      "source_output_oklab_l_correlation": 0.9976007024
     },
     {
       "source": "images/projects/athletics/strength-to-weight.png",
       "source_sha256": "91f68419dffb335acdd87433e2212912345203820f456c4192aba1b09675def2",
       "output": "images/ember-1200k/projects/athletics/strength-to-weight.png",
-      "output_sha256": "4ddd295cc53095bfb84640bcf9b474ef8e0bc7c8ece9c0e75f0754b708bc55d2",
+      "output_sha256": "f5dff7b19c89e7c5af403843bed5bf821ed8ac0d4fc98e36a486133e261b34fa",
       "output_bytes": 39471,
       "width": 1200,
       "height": 624,
@@ -624,13 +624,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9984719405
+      "source_output_oklab_l_correlation": 0.9976148052
     },
     {
       "source": "images/projects/color_match/Fluorescent_spectrum.png",
       "source_sha256": "1e47121aee028a0c77b49cf4748bf804a6eb38f16b3253fd7ebeb1788cb47118",
       "output": "images/ember-1200k/projects/color_match/Fluorescent_spectrum.png",
-      "output_sha256": "bb9826dc0b5135855ad582cd89370cd1af384a5ccf8a19f71438a769f0c12bf6",
+      "output_sha256": "66b3f4842875f8487edb14706ce112a09940c21481cd371ba9ac2793a35bc2e9",
       "output_bytes": 52536,
       "width": 1200,
       "height": 734,
@@ -638,13 +638,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9986301681
+      "source_output_oklab_l_correlation": 0.997920273
     },
     {
       "source": "images/projects/color_match/LMS_response_curves.png",
       "source_sha256": "c9e51d1c32e7317d93f74659e4aa8c42d2afce3c6752a383d3325949604a704b",
       "output": "images/ember-1200k/projects/color_match/LMS_response_curves.png",
-      "output_sha256": "eb75876cfde969cb7eb183c48e1de7cd41340d0d47902d2c0c2cdd7d9578d45b",
+      "output_sha256": "8a1c996841c41c030e946eb375eda05faeb6e23c0daceb80a22500a78fe3a18d",
       "output_bytes": 18516,
       "width": 856,
       "height": 568,
@@ -652,13 +652,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9985644971
+      "source_output_oklab_l_correlation": 0.9978084123
     },
     {
       "source": "images/projects/color_match/LymanSeries.svg",
       "source_sha256": "09b138773fb0602dc3f143a0e481b0d5c65efa26f9ea3003fbe86898322048a5",
       "output": "images/ember-1200k/projects/color_match/LymanSeries.png",
-      "output_sha256": "63b9b1b48e70f1bc12f2e2ce9ae00d67079766d29b6c8b159205a0d79c20f877",
+      "output_sha256": "b9cf019ff225500019d52b4780d849ceaa9cda57fa6742eae25a2f3da6c45f1d",
       "output_bytes": 6591,
       "width": 739,
       "height": 358,
@@ -666,13 +666,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9986839108
+      "source_output_oklab_l_correlation": 0.9979741903
     },
     {
       "source": "images/projects/color_match/RGB_LED_Spectrum.svg",
       "source_sha256": "8f997becd740224da1f8efe6ba1e0bdbc5c8fe84b1cc0b265249e975a27d64d8",
       "output": "images/ember-1200k/projects/color_match/RGB_LED_Spectrum.png",
-      "output_sha256": "3917b501f49cf7d3df7f325c27741b1c7b751e28f751aa20fe9119f2ea0f2557",
+      "output_sha256": "8b5b33b6b43886240d690ab32f35ca51c6f1bacc61648359e96a60c992dd95cf",
       "output_bytes": 12158,
       "width": 695,
       "height": 498,
@@ -680,13 +680,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.998757346
+      "source_output_oklab_l_correlation": 0.9981304152
     },
     {
       "source": "images/projects/color_match/candle_and_LED_spectrum.png",
       "source_sha256": "bcd737ddf4de818b254b230d89430fc6c46ed4e5518556103146de967be855f0",
       "output": "images/ember-1200k/projects/color_match/candle_and_LED_spectrum.png",
-      "output_sha256": "048860b42ee933f22d57c4dc3595976ada8b515d695fc1f64f544f35ebd8b910",
+      "output_sha256": "c1c64fb63bcc8fd7c8ba984786bb1aba85450c6cb96792ed9ca0b6bdaf9f3814",
       "output_bytes": 16206,
       "width": 856,
       "height": 568,
@@ -694,13 +694,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982618811
+      "source_output_oklab_l_correlation": 0.9964973382
     },
     {
       "source": "images/projects/color_match/candle_spectrum.png",
       "source_sha256": "79413817945aaf6604c494869c85e3b0054a75a4229390377fc8261d52f5471f",
       "output": "images/ember-1200k/projects/color_match/candle_spectrum.png",
-      "output_sha256": "1f02269a5f43af15b1565122c28f9520e092a6ac62c5f842de84370e5f65a31d",
+      "output_sha256": "9cf18d4c05465045f4deda23462cbca1491a00a65188a7717a355f5a2d5f6c47",
       "output_bytes": 14789,
       "width": 856,
       "height": 568,
@@ -708,13 +708,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982421869
+      "source_output_oklab_l_correlation": 0.9963507894
     },
     {
       "source": "images/projects/color_match/cheat_sheet.png",
       "source_sha256": "2ab3ee7c6f317642f65e1db7c1ec937db734a9b743ba6874fdb8bebd14372a60",
       "output": "images/ember-1200k/projects/color_match/cheat_sheet.png",
-      "output_sha256": "f9aad6a663fa069e5ee710254c6b1344fdab66b39f9fdf7e24f73d1a96c3a2fc",
+      "output_sha256": "b1c7974b7c68e9c77c70f889638c43e6e732495f67233b815fb392dffdc64f8a",
       "output_bytes": 47194,
       "width": 745,
       "height": 639,
@@ -722,13 +722,13 @@
         0.1764313644,
         0.9940481562
       ],
-      "source_output_oklab_l_correlation": 0.9970750323
+      "source_output_oklab_l_correlation": 0.996609781
     },
     {
       "source": "images/projects/color_match/daylight_spectrum.png",
       "source_sha256": "8ee3e6d2d26beb2c62869b82fa57c29705ddacc010cfac8c7072302ba8c4f489",
       "output": "images/ember-1200k/projects/color_match/daylight_spectrum.png",
-      "output_sha256": "40bd8ae0f2ba5370e8f17381b3c833b715f8dd8267914a8f900df7a7d22a48e7",
+      "output_sha256": "7a1562c0ce106ae91a6d73416317aa1dd7fcc9518f07628e1f9ca5a65de8e1f5",
       "output_bytes": 15775,
       "width": 856,
       "height": 568,
@@ -736,13 +736,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.998218755
+      "source_output_oklab_l_correlation": 0.9963330972
     },
     {
       "source": "images/projects/color_match/flowchart.png",
       "source_sha256": "cc76a9e7cfaabbeb11f3ba9df51f2b01268fee696210911ec83a1e86d40b1c38",
       "output": "images/ember-1200k/projects/color_match/flowchart.png",
-      "output_sha256": "1a5e2c7434ee9d364e5ef07142c4e19de6e5c5980f8f4bde64a21d52964cf5cb",
+      "output_sha256": "d49f141c507ac0dfc06d5078b4822031bfa6d433144760515282fa729024250c",
       "output_bytes": 58947,
       "width": 1200,
       "height": 573,
@@ -750,13 +750,13 @@
         0.3387682565,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9994726619
+      "source_output_oklab_l_correlation": 0.9993396117
     },
     {
       "source": "images/projects/color_match/math0.svg",
       "source_sha256": "c1e1c4d6b981a3c1cec9e07e9a922cfd7b63907a91f43278ae9ee31819fbd5db",
       "output": "images/ember-1200k/projects/color_match/math0.png",
-      "output_sha256": "b53b02478b7e871c0155bffd79856978551892fbe20d2d9c248064a8ed867b40",
+      "output_sha256": "814db20e527a0268268d96cb9703402395335e6cce8c29737a16f2ddc296aee2",
       "output_bytes": 1744,
       "width": 173,
       "height": 18,
@@ -764,13 +764,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9980050739
+      "source_output_oklab_l_correlation": 0.9969934989
     },
     {
       "source": "images/projects/color_match/math1.svg",
       "source_sha256": "0236cec2ecf42c0b2ffd552c89c8678d43256ad6452cfedd4b1141a47acf38f5",
       "output": "images/ember-1200k/projects/color_match/math1.png",
-      "output_sha256": "188c0d21774e1eb068ec20424a2f80338ece946fecea412d8c6e75bef3c93206",
+      "output_sha256": "3e5d6caeaf570a5767144df0d7a6fb74eb786c642a88398ee865af9144b77cf6",
       "output_bytes": 2516,
       "width": 331,
       "height": 48,
@@ -778,13 +778,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.998178803
+      "source_output_oklab_l_correlation": 0.9972724795
     },
     {
       "source": "images/projects/color_match/math10.svg",
       "source_sha256": "aa2c1a90d8f5c4604827e56995cb155270f38ffa6e525f4e2f16c784e7db1acb",
       "output": "images/ember-1200k/projects/color_match/math10.png",
-      "output_sha256": "6fd42eae9d921443b473803ba9047475eec55acffdc2a634d636f6691f3ed8ff",
+      "output_sha256": "613d20e9b5b7dbcfb91379bc6dd48aa2066a35080e346cce5a088fc2e68a2727",
       "output_bytes": 1444,
       "width": 106,
       "height": 65,
@@ -792,13 +792,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982706873
+      "source_output_oklab_l_correlation": 0.9973466103
     },
     {
       "source": "images/projects/color_match/math11.svg",
       "source_sha256": "892caea14e4b6d160dbfea206d234385c8a4022ea40e464a7cb224ae3b6ccfe7",
       "output": "images/ember-1200k/projects/color_match/math11.png",
-      "output_sha256": "1ba032c03c1eb6ce22229c1184e2e648ad5d13f1fe2a9c652ceed33d7c1a25ad",
+      "output_sha256": "5588388eda4062916113102bb6901ab1d42cf5f808e7b05afda725761f812977",
       "output_bytes": 1488,
       "width": 127,
       "height": 65,
@@ -806,13 +806,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982006762
+      "source_output_oklab_l_correlation": 0.9972851491
     },
     {
       "source": "images/projects/color_match/math2.svg",
       "source_sha256": "2fa9a3931c6374061f576b0bece58c1138b7befcb62b22997a0a83720c6223d7",
       "output": "images/ember-1200k/projects/color_match/math2.png",
-      "output_sha256": "da4fb635631b88772fdf1f5d161bfd0482cd473931f8aca77122ba753aeaeb69",
+      "output_sha256": "ac53117430c44e0121d7751a965b164f1134f570612be7c8a41996f24c450411",
       "output_bytes": 1135,
       "width": 45,
       "height": 18,
@@ -820,13 +820,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9981544447
+      "source_output_oklab_l_correlation": 0.9972211864
     },
     {
       "source": "images/projects/color_match/math3.svg",
       "source_sha256": "bfd31bbfc969ba1f06bf2cfec1bcac6c84f29b432587b5f0fc7b72e1c32c4ed1",
       "output": "images/ember-1200k/projects/color_match/math3.png",
-      "output_sha256": "e7fc83dba14bf124bbe809f2bfb2fe468589f650ce91647d4649c036e893feff",
+      "output_sha256": "694a7d93af1e1ad35958d2c8c5b7cfad99fcb435f5456498a7f81063441148b2",
       "output_bytes": 2327,
       "width": 312,
       "height": 18,
@@ -834,13 +834,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9980958029
+      "source_output_oklab_l_correlation": 0.9971541798
     },
     {
       "source": "images/projects/color_match/math4.svg",
       "source_sha256": "1cfb266ba5c6a7cf1f4e137447cb848c108fe6227b39d1e57ca91f2d3de1de40",
       "output": "images/ember-1200k/projects/color_match/math4.png",
-      "output_sha256": "01040c831259af1f8414fbc7a37a89eb8721e313dfade947ffa4096612567182",
+      "output_sha256": "fe343cdc915f7765e463f02ed9cbf12318cff93606a1043c845d1e755b83c859",
       "output_bytes": 2605,
       "width": 328,
       "height": 46,
@@ -848,13 +848,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9983076378
+      "source_output_oklab_l_correlation": 0.9974212006
     },
     {
       "source": "images/projects/color_match/math5.svg",
       "source_sha256": "a2acbfbadbe1769a20f97e8a05e4bb7f96e2c4b759c92d7c3e5162b304578068",
       "output": "images/ember-1200k/projects/color_match/math5.png",
-      "output_sha256": "1ad8e6122d8d462dbc795f55304a39bebd77bf47dc2ef08f96b810b171002658",
+      "output_sha256": "f66423a7216b515496fa841b82870cebb9dd94c15f7d6e654a9d844277338131",
       "output_bytes": 6283,
       "width": 472,
       "height": 78,
@@ -862,13 +862,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982744645
+      "source_output_oklab_l_correlation": 0.9973649571
     },
     {
       "source": "images/projects/color_match/math6.svg",
       "source_sha256": "78dfeecb34d9847b96dc886357dd20d6451df61e0e1b10f2f642e849008a6e58",
       "output": "images/ember-1200k/projects/color_match/math6.png",
-      "output_sha256": "cae5fb4f5703c8d1d8517d92d3924321cf1bbbd0df61cdbfb051f5471f5965aa",
+      "output_sha256": "6fd43a78069dd57efe755bfba2f425eef6f873f9b6bb43a3de56bb3cdd5d9453",
       "output_bytes": 4314,
       "width": 371,
       "height": 78,
@@ -876,13 +876,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9983292365
+      "source_output_oklab_l_correlation": 0.9974054971
     },
     {
       "source": "images/projects/color_match/math7.svg",
       "source_sha256": "ed98acd11ad6ac612bc3eecb47c063212dd6ba2d639e6e95d50e7259e5c4fc30",
       "output": "images/ember-1200k/projects/color_match/math7.png",
-      "output_sha256": "75d2e2924c0cbdb8f07e3a46d2b4481f8e5d8e479bd1d3582b7ec274845b09a0",
+      "output_sha256": "124f13866f070e28d5deb78a5fe96e6cc28f13f025578b8e09820bb301015e20",
       "output_bytes": 2544,
       "width": 232,
       "height": 65,
@@ -890,13 +890,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9979945206
+      "source_output_oklab_l_correlation": 0.9969206022
     },
     {
       "source": "images/projects/color_match/math8.svg",
       "source_sha256": "d86282236d4da4d992c556f1669c77fbff8ef9e358bcb7c37c9f6eca97d5e335",
       "output": "images/ember-1200k/projects/color_match/math8.png",
-      "output_sha256": "18eb2c9dd19df8785888e40a897c38942fa38c6947194d852506a28ae840c2ee",
+      "output_sha256": "856cc330c81509255586b30a0221465de8fb3b190605d37459b09d3ddfd68e0a",
       "output_bytes": 9290,
       "width": 789,
       "height": 78,
@@ -904,13 +904,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982196217
+      "source_output_oklab_l_correlation": 0.9972889473
     },
     {
       "source": "images/projects/color_match/math9.svg",
       "source_sha256": "42ebe7c4d0c8cdcd0bcc20455fc61b83f97016b87e5fa3a7e09933b938b9e871",
       "output": "images/ember-1200k/projects/color_match/math9.png",
-      "output_sha256": "f5def54acd2e4f4d0bd6184fde36f8b2cab00b8f559c0d33b71a0bf9e409db40",
+      "output_sha256": "944d616adc13c194898cf29290155988e23a95d439edc46b6c5c5d1efc33d5fa",
       "output_bytes": 9071,
       "width": 683,
       "height": 78,
@@ -918,13 +918,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9982471077
+      "source_output_oklab_l_correlation": 0.9973505661
     },
     {
       "source": "images/projects/color_match/pigeon_portrait.jpg",
       "source_sha256": "998bf9eba3bdd38258bd28172e01ff1ded4d9a6ed5f91a333e1411d341d4d2ca",
       "output": "images/ember-1200k/projects/color_match/pigeon_portrait.png",
-      "output_sha256": "f7e5434466fc47031066ae6b8567368c8eda7fd2cb7e2f1abf77376e3bba2c4e",
+      "output_sha256": "00603a3233b5554cc6d3ace262510b91fc6de37fc293d047a77f35e41a76d82e",
       "output_bytes": 190797,
       "width": 533,
       "height": 600,
@@ -932,13 +932,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9983073693
+      "source_output_oklab_l_correlation": 0.9981190694
     },
     {
       "source": "images/projects/learn_kf/download_zip.png",
       "source_sha256": "05eef384cda143864ea49a204a6148bc6ea36516277c5233c3d6bcf2b40f153a",
       "output": "images/ember-1200k/projects/learn_kf/download_zip.png",
-      "output_sha256": "ae1fe03d8da1595a2a3ea2977677124e30d87b824616149ca216ef5f8a4b2aa9",
+      "output_sha256": "5079ef98321fbca1bd432f76553f58e8fdf78323ade661e7d214eadd41b4dd18",
       "output_bytes": 79301,
       "width": 1200,
       "height": 665,
@@ -946,13 +946,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9988271846
+      "source_output_oklab_l_correlation": 0.9982783669
     },
     {
       "source": "images/projects/learn_kf/kalman_math.png",
       "source_sha256": "65af2ff0ecd5e31be62e140104053607a42670d2e501026884ddc29f06bfd216",
       "output": "images/ember-1200k/projects/learn_kf/kalman_math.png",
-      "output_sha256": "ab50ef63a65ae997639262035606858d7a20cee5084262ce39eaf0085d8543ff",
+      "output_sha256": "485fa449c32987969974c702a3c20a02a0e2baf155be7b5959a818936e804947",
       "output_bytes": 57094,
       "width": 1200,
       "height": 935,
@@ -960,13 +960,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9993562148
+      "source_output_oklab_l_correlation": 0.9989633711
     },
     {
       "source": "images/projects/learn_kf/launch_binder.png",
       "source_sha256": "8454bd88242e51ab46618158a519ca4d156ef426a88eea23275c0b6d43abe07f",
       "output": "images/ember-1200k/projects/learn_kf/launch_binder.png",
-      "output_sha256": "edb9e00880245d7aa8dcab8df6ceee7cfcaab8aef5a997b28bd34d797ea6bc8d",
+      "output_sha256": "21afa80df7fdcf485f29c6f000ff845ce896a8a8aca1d4ab1d940304978bc0e0",
       "output_bytes": 88301,
       "width": 1200,
       "height": 545,
@@ -974,13 +974,13 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9988939468
+      "source_output_oklab_l_correlation": 0.9983480487
     },
     {
       "source": "images/projects/personal_site/personal_site_screenshot_2020_06.png",
       "source_sha256": "5d1372af553f4ef211a28619821587e46de4499a31e3327e17bf62fe79e90630",
       "output": "images/ember-1200k/projects/personal_site/personal_site_screenshot_2020_06.png",
-      "output_sha256": "68e9a8157c646c3a597f4ec23f6741d6dce29d41fc4e123a47103c0a9d7152fa",
+      "output_sha256": "7741a160864c35ddb4588bed2396cd518c8660398ea953bf124adccb197eef83",
       "output_bytes": 108664,
       "width": 1200,
       "height": 1217,
@@ -988,7 +988,7 @@
         0.0,
         0.9999999935
       ],
-      "source_output_oklab_l_correlation": 0.9989494937
+      "source_output_oklab_l_correlation": 0.99841708
     }
   ]
 }
