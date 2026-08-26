@@ -120,7 +120,37 @@ class EmberSiteTests(unittest.TestCase):
 
         self.assertIn("position: sticky", custom)
         self.assertIn("grid-template-rows: auto", custom)
-        self.assertIn("--site-link: var(--ember-terminal-red)", custom)
+        self.assertIn("--site-link: var(--ember-terminal-blue)", custom)
+        self.assertIn("--site-link-visited: var(--ember-category-three)", custom)
+        self.assertIn("--site-link-hover: var(--ember-terminal-cyan)", custom)
+        self.assertNotIn("--site-link: var(--ember-terminal-red)", custom)
+        self.assertRegex(
+            custom,
+            re.compile(r"\.site-header\s*\{[^}]*background: var\(--ember-bg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(r"blockquote\s*\{[^}]*background: var\(--ember-bg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(r"\.site-nav \.page-link[^}]*color: var\(--ember-fg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(r"\.active_page \.page-link[^}]*color: var\(--ember-fg-0\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(r"\.collection_title a[^}]*color: var\(--ember-fg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(
+                r"\.page-content p a,.*?text-decoration: underline;.*?text-decoration-thickness: 1px;.*?text-underline-offset: 0\.16em;",
+                re.DOTALL,
+            ),
+        )
         self.assertRegex(
             custom,
             re.compile(

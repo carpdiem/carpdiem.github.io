@@ -217,6 +217,21 @@ class EmberBrowserTests(unittest.TestCase):
         )
         self.assertEqual(state["palette"], "1200k-dark")
         self.assertEqual(state["temperature"], "1200k")
+        initial_roles = json.loads(
+            self.cdp.evaluate(
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
+            )
+        )
+        self.assertEqual(
+            initial_roles,
+            {
+                "link": "#DED872",
+                "visited": "#B76270",
+                "hover": "#C8FFC4",
+                "header": "rgb(23, 19, 19)",
+                "body": "rgb(5, 4, 4)",
+            },
+        )
         self.assertTrue(state["images"])
         self.assertTrue(
             all(
@@ -286,12 +301,17 @@ class EmberBrowserTests(unittest.TestCase):
         )
         restored = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify({palette:document.documentElement.dataset.emberPalette,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height}))})"
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {palette:document.documentElement.dataset.emberPalette,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
             )
         )
         self.assertEqual(restored["palette"], "3400k-light")
         self.assertEqual(restored["paragraphLineHeight"], state["paragraphLineHeight"])
         self.assertEqual(restored["states"], ["source"])
+        self.assertEqual(restored["link"], "#396EDB")
+        self.assertEqual(restored["visited"], "#84499C")
+        self.assertEqual(restored["hover"], "#0B7F8C")
+        self.assertEqual(restored["header"], "rgb(236, 236, 235)")
+        self.assertEqual(restored["body"], "rgb(249, 249, 248)")
         self.assertTrue(
             all(
                 "/images/ember-1200k/" not in image["src"]
@@ -317,6 +337,20 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertEqual(
             self.cdp.evaluate("document.documentElement.dataset.emberPalette"),
             "3400k-dark",
+        )
+        dark_roles = json.loads(
+            self.cdp.evaluate(
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor}})())"
+            )
+        )
+        self.assertEqual(
+            dark_roles,
+            {
+                "link": "#A4C0FC",
+                "visited": "#C7779E",
+                "hover": "#69EBD5",
+                "header": "rgb(19, 16, 15)",
+            },
         )
 
         self.cdp.evaluate(

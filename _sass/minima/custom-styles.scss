@@ -38,6 +38,11 @@ a:link {
 	color: var(--site-link);
 }
 
+a:hover,
+a:focus-visible {
+	color: var(--site-link-hover);
+}
+
 .active_page {
 //	font-weight: bold;
 	text-decoration: underline;
@@ -217,8 +222,21 @@ ul, ol {
 }
 
 .index_whole_title h2 {
-	opacity: 0.6;
+	opacity: 1;
 	padding-left: 25px;
+	font-size: 1.05rem;
+	font-weight: 400;
+}
+
+.collection_title a,
+.collection_title a:link,
+.collection_title a:visited {
+	color: var(--ember-fg-1);
+}
+
+.collection_title a:hover,
+.collection_title a:focus-visible {
+	color: var(--site-link-hover);
 }
 
 .site-nav {
@@ -280,20 +298,32 @@ code table tbody tr td pre {
 
 /* Ember palette integration for the normal Jekyll browsing shell. */
 :root[data-ember-palette="3400k-light"] {
-	--site-link: var(--ember-terminal-red);
-	--site-link-visited: var(--ember-terminal-magenta);
+	--site-link: var(--ember-terminal-blue);
+	--site-link-visited: var(--ember-category-three);
+	--site-link-hover: var(--ember-terminal-cyan);
+	--site-link-elevated: var(--ember-terminal-magenta);
+	--site-link-elevated-visited: var(--ember-terminal-red);
+	--site-link-elevated-hover: var(--ember-fg-0);
 	color-scheme: light;
 }
 
 :root[data-ember-palette="3400k-dark"] {
-	--site-link: var(--ember-terminal-red);
-	--site-link-visited: var(--ember-category-six);
+	--site-link: var(--ember-terminal-blue);
+	--site-link-visited: var(--ember-category-three);
+	--site-link-hover: var(--ember-terminal-cyan);
+	--site-link-elevated: var(--ember-terminal-blue);
+	--site-link-elevated-visited: var(--ember-category-three);
+	--site-link-elevated-hover: var(--ember-terminal-cyan);
 	color-scheme: dark;
 }
 
 :root[data-ember-palette="1200k-dark"] {
-	--site-link: var(--ember-terminal-red);
-	--site-link-visited: var(--ember-category-one);
+	--site-link: var(--ember-terminal-blue);
+	--site-link-visited: var(--ember-category-three);
+	--site-link-hover: var(--ember-terminal-cyan);
+	--site-link-elevated: var(--ember-terminal-blue);
+	--site-link-elevated-visited: var(--ember-category-three);
+	--site-link-elevated-hover: var(--ember-terminal-cyan);
 	color-scheme: dark;
 }
 
@@ -330,9 +360,9 @@ body {
 	min-height: 0;
 	line-height: 1.3;
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-2);
+	background: var(--ember-bg-1);
 	border-top: 0;
-	border-bottom-color: var(--ember-bg-4);
+	border-bottom-color: var(--ember-bg-3);
 }
 
 .site-header .wrapper {
@@ -347,11 +377,14 @@ body {
 
 .site-title,
 .site-title:link,
-.site-title:visited,
+.site-title:visited {
+	color: var(--ember-fg-0);
+}
+
 .site-nav .page-link,
 .site-nav .page-link:link,
 .site-nav .page-link:visited {
-	color: var(--ember-fg-0);
+	color: var(--ember-fg-1);
 }
 
 .site-title {
@@ -367,8 +400,8 @@ body {
 	grid-row: 1;
 	justify-self: end;
 	float: none;
-	background: var(--ember-bg-2);
-	border-color: var(--ember-bg-4);
+	background: var(--ember-bg-1);
+	border-color: var(--ember-bg-3);
 }
 
 .site-nav .menu-icon > svg path {
@@ -379,8 +412,16 @@ body {
 	background: var(--ember-bg-2);
 }
 
-.active_page .page-link {
+.active_page .page-link,
+.active_page .page-link:link,
+.active_page .page-link:visited {
+	color: var(--ember-fg-0);
 	text-decoration-color: var(--site-link);
+}
+
+.site-nav .page-link:hover,
+.site-nav .page-link:focus-visible {
+	color: var(--ember-fg-0);
 }
 
 .ember-palette-switcher {
@@ -445,6 +486,23 @@ body {
 	line-height: $base-line-height;
 }
 
+.page-content p a,
+.page-content li a,
+.page-content td a,
+.read_more_link {
+	text-decoration: underline;
+	text-decoration-color: var(--ember-bg-5);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.16em;
+}
+
+.page-content p a:hover,
+.page-content li a:hover,
+.page-content td a:hover,
+.read_more_link:hover {
+	text-decoration-color: currentColor;
+}
+
 .site-footer {
 	border-top-color: var(--ember-bg-4);
 }
@@ -464,8 +522,29 @@ hr {
 
 blockquote {
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-3);
+	background: var(--ember-bg-1);
 	border-color: var(--ember-bg-4);
+}
+
+blockquote a:link,
+table a:link,
+pre a:link,
+code a:link {
+	color: var(--site-link-elevated);
+}
+
+blockquote a:visited,
+table a:visited,
+pre a:visited,
+code a:visited {
+	color: var(--site-link-elevated-visited);
+}
+
+blockquote a:hover,
+table a:hover,
+pre a:hover,
+code a:hover {
+	color: var(--site-link-elevated-hover);
 }
 
 pre,
