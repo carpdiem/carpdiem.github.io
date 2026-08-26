@@ -92,18 +92,18 @@ class EmberSiteTests(unittest.TestCase):
         css = (ROOT / "assets" / "ember" / "ember.css").read_bytes()
         self.assertEqual(
             hashlib.sha256(css).hexdigest(),
-            "e1dfb7039ad7716eac229e475736fc2003e9366bb9b29a163a0e4c9e732afb82",
+            "a3976c3a7245dc300424d5569667143d6dedeb4cbcca3c1153fcf69304b246aa",
         )
         palette_path = ROOT / "assets" / "ember" / "1200k-dark-image-palette.json"
         palette_bytes = palette_path.read_bytes()
         self.assertEqual(
             hashlib.sha256(palette_bytes).hexdigest(),
-            "751b3750c8fe9ac9940fe0414443e763de41b3fff6ac9f438045a9fb7f9a6ed7",
+            "d2d6805e6a4c5d989481ec746a75d0818dc07639c2e26fe0cf4e98addc9143b7",
         )
         palette = json.loads(palette_bytes)
         self.assertEqual(
             palette["source"]["commit"],
-            "70f4efbb3d97954e49ecf2f120d3fa477b14526f",
+            "016c6b37b283baf44711af3330d2872305b9398c",
         )
         self.assertEqual(palette["source"]["ember_schema_version"], 14)
         self.assertEqual(len(palette["family"]["continuous_rgb"]), 256)

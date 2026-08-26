@@ -3,7 +3,7 @@
   "palette": "1200k-dark",
   "palette_source": {
     "repository": "https://github.com/carpdiem/ember",
-    "commit": "70f4efbb3d97954e49ecf2f120d3fa477b14526f",
+    "commit": "016c6b37b283baf44711af3330d2872305b9398c",
     "manifest": "palettes/ember.json",
     "ember_schema_version": 14
   },
