@@ -4,6 +4,7 @@
     "repository": "https://github.com/carpdiem/ember",
     "commit": "19953a6ddbe468535c2ca6118f3b8f51b1a41fac",
     "manifest": "palettes/ember.json",
+    "manifest_sha256": "02d74d287c82139dd44f18bf22f2564ea15f99cc68ca6f9977d9bc2d299a0746",
     "ember_schema_version": 15
   },
   "family": {

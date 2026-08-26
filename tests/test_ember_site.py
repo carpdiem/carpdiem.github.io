@@ -98,7 +98,7 @@ class EmberSiteTests(unittest.TestCase):
         palette_bytes = palette_path.read_bytes()
         self.assertEqual(
             hashlib.sha256(palette_bytes).hexdigest(),
-            "624528f318afb2b1e0e32518e0d1c5b5634e6699ebcee9a2f60a21ce328381ba",
+            "80b5da225ac4e37049d7c09bb8e0bf5d838bad2fd1a30f4749e279bacf39737d",
         )
         palette = json.loads(palette_bytes)
         self.assertEqual(
@@ -106,6 +106,10 @@ class EmberSiteTests(unittest.TestCase):
             "19953a6ddbe468535c2ca6118f3b8f51b1a41fac",
         )
         self.assertEqual(palette["source"]["ember_schema_version"], 15)
+        self.assertEqual(
+            palette["source"]["manifest_sha256"],
+            "02d74d287c82139dd44f18bf22f2564ea15f99cc68ca6f9977d9bc2d299a0746",
+        )
         self.assertEqual(len(palette["family"]["continuous_rgb"]), 256)
 
     def test_active_shell_and_syntax_styles_use_ember_roles(self) -> None:
