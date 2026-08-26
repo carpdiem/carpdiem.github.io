@@ -2,9 +2,9 @@
   "schema_version": 1,
   "source": {
     "repository": "https://github.com/carpdiem/ember",
-    "commit": "016c6b37b283baf44711af3330d2872305b9398c",
+    "commit": "19953a6ddbe468535c2ca6118f3b8f51b1a41fac",
     "manifest": "palettes/ember.json",
-    "ember_schema_version": 14
+    "ember_schema_version": 15
   },
   "family": {
     "slug": "1200k-dark",
