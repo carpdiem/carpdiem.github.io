@@ -120,10 +120,12 @@ class EmberSiteTests(unittest.TestCase):
 
         self.assertIn("position: sticky", custom)
         self.assertIn("grid-template-rows: auto", custom)
-        self.assertIn("--site-link: var(--ember-terminal-blue)", custom)
-        self.assertIn("--site-link-visited: var(--ember-category-three)", custom)
-        self.assertIn("--site-link-hover: var(--ember-terminal-cyan)", custom)
-        self.assertNotIn("--site-link: var(--ember-terminal-red)", custom)
+        self.assertIn("--site-link: var(--ember-terminal-red)", custom)
+        self.assertIn("--site-link-visited: var(--ember-terminal-yellow)", custom)
+        self.assertIn("--site-link-visited: var(--ember-category-six)", custom)
+        self.assertIn("--site-link-hover: var(--ember-fg-0)", custom)
+        self.assertIn("--site-link-elevated-visited: var(--ember-category-one)", custom)
+        self.assertNotIn("--site-link: var(--ember-terminal-blue)", custom)
         self.assertRegex(
             custom,
             re.compile(r"\.site-header\s*\{[^}]*background: var\(--ember-bg-1\)", re.DOTALL),

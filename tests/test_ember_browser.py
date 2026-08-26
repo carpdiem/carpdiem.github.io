@@ -219,15 +219,18 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertEqual(state["temperature"], "1200k")
         initial_roles = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),elevated:root.getPropertyValue('--site-link-elevated').trim(),elevatedVisited:root.getPropertyValue('--site-link-elevated-visited').trim(),elevatedHover:root.getPropertyValue('--site-link-elevated-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
             )
         )
         self.assertEqual(
             initial_roles,
             {
-                "link": "#DED872",
+                "link": "#F68F96",
                 "visited": "#B76270",
-                "hover": "#C8FFC4",
+                "hover": "#FFFBEE",
+                "elevated": "#F68F96",
+                "elevatedVisited": "#F3AC74",
+                "elevatedHover": "#FFFBEE",
                 "header": "rgb(23, 19, 19)",
                 "body": "rgb(5, 4, 4)",
             },
@@ -301,15 +304,18 @@ class EmberBrowserTests(unittest.TestCase):
         )
         restored = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {palette:document.documentElement.dataset.emberPalette,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {palette:document.documentElement.dataset.emberPalette,paragraphLineHeight:getComputedStyle(document.querySelector('main p')).lineHeight,states:[...new Set([...document.querySelectorAll('main .ember-js-content img')].map(img=>img.dataset.emberImageState))],images:[...document.querySelectorAll('main .ember-js-content img')].map(img=>({src:img.getAttribute('src'),width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})),link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),elevated:root.getPropertyValue('--site-link-elevated').trim(),elevatedVisited:root.getPropertyValue('--site-link-elevated-visited').trim(),elevatedHover:root.getPropertyValue('--site-link-elevated-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor,body:getComputedStyle(document.body).backgroundColor}})())"
             )
         )
         self.assertEqual(restored["palette"], "3400k-light")
         self.assertEqual(restored["paragraphLineHeight"], state["paragraphLineHeight"])
         self.assertEqual(restored["states"], ["source"])
-        self.assertEqual(restored["link"], "#396EDB")
-        self.assertEqual(restored["visited"], "#84499C")
-        self.assertEqual(restored["hover"], "#0B7F8C")
+        self.assertEqual(restored["link"], "#98074F")
+        self.assertEqual(restored["visited"], "#844601")
+        self.assertEqual(restored["hover"], "#342F2C")
+        self.assertEqual(restored["elevated"], "#98074F")
+        self.assertEqual(restored["elevatedVisited"], "#844601")
+        self.assertEqual(restored["elevatedHover"], "#342F2C")
         self.assertEqual(restored["header"], "rgb(236, 236, 235)")
         self.assertEqual(restored["body"], "rgb(249, 249, 248)")
         self.assertTrue(
@@ -340,15 +346,18 @@ class EmberBrowserTests(unittest.TestCase):
         )
         dark_roles = json.loads(
             self.cdp.evaluate(
-                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor}})())"
+                "JSON.stringify((()=>{const root=getComputedStyle(document.documentElement);return {link:root.getPropertyValue('--site-link').trim(),visited:root.getPropertyValue('--site-link-visited').trim(),hover:root.getPropertyValue('--site-link-hover').trim(),elevated:root.getPropertyValue('--site-link-elevated').trim(),elevatedVisited:root.getPropertyValue('--site-link-elevated-visited').trim(),elevatedHover:root.getPropertyValue('--site-link-elevated-hover').trim(),header:getComputedStyle(document.querySelector('.site-header')).backgroundColor}})())"
             )
         )
         self.assertEqual(
             dark_roles,
             {
-                "link": "#A4C0FC",
-                "visited": "#C7779E",
-                "hover": "#69EBD5",
+                "link": "#F7B7AA",
+                "visited": "#915E42",
+                "hover": "#DCD9BF",
+                "elevated": "#F7B7AA",
+                "elevatedVisited": "#DEA460",
+                "elevatedHover": "#DCD9BF",
                 "header": "rgb(19, 16, 15)",
             },
         )

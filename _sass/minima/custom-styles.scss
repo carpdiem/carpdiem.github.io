@@ -298,32 +298,32 @@ code table tbody tr td pre {
 
 /* Ember palette integration for the normal Jekyll browsing shell. */
 :root[data-ember-palette="3400k-light"] {
-	--site-link: var(--ember-terminal-blue);
-	--site-link-visited: var(--ember-category-three);
-	--site-link-hover: var(--ember-terminal-cyan);
-	--site-link-elevated: var(--ember-terminal-magenta);
-	--site-link-elevated-visited: var(--ember-terminal-red);
+	--site-link: var(--ember-terminal-red);
+	--site-link-visited: var(--ember-terminal-yellow);
+	--site-link-hover: var(--ember-fg-0);
+	--site-link-elevated: var(--ember-terminal-red);
+	--site-link-elevated-visited: var(--ember-terminal-yellow);
 	--site-link-elevated-hover: var(--ember-fg-0);
 	color-scheme: light;
 }
 
 :root[data-ember-palette="3400k-dark"] {
-	--site-link: var(--ember-terminal-blue);
-	--site-link-visited: var(--ember-category-three);
-	--site-link-hover: var(--ember-terminal-cyan);
-	--site-link-elevated: var(--ember-terminal-blue);
-	--site-link-elevated-visited: var(--ember-category-three);
-	--site-link-elevated-hover: var(--ember-terminal-cyan);
+	--site-link: var(--ember-terminal-red);
+	--site-link-visited: var(--ember-category-six);
+	--site-link-hover: var(--ember-fg-0);
+	--site-link-elevated: var(--ember-terminal-red);
+	--site-link-elevated-visited: var(--ember-category-one);
+	--site-link-elevated-hover: var(--ember-fg-0);
 	color-scheme: dark;
 }
 
 :root[data-ember-palette="1200k-dark"] {
-	--site-link: var(--ember-terminal-blue);
+	--site-link: var(--ember-terminal-red);
 	--site-link-visited: var(--ember-category-three);
-	--site-link-hover: var(--ember-terminal-cyan);
-	--site-link-elevated: var(--ember-terminal-blue);
-	--site-link-elevated-visited: var(--ember-category-three);
-	--site-link-elevated-hover: var(--ember-terminal-cyan);
+	--site-link-hover: var(--ember-fg-0);
+	--site-link-elevated: var(--ember-terminal-red);
+	--site-link-elevated-visited: var(--ember-category-one);
+	--site-link-elevated-hover: var(--ember-fg-0);
 	color-scheme: dark;
 }
 
