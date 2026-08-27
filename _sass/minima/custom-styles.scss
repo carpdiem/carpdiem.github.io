@@ -199,6 +199,19 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: $spacing-unit / 2;
 }
 
+.section_title {
+	margin-top: $spacing-unit / 2;
+	margin-bottom: $spacing-unit / 2;
+	color: var(--ember-fg-1);
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.section_subtitle {
+	color: var(--ember-fg-2);
+	text-align: center;
+}
+
 hr {
 	margin-bottom: 0;
 }
@@ -406,7 +419,20 @@ body {
 .site-title,
 .site-title:link,
 .site-title:visited {
+	color: var(--ember-fg-1);
+}
+
+.site-title.active_page,
+.site-title.active_page:link,
+.site-title.active_page:visited {
 	color: var(--ember-fg-0);
+}
+
+.site-title:not(.active_page):hover,
+.site-title:not(.active_page):focus-visible {
+	color: var(--ember-fg-1);
+	text-decoration: underline;
+	text-decoration-color: var(--ember-fg-2);
 }
 
 .site-nav .page-link,
@@ -444,12 +470,15 @@ body {
 .active_page .page-link:link,
 .active_page .page-link:visited {
 	color: var(--ember-fg-0);
+	text-decoration: underline;
 	text-decoration-color: var(--site-link);
 }
 
-.site-nav .page-link:hover,
-.site-nav .page-link:focus-visible {
-	color: var(--ember-fg-0);
+.not_active_page .page-link:hover,
+.not_active_page .page-link:focus-visible {
+	color: var(--ember-fg-1);
+	text-decoration: underline;
+	text-decoration-color: var(--ember-fg-2);
 }
 
 .ember-palette-switcher {

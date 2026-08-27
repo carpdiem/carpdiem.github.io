@@ -3,7 +3,7 @@ layout: default
 title: Misc
 permalink: /misc
 ---
-<h2 style="text-align: center">various things that don't fit elsewhere</h2>
+<h2 class="section_title">various things that don't fit elsewhere</h2>
 
 {% assign sorted = site.misc | sort: 'last_modified' | reverse %}
 {% for m in sorted %}

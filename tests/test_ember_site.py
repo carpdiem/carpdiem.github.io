@@ -149,6 +149,14 @@ class EmberSiteTests(unittest.TestCase):
         )
         self.assertRegex(
             custom,
+            re.compile(r"\.site-title,.*?color: var\(--ember-fg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
+            re.compile(r"\.not_active_page \.page-link:hover[^}]*color: var\(--ember-fg-1\)", re.DOTALL),
+        )
+        self.assertRegex(
+            custom,
             re.compile(r"\.collection_title a[^}]*color: var\(--ember-fg-1\)", re.DOTALL),
         )
         self.assertRegex(
@@ -186,6 +194,24 @@ class EmberSiteTests(unittest.TestCase):
             "--ember-terminal-cyan",
         ):
             self.assertIn(role, syntax)
+
+    def test_section_titles_share_one_markup_contract(self) -> None:
+        for relative in (
+            "index.md",
+            "blog.md",
+            "essays.md",
+            "lists.md",
+            "misc.md",
+            "projects.md",
+            "about.md",
+        ):
+            source = (ROOT / relative).read_text()
+            self.assertIn('class="section_title"', source, relative)
+        self.assertNotIn("page-heading", (ROOT / "index.md").read_text())
+        self.assertIn(
+            'class="section_subtitle"',
+            (ROOT / "essays.md").read_text(),
+        )
 
     def test_generated_image_manifest_is_complete_and_grounded(self) -> None:
         manifest_path = ROOT / "images" / "ember-1200k" / "manifest.json"

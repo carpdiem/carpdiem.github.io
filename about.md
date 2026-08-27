@@ -3,7 +3,7 @@ layout: default
 title: About
 permalink: /about/
 ---
-<h2 style="text-align: center">wherefore doth I exist?</h2>
+<h2 class="section_title">wherefore doth I exist?</h2>
 
 ## This site…
 

@@ -3,7 +3,7 @@ layout: home
 permalink: /
 ---
 
-<h2 class="page-heading" style="text-align: center">recent updates</h2>
+<h2 class="section_title">recent updates</h2>
 
 {% assign sorted = site.documents | sort: 'last_modified' | reverse | slice: 0, 10 %}
 {% for item in sorted %}

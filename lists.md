@@ -3,7 +3,7 @@ layout: default
 title: Lists
 permalink: /lists
 ---
-<h2 style="text-align: center">curious collections</h2>
+<h2 class="section_title">curious collections</h2>
 
 {% assign sorted = site.lists | sort: 'last_modified' | reverse %}
 {% for l in sorted %}

@@ -3,7 +3,7 @@ layout: default
 title: Projects
 permalink: /projects
 ---
-<h2 style="text-align: center">significant efforts I'd like to share with you</h2>
+<h2 class="section_title">significant efforts I'd like to share with you</h2>
 
 {% assign sorted = site.projects | sort: 'last_modified' | reverse %}
 {% for p in sorted %}

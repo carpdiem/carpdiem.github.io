@@ -3,7 +3,7 @@ layout: blog_index
 title: Blog
 permalink: /blog
 ---
-<h2 style="text-align: center">shortform blog entries</h2>
+<h2 class="section_title">shortform blog entries</h2>
 
 {% assign sorted = site.blog | sort: 'date' | reverse %}
 <div class="post-list">

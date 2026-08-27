@@ -561,6 +561,108 @@ JSON.stringify((() => {
                 }
                 self.assertEqual(actual, expected_actual)
 
+    def test_section_title_and_navigation_hierarchy_contracts(self) -> None:
+        pages = (
+            ("/", "Usually Pragmatic"),
+            ("/blog.html", "Blog"),
+            ("/essays.html", "Essays"),
+            ("/lists.html", "Lists"),
+            ("/misc.html", "Misc"),
+            ("/projects.html", "Projects"),
+            ("/about/", "About"),
+        )
+        self.cdp.call(
+            "Emulation.setEmulatedMedia",
+            {"features": [{"name": "prefers-color-scheme", "value": "light"}]},
+        )
+        self.cdp.call(
+            "Emulation.setDeviceMetricsOverride",
+            {"width": 1280, "height": 800, "deviceScaleFactor": 1, "mobile": False},
+        )
+        reference_geometry = None
+
+        for path, active_label in pages:
+            with self.subTest(path=path):
+                self.cdp.navigate(self.base_url + path)
+                self.cdp.evaluate(
+                    'document.querySelector(\'[data-ember-temperature-choice="3400k"]\').click()'
+                )
+                actual = json.loads(
+                    self.cdp.evaluate(
+                        """
+JSON.stringify((() => {
+  const title = document.querySelector('main .section_title');
+  const titleStyle = getComputedStyle(title);
+  const titleRect = title.getBoundingClientRect();
+  const nextRect = title.nextElementSibling.getBoundingClientRect();
+  const roleColor = role => {
+    const probe = document.createElement('span');
+    probe.style.color = `var(${role})`;
+    document.body.append(probe);
+    const color = getComputedStyle(probe).color;
+    probe.remove();
+    return color;
+  };
+  const navigation = [document.querySelector('.site-title'), ...document.querySelectorAll('.page-link')].map(link => ({
+    text: link.textContent.trim(),
+    active: link.matches('.active_page') || Boolean(link.closest('.active_page')),
+    color: getComputedStyle(link).color,
+    decoration: getComputedStyle(link).textDecorationLine,
+  }));
+  return {
+    title: {
+      color: titleStyle.color,
+      fontSize: titleStyle.fontSize,
+      marginTop: titleStyle.marginTop,
+      marginBottom: titleStyle.marginBottom,
+      top: Math.round(titleRect.top),
+      bottom: Math.round(titleRect.bottom),
+      nextGap: Math.round(nextRect.top - titleRect.bottom),
+    },
+    roles: {fg0: roleColor('--ember-fg-0'), fg1: roleColor('--ember-fg-1')},
+    navigation,
+  };
+})())
+                        """
+                    )
+                )
+                self.assertEqual(actual["title"]["color"], actual["roles"]["fg1"])
+                geometry = {
+                    key: value
+                    for key, value in actual["title"].items()
+                    if key != "color"
+                }
+                if reference_geometry is None:
+                    reference_geometry = geometry
+                self.assertEqual(geometry, reference_geometry)
+                self.assertEqual(
+                    reference_geometry,
+                    {
+                        "fontSize": "24px",
+                        "marginTop": "15px",
+                        "marginBottom": "15px",
+                        "top": 97,
+                        "bottom": 129,
+                        "nextGap": 15,
+                    },
+                )
+
+                active = [item for item in actual["navigation"] if item["active"]]
+                inactive = [item for item in actual["navigation"] if not item["active"]]
+                self.assertEqual([item["text"] for item in active], [active_label])
+                self.assertTrue(
+                    all(item["color"] == actual["roles"]["fg0"] for item in active)
+                )
+                self.assertTrue(
+                    all("underline" in item["decoration"] for item in active)
+                )
+                self.assertTrue(
+                    all(item["color"] == actual["roles"]["fg1"] for item in inactive)
+                )
+                self.assertTrue(
+                    all("underline" not in item["decoration"] for item in inactive)
+                )
+
 
 if __name__ == "__main__":
     unittest.main()
