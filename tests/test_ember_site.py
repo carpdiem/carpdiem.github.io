@@ -124,7 +124,14 @@ class EmberSiteTests(unittest.TestCase):
         self.assertIn("--site-header-bg: var(--ember-bg-0)", custom)
         self.assertIn("--site-subtle-bg: color-mix", custom)
         self.assertIn("--site-inline-code-bg: var(--site-subtle-bg)", custom)
-        self.assertIn("applyCodePalettes", runtime)
+        self.assertNotIn("applyCodePalettes", runtime)
+        self.assertIn("--site-code-bg: var(--ember-bg-0)", custom)
+        self.assertIn("--site-code-gutter-bg: var(--ember-bg-1)", custom)
+        self.assertIn("--site-inline-code-border: var(--ember-bg-2)", custom)
+        self.assertIn("box-decoration-break: clone", syntax)
+        self.assertIn(".highlight > pre", syntax)
+        self.assertIn("position: sticky", syntax)
+        self.assertNotIn(".highlight table td { padding: 5px; }", syntax)
         self.assertIn("--site-link: var(--ember-terminal-red)", custom)
         self.assertIn("--site-link-visited: var(--ember-terminal-yellow)", custom)
         self.assertIn("--site-link-visited: var(--ember-category-six)", custom)
@@ -184,8 +191,10 @@ class EmberSiteTests(unittest.TestCase):
         for role in (
             "--ember-fg-0",
             "--ember-fg-2",
-            "--ember-bg-2",
-            "--ember-bg-3",
+            "--site-code-bg",
+            "--site-code-gutter-bg",
+            "--site-code-border",
+            "--site-code-mark-bg",
             "--ember-terminal-red",
             "--ember-terminal-green",
             "--ember-terminal-yellow",

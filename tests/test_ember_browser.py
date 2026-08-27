@@ -23,6 +23,8 @@ PHOTO_PAGE = (
     "/blog/2020-08-10-How-do-you-solve-a-puzzle-with-only-white-pieces-left.html"
 )
 CODE_PAGE = "/blog/2024-04-22-Python-decorators-for-fun-and-profit.html"
+DOTFILES_PAGE = "/misc/Dotfiles-zshrc-vimrc-tmuxconf-and-jupyter_customcss.html"
+COLOR_PAGE = "/projects/Generating-Color-Temperature-Equivalent-Light-with-RGB-LEDs.html"
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
@@ -409,7 +411,7 @@ class EmberBrowserTests(unittest.TestCase):
         self.cdp.navigate(self.base_url + "/blog.html")
         infinite = json.loads(
             self.cdp.evaluate(
-                "new Promise((resolve,reject)=>{window.scrollTo(0,document.body.scrollHeight);const deadline=Date.now()+5000,timer=setInterval(()=>{const posts=document.querySelectorAll('.post-list .post').length;if(posts>=10){clearInterval(timer);const images=[...document.querySelectorAll('.post-list img')],codeBlocks=[...document.querySelectorAll('.post-list .highlight')];resolve(JSON.stringify({posts,states:[...new Set(images.map(img=>img.dataset.emberImageState))],loaded:images.every(img=>img.complete&&img.naturalWidth>0),codeBlocks:codeBlocks.length,codePalettes:[...new Set(codeBlocks.map(block=>block.dataset.emberPalette))]}))}else if(Date.now()>deadline){clearInterval(timer);reject(new Error('infinite scroll timeout'))}},50)})",
+                "new Promise((resolve,reject)=>{window.scrollTo(0,document.body.scrollHeight);const deadline=Date.now()+5000,timer=setInterval(()=>{const posts=document.querySelectorAll('.post-list .post').length;if(posts>=10){clearInterval(timer);const images=[...document.querySelectorAll('.post-list img')],codeBlocks=[...document.querySelectorAll('.post-list .highlight')];resolve(JSON.stringify({posts,states:[...new Set(images.map(img=>img.dataset.emberImageState))],loaded:images.every(img=>img.complete&&img.naturalWidth>0),codeBlocks:codeBlocks.length,codePalettes:[...new Set(codeBlocks.map(block=>block.dataset.emberPalette||''))]}))}else if(Date.now()>deadline){clearInterval(timer);reject(new Error('infinite scroll timeout'))}},50)})",
                 await_promise=True,
             )
         )
@@ -417,7 +419,7 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertEqual(infinite["states"], ["1200k"])
         self.assertTrue(infinite["loaded"])
         self.assertGreater(infinite["codeBlocks"], 0)
-        self.assertEqual(infinite["codePalettes"], ["1200k-dark"])
+        self.assertEqual(infinite["codePalettes"], [""])
 
         self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": True})
         self.cdp.navigate(self.base_url + PHOTO_PAGE + "#update-finished", settle=False)
@@ -462,9 +464,9 @@ class EmberBrowserTests(unittest.TestCase):
                 "inlineCode": "rgb(241, 241, 240)",
                 "tableHeader": "rgb(236, 236, 235)",
                 "tableZebra": "rgb(241, 241, 240)",
-                "codePalette": "3400k-dark",
-                "codeBackground": "rgb(30, 25, 24)",
-                "codeToken": "rgb(212, 134, 195)",
+                "codePalette": "",
+                "codeBackground": "rgb(249, 249, 248)",
+                "codeToken": "rgb(131, 57, 167)",
             },
             {
                 "media": "dark",
@@ -476,7 +478,7 @@ class EmberBrowserTests(unittest.TestCase):
                 "inlineCode": "rgb(41, 33, 31)",
                 "tableHeader": "rgb(30, 25, 24)",
                 "tableZebra": "rgb(19, 16, 15)",
-                "codePalette": "3400k-dark",
+                "codePalette": "",
                 "codeBackground": "rgb(30, 25, 24)",
                 "codeToken": "rgb(212, 134, 195)",
             },
@@ -490,7 +492,7 @@ class EmberBrowserTests(unittest.TestCase):
                 "inlineCode": "rgb(38, 31, 29)",
                 "tableHeader": "rgb(23, 19, 19)",
                 "tableZebra": "rgb(23, 19, 19)",
-                "codePalette": "1200k-dark",
+                "codePalette": "",
                 "codeBackground": "rgb(23, 19, 19)",
                 "codeToken": "rgb(246, 143, 150)",
             },
@@ -544,7 +546,7 @@ JSON.stringify((() => {
     inlineCode: background(inlineCode),
     tableHeader: background(probe.querySelector('th')),
     tableZebra: background(probe.querySelector('tbody tr:nth-child(even)')),
-    codePalette: block.dataset.emberPalette,
+    codePalette: block.dataset.emberPalette || '',
     codeBackground: background(block),
     codeToken: getComputedStyle(block.querySelector('.k')).color,
   };
@@ -560,6 +562,98 @@ JSON.stringify((() => {
                     if key not in {"media", "temperature"}
                 }
                 self.assertEqual(actual, expected_actual)
+
+    def test_code_component_is_uniform_and_has_one_scroll_owner(self) -> None:
+        cases = (
+            ("light", "3400k", "rgb(249, 249, 248)", "rgb(236, 236, 235)"),
+            ("dark", "3400k", "rgb(30, 25, 24)", "rgb(19, 16, 15)"),
+            ("light", "1200k", "rgb(23, 19, 19)", "rgb(38, 31, 29)"),
+        )
+        pages = (CODE_PAGE, DOTFILES_PAGE, COLOR_PAGE)
+        viewports = ((1280, 800, False), (390, 844, True))
+
+        for media, temperature, panel_bg, gutter_bg in cases:
+            for width, height, mobile in viewports:
+                for path in pages:
+                    with self.subTest(
+                        media=media,
+                        temperature=temperature,
+                        width=width,
+                        path=path,
+                    ):
+                        self.cdp.call(
+                            "Emulation.setEmulatedMedia",
+                            {
+                                "features": [
+                                    {"name": "prefers-color-scheme", "value": media}
+                                ]
+                            },
+                        )
+                        self.cdp.call(
+                            "Emulation.setDeviceMetricsOverride",
+                            {
+                                "width": width,
+                                "height": height,
+                                "deviceScaleFactor": 1,
+                                "mobile": mobile,
+                            },
+                        )
+                        self.cdp.navigate(self.base_url + path)
+                        self.cdp.evaluate(
+                            f'document.querySelector(\'[data-ember-temperature-choice="{temperature}"]\').click()'
+                        )
+                        actual = json.loads(
+                            self.cdp.evaluate(
+                                """
+JSON.stringify((() => {
+  const blocks = [...document.querySelectorAll('main .highlight')];
+  const one = values => [...new Set(values)];
+  const style = (element, property) => getComputedStyle(element)[property];
+  return {
+    count: blocks.length,
+    panelBackgrounds: one(blocks.map(block => style(block, 'backgroundColor'))),
+    panelBorders: one(blocks.map(block => style(block, 'borderTopWidth'))),
+    panelRadii: one(blocks.map(block => style(block, 'borderRadius'))),
+    panelOverflow: one(blocks.map(block => style(block, 'overflow'))),
+    fontSizes: one(blocks.map(block => style(block.querySelector('code'), 'fontSize'))),
+    lineHeights: one(blocks.map(block => style(block.querySelector('code'), 'lineHeight'))),
+    codePadding: one(blocks.map(block => style(block.querySelector('code'), 'padding'))),
+    outerPreOverflow: one(blocks.map(block => style(block.querySelector(':scope > pre'), 'overflowX'))),
+    tableDisplay: one(blocks.map(block => style(block.querySelector('.rouge-table'), 'display'))),
+    tableOverflow: one(blocks.map(block => style(block.querySelector('.rouge-table'), 'overflowX'))),
+    cellAlignment: one(blocks.flatMap(block => [...block.querySelectorAll('td')].map(cell => style(cell, 'verticalAlign')))),
+    gutterBackgrounds: one(blocks.map(block => style(block.querySelector('.gutter'), 'backgroundColor'))),
+    gutterPositions: one(blocks.map(block => style(block.querySelector('.gutter'), 'position'))),
+    scrollOwnerCounts: blocks.map(block => {
+      const candidates = [block.querySelector(':scope > pre'), block.querySelector('.rouge-table'), ...block.querySelectorAll('.rouge-table pre')];
+      return candidates.filter(element => ['auto', 'scroll'].includes(style(element, 'overflowX'))).length;
+    }),
+    nestedPalettes: one(blocks.map(block => block.dataset.emberPalette || '')),
+    documentOverflow: document.documentElement.scrollWidth > innerWidth,
+  };
+})())
+                                """
+                            )
+                        )
+                        self.assertGreater(actual["count"], 0)
+                        self.assertEqual(actual["panelBackgrounds"], [panel_bg])
+                        self.assertEqual(actual["gutterBackgrounds"], [gutter_bg])
+                        self.assertEqual(actual["panelBorders"], ["1px"])
+                        self.assertEqual(actual["panelRadii"], ["4px"])
+                        self.assertEqual(actual["panelOverflow"], ["hidden"])
+                        self.assertEqual(actual["fontSizes"], ["15px"])
+                        self.assertEqual(actual["lineHeights"], ["20.25px"])
+                        self.assertEqual(actual["codePadding"], ["0px"])
+                        self.assertEqual(actual["outerPreOverflow"], ["auto"])
+                        self.assertEqual(actual["tableDisplay"], ["table"])
+                        self.assertEqual(actual["tableOverflow"], ["visible"])
+                        self.assertEqual(actual["cellAlignment"], ["top"])
+                        self.assertEqual(actual["gutterPositions"], ["sticky"])
+                        self.assertTrue(
+                            all(count == 1 for count in actual["scrollOwnerCounts"])
+                        )
+                        self.assertEqual(actual["nestedPalettes"], [""])
+                        self.assertFalse(actual["documentOverflow"])
 
     def test_section_title_and_navigation_hierarchy_contracts(self) -> None:
         pages = (

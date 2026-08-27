@@ -1,4 +1,4 @@
-/* Rouge syntax highlighting mapped onto active Ember terminal and surface roles. */
+/* Rouge syntax highlighting and code presentation mapped onto Ember roles. */
 
 .language-plaintext {
   color: var(--ember-fg-0);
@@ -7,18 +7,126 @@
 code {
   color: var(--ember-fg-0);
   background-color: var(--site-inline-code-bg);
+  border: 1px solid var(--site-inline-code-border);
+  border-radius: 4px;
+  padding: 0.12em 0.34em 0.16em;
+  font-size: 0.9em;
+  line-height: 1;
+  vertical-align: 0.03em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  overflow-wrap: anywhere;
 }
 
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+.highlight {
+  margin: 0 5% $spacing-unit / 2;
+  color: var(--ember-fg-0);
+  background: var(--site-code-bg);
+  border: 1px solid var(--site-code-border);
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: $code-font-family;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
+.highlight > pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+}
+
+.highlight > pre > code {
+  display: block;
+  min-width: max-content;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  -webkit-box-decoration-break: slice;
+  box-decoration-break: slice;
+  overflow-wrap: normal;
+}
+
+.highlight .rouge-table {
+  display: table;
+  width: 100%;
+  min-width: max-content;
+  margin: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-collapse: collapse;
+  font: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+.highlight .rouge-table tbody,
+.highlight .rouge-table tr {
+  background: transparent;
+}
+
+.highlight .rouge-table td {
+  padding: 8px 0;
+  vertical-align: top;
+  background: transparent;
+  border: 0;
+}
+
+.highlight .rouge-table .gutter {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: 1%;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: var(--ember-fg-2);
+  background: var(--site-code-gutter-bg);
+  border-right: 1px solid var(--site-code-border);
+  text-align: right;
+  user-select: none;
+}
+
+.highlight .rouge-table .code {
+  width: auto;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.highlight .rouge-table pre {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+}
+
 .highlight,
 .highlight .w {
   color: var(--ember-fg-0);
-  background-color: var(--ember-bg-2);
+  background-color: var(--site-code-bg);
 }
 .highlight .err {
   color: var(--ember-terminal-red);
-  background-color: var(--ember-bg-3);
+  background-color: var(--site-code-mark-bg);
   font-weight: bold;
 }
 .highlight .c,
@@ -44,7 +152,7 @@ code {
 }
 .highlight .gi {
   color: var(--ember-terminal-green);
-  background-color: var(--ember-bg-3);
+  background-color: var(--site-code-mark-bg);
 }
 .highlight .gi .x {
   color: inherit;
@@ -52,7 +160,7 @@ code {
 }
 .highlight .gd {
   color: var(--ember-terminal-red);
-  background-color: var(--ember-bg-3);
+  background-color: var(--site-code-mark-bg);
 }
 .highlight .gd .x {
   color: inherit;
@@ -137,11 +245,5 @@ code {
 }
 .highlight .lineno {
   color: var(--ember-fg-2);
-}
-.highlight .gutter {
-  border-color: var(--ember-bg-4);
-}
-.highlight pre {
-  color: var(--ember-fg-0);
-  background-color: var(--ember-bg-2);
+  font-variant-numeric: tabular-nums;
 }

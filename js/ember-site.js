@@ -26,22 +26,6 @@
     return darkPreference.matches ? "3400k-dark" : "3400k-light";
   };
 
-  const applyCodePalettes = (scope = document) => {
-    const palette = root.dataset.emberPalette === "3400k-light"
-      ? "3400k-dark"
-      : root.dataset.emberPalette;
-    const blocks = [];
-    if (scope === document) {
-      blocks.push(...document.querySelectorAll("main .highlight, main pre"));
-    } else if (scope.closest && scope.closest("main")) {
-      if (scope.matches(".highlight, pre")) blocks.push(scope);
-      blocks.push(...scope.querySelectorAll(".highlight, pre"));
-    }
-    new Set(blocks).forEach((block) => {
-      block.dataset.emberPalette = palette;
-    });
-  };
-
   const derivativePathFor = (source) => {
     let url;
     try {
@@ -139,7 +123,6 @@
     const normalized = temperature === "1200k" ? "1200k" : "3400k";
     root.dataset.emberTemperature = normalized;
     root.dataset.emberPalette = familyFor(normalized);
-    applyCodePalettes();
 
     controls.forEach((control) => {
       control.setAttribute(
@@ -169,7 +152,6 @@
   const handlePreferenceChange = () => {
     if (selectedTemperature() !== "3400k") return;
     root.dataset.emberPalette = familyFor("3400k");
-    applyCodePalettes();
     requestAnimationFrame(syncThemeColor);
   };
   if (darkPreference.addEventListener) {
@@ -185,7 +167,6 @@
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === Node.ELEMENT_NODE) {
             applyImages(selectedTemperature(), node);
-            applyCodePalettes(node);
           }
         });
       });

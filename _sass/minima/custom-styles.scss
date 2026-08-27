@@ -258,35 +258,6 @@ ul, ol {
 	}
 }
 
-.highlight {
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-.highlight pre {
-	border-width: 0;
-	padding: 0;
-	background-color: var(--ember-bg-2);
-}
-
-code table {
-	border-width: 0;
-	font-family: "Iosevka Term Slab Light";
-}
-
-code table tbody tr td {
-	border-width: 0;
-}
-
-code table tbody tr td:first-child {
-	border-right-style: solid;
-	border-left-style: none;
-	border-top-style: none;
-	border-bottom-style: none;
-	border-width: 2px;
-	border-color: var(--ember-bg-4);
-}	
-
 .read_more_link {
 	padding-left: 5%;
 }
@@ -301,14 +272,6 @@ object {
 	margin-left: 5%;
 }
 
-code table {
-	margin-bottom: 0;
-}
-
-code table tbody tr td pre {
-	margin-bottom: 0;
-}
-
 /* Ember palette integration for the normal Jekyll browsing shell. */
 :root[data-ember-palette="3400k-light"] {
 	--site-header-bg: var(--ember-bg-0);
@@ -319,6 +282,11 @@ code table tbody tr td pre {
 	--site-subtle-bg: color-mix(in srgb, var(--ember-bg-0) 40%, var(--ember-bg-1));
 	--site-blockquote-bg: var(--site-subtle-bg);
 	--site-inline-code-bg: var(--site-subtle-bg);
+	--site-inline-code-border: var(--ember-bg-2);
+	--site-code-bg: var(--ember-bg-0);
+	--site-code-gutter-bg: var(--ember-bg-1);
+	--site-code-border: var(--ember-bg-2);
+	--site-code-mark-bg: var(--ember-bg-1);
 	--site-table-zebra-bg: var(--site-subtle-bg);
 	--site-table-header-bg: var(--ember-bg-1);
 	--site-link: var(--ember-terminal-red);
@@ -338,6 +306,11 @@ code table tbody tr td pre {
 	--site-subtle-bg: var(--ember-bg-1);
 	--site-blockquote-bg: var(--ember-bg-1);
 	--site-inline-code-bg: var(--ember-bg-3);
+	--site-inline-code-border: var(--ember-bg-4);
+	--site-code-bg: var(--ember-bg-2);
+	--site-code-gutter-bg: var(--ember-bg-1);
+	--site-code-border: var(--ember-bg-4);
+	--site-code-mark-bg: var(--ember-bg-3);
 	--site-table-zebra-bg: var(--ember-bg-1);
 	--site-table-header-bg: var(--ember-bg-2);
 	--site-link: var(--ember-terminal-red);
@@ -357,6 +330,11 @@ code table tbody tr td pre {
 	--site-subtle-bg: var(--ember-bg-1);
 	--site-blockquote-bg: var(--ember-bg-1);
 	--site-inline-code-bg: var(--ember-bg-3);
+	--site-inline-code-border: var(--ember-bg-4);
+	--site-code-bg: var(--ember-bg-2);
+	--site-code-gutter-bg: var(--ember-bg-3);
+	--site-code-border: var(--ember-bg-4);
+	--site-code-mark-bg: var(--ember-bg-3);
 	--site-table-zebra-bg: var(--ember-bg-1);
 	--site-table-header-bg: var(--ember-bg-2);
 	--site-link: var(--ember-terminal-red);
@@ -605,21 +583,21 @@ code a:hover {
 }
 
 pre,
-code,
-.highlight,
-.highlighter-rouge .highlight {
+code {
 	color: var(--ember-fg-0);
-	background: var(--ember-bg-2);
-	border-color: var(--ember-bg-4);
+}
+
+pre {
+	background: var(--site-code-bg);
+	border-color: var(--site-code-border);
 }
 
 code {
 	background: var(--site-inline-code-bg);
+	border-color: var(--site-inline-code-border);
 }
 
-pre > code,
-.highlight pre,
-.highlight code {
+pre > code {
 	background: transparent;
 }
 
