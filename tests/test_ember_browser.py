@@ -465,7 +465,7 @@ class EmberBrowserTests(unittest.TestCase):
                 "tableHeader": "rgb(236, 236, 235)",
                 "tableZebra": "rgb(241, 241, 240)",
                 "codePalette": "",
-                "codeBackground": "rgb(249, 249, 248)",
+                "codeBackground": "rgb(241, 241, 240)",
                 "codeToken": "rgb(131, 57, 167)",
             },
             {
@@ -479,7 +479,7 @@ class EmberBrowserTests(unittest.TestCase):
                 "tableHeader": "rgb(30, 25, 24)",
                 "tableZebra": "rgb(19, 16, 15)",
                 "codePalette": "",
-                "codeBackground": "rgb(30, 25, 24)",
+                "codeBackground": "rgb(41, 33, 31)",
                 "codeToken": "rgb(212, 134, 195)",
             },
             {
@@ -493,7 +493,7 @@ class EmberBrowserTests(unittest.TestCase):
                 "tableHeader": "rgb(23, 19, 19)",
                 "tableZebra": "rgb(23, 19, 19)",
                 "codePalette": "",
-                "codeBackground": "rgb(23, 19, 19)",
+                "codeBackground": "rgb(38, 31, 29)",
                 "codeToken": "rgb(246, 143, 150)",
             },
         )
@@ -565,14 +565,14 @@ JSON.stringify((() => {
 
     def test_code_component_is_uniform_and_has_one_scroll_owner(self) -> None:
         cases = (
-            ("light", "3400k", "rgb(249, 249, 248)", "rgb(236, 236, 235)"),
-            ("dark", "3400k", "rgb(30, 25, 24)", "rgb(19, 16, 15)"),
-            ("light", "1200k", "rgb(23, 19, 19)", "rgb(38, 31, 29)"),
+            ("light", "3400k", "rgb(241, 241, 240)", "rgb(249, 249, 248)", "rgb(236, 236, 235)"),
+            ("dark", "3400k", "rgb(41, 33, 31)", "rgb(30, 25, 24)", "rgb(19, 16, 15)"),
+            ("light", "1200k", "rgb(38, 31, 29)", "rgb(23, 19, 19)", "rgb(38, 31, 29)"),
         )
         pages = (CODE_PAGE, DOTFILES_PAGE, COLOR_PAGE)
         viewports = ((1280, 800, False), (390, 844, True))
 
-        for media, temperature, panel_bg, gutter_bg in cases:
+        for media, temperature, frame_bg, reading_bg, gutter_bg in cases:
             for width, height, mobile in viewports:
                 for path in pages:
                     with self.subTest(
@@ -609,9 +609,20 @@ JSON.stringify((() => {
   const blocks = [...document.querySelectorAll('main .highlight')];
   const one = values => [...new Set(values)];
   const style = (element, property) => getComputedStyle(element)[property];
+  const background = element => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    const context = canvas.getContext('2d');
+    context.fillStyle = getComputedStyle(element).backgroundColor;
+    context.fillRect(0, 0, 1, 1);
+    const [red, green, blue] = context.getImageData(0, 0, 1, 1).data;
+    return `rgb(${red}, ${green}, ${blue})`;
+  };
   return {
     count: blocks.length,
-    panelBackgrounds: one(blocks.map(block => style(block, 'backgroundColor'))),
+    panelBackgrounds: one(blocks.map(background)),
+    panelPadding: one(blocks.map(block => style(block, 'padding'))),
     panelBorders: one(blocks.map(block => style(block, 'borderTopWidth'))),
     panelRadii: one(blocks.map(block => style(block, 'borderRadius'))),
     panelOverflow: one(blocks.map(block => style(block, 'overflow'))),
@@ -619,10 +630,12 @@ JSON.stringify((() => {
     lineHeights: one(blocks.map(block => style(block.querySelector('code'), 'lineHeight'))),
     codePadding: one(blocks.map(block => style(block.querySelector('code'), 'padding'))),
     outerPreOverflow: one(blocks.map(block => style(block.querySelector(':scope > pre'), 'overflowX'))),
+    readingBackgrounds: one(blocks.map(block => background(block.querySelector(':scope > pre')))),
+    readingRadii: one(blocks.map(block => style(block.querySelector(':scope > pre'), 'borderRadius'))),
     tableDisplay: one(blocks.map(block => style(block.querySelector('.rouge-table'), 'display'))),
     tableOverflow: one(blocks.map(block => style(block.querySelector('.rouge-table'), 'overflowX'))),
     cellAlignment: one(blocks.flatMap(block => [...block.querySelectorAll('td')].map(cell => style(cell, 'verticalAlign')))),
-    gutterBackgrounds: one(blocks.map(block => style(block.querySelector('.gutter'), 'backgroundColor'))),
+    gutterBackgrounds: one(blocks.map(block => background(block.querySelector('.gutter')))),
     gutterPositions: one(blocks.map(block => style(block.querySelector('.gutter'), 'position'))),
     scrollOwnerCounts: blocks.map(block => {
       const candidates = [block.querySelector(':scope > pre'), block.querySelector('.rouge-table'), ...block.querySelectorAll('.rouge-table pre')];
@@ -636,7 +649,10 @@ JSON.stringify((() => {
                             )
                         )
                         self.assertGreater(actual["count"], 0)
-                        self.assertEqual(actual["panelBackgrounds"], [panel_bg])
+                        self.assertEqual(actual["panelBackgrounds"], [frame_bg])
+                        self.assertEqual(actual["panelPadding"], ["2px"])
+                        self.assertEqual(actual["readingBackgrounds"], [reading_bg])
+                        self.assertEqual(actual["readingRadii"], ["2px"])
                         self.assertEqual(actual["gutterBackgrounds"], [gutter_bg])
                         self.assertEqual(actual["panelBorders"], ["1px"])
                         self.assertEqual(actual["panelRadii"], ["4px"])

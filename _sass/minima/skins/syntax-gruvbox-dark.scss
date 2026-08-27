@@ -21,9 +21,10 @@ code {
 .highlight {
   margin: 0 5% $spacing-unit / 2;
   color: var(--ember-fg-0);
-  background: var(--site-code-bg);
+  background: var(--site-inline-code-bg);
   border: 1px solid var(--site-code-border);
   border-radius: 4px;
+  padding: 2px;
   overflow: hidden;
   font-family: $code-font-family;
   font-size: 0.9375rem;
@@ -38,9 +39,9 @@ code {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   color: inherit;
-  background: transparent;
+  background: var(--site-code-bg);
   border: 0;
-  border-radius: 0;
+  border-radius: 2px;
   font: inherit;
   line-height: inherit;
 }
@@ -119,7 +120,6 @@ code {
   line-height: inherit;
 }
 
-.highlight,
 .highlight .w {
   color: var(--ember-fg-0);
   background-color: var(--site-code-bg);
