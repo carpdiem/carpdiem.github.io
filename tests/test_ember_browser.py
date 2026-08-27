@@ -22,6 +22,7 @@ SITE = ROOT / "_site"
 PHOTO_PAGE = (
     "/blog/2020-08-10-How-do-you-solve-a-puzzle-with-only-white-pieces-left.html"
 )
+CODE_PAGE = "/blog/2024-04-22-Python-decorators-for-fun-and-profit.html"
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
@@ -316,7 +317,7 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertEqual(restored["elevated"], "#98074F")
         self.assertEqual(restored["elevatedVisited"], "#844601")
         self.assertEqual(restored["elevatedHover"], "#342F2C")
-        self.assertEqual(restored["header"], "rgb(236, 236, 235)")
+        self.assertEqual(restored["header"], "rgb(249, 249, 248)")
         self.assertEqual(restored["body"], "rgb(249, 249, 248)")
         self.assertTrue(
             all(
@@ -408,13 +409,15 @@ class EmberBrowserTests(unittest.TestCase):
         self.cdp.navigate(self.base_url + "/blog.html")
         infinite = json.loads(
             self.cdp.evaluate(
-                "new Promise((resolve,reject)=>{window.scrollTo(0,document.body.scrollHeight);const deadline=Date.now()+5000,timer=setInterval(()=>{const posts=document.querySelectorAll('.post-list .post').length;if(posts>=10){clearInterval(timer);const images=[...document.querySelectorAll('.post-list img')];resolve(JSON.stringify({posts,states:[...new Set(images.map(img=>img.dataset.emberImageState))],loaded:images.every(img=>img.complete&&img.naturalWidth>0)}))}else if(Date.now()>deadline){clearInterval(timer);reject(new Error('infinite scroll timeout'))}},50)})",
+                "new Promise((resolve,reject)=>{window.scrollTo(0,document.body.scrollHeight);const deadline=Date.now()+5000,timer=setInterval(()=>{const posts=document.querySelectorAll('.post-list .post').length;if(posts>=10){clearInterval(timer);const images=[...document.querySelectorAll('.post-list img')],codeBlocks=[...document.querySelectorAll('.post-list .highlight')];resolve(JSON.stringify({posts,states:[...new Set(images.map(img=>img.dataset.emberImageState))],loaded:images.every(img=>img.complete&&img.naturalWidth>0),codeBlocks:codeBlocks.length,codePalettes:[...new Set(codeBlocks.map(block=>block.dataset.emberPalette))]}))}else if(Date.now()>deadline){clearInterval(timer);reject(new Error('infinite scroll timeout'))}},50)})",
                 await_promise=True,
             )
         )
         self.assertGreaterEqual(infinite["posts"], 10)
         self.assertEqual(infinite["states"], ["1200k"])
         self.assertTrue(infinite["loaded"])
+        self.assertGreater(infinite["codeBlocks"], 0)
+        self.assertEqual(infinite["codePalettes"], ["1200k-dark"])
 
         self.cdp.call("Emulation.setScriptExecutionDisabled", {"value": True})
         self.cdp.navigate(self.base_url + PHOTO_PAGE + "#update-finished", settle=False)
@@ -446,6 +449,117 @@ class EmberBrowserTests(unittest.TestCase):
         self.assertTrue(
             all("/images/ember-1200k/" not in url for url in no_script_image_requests)
         )
+
+    def test_surface_roles_and_code_subtheme_contracts(self) -> None:
+        cases = (
+            {
+                "media": "light",
+                "temperature": "3400k",
+                "palette": "3400k-light",
+                "header": "rgb(249, 249, 248)",
+                "body": "rgb(249, 249, 248)",
+                "blockquote": "rgb(241, 241, 240)",
+                "inlineCode": "rgb(241, 241, 240)",
+                "tableHeader": "rgb(236, 236, 235)",
+                "tableZebra": "rgb(241, 241, 240)",
+                "codePalette": "3400k-dark",
+                "codeBackground": "rgb(30, 25, 24)",
+                "codeToken": "rgb(212, 134, 195)",
+            },
+            {
+                "media": "dark",
+                "temperature": "3400k",
+                "palette": "3400k-dark",
+                "header": "rgb(19, 16, 15)",
+                "body": "rgb(5, 4, 4)",
+                "blockquote": "rgb(19, 16, 15)",
+                "inlineCode": "rgb(41, 33, 31)",
+                "tableHeader": "rgb(30, 25, 24)",
+                "tableZebra": "rgb(19, 16, 15)",
+                "codePalette": "3400k-dark",
+                "codeBackground": "rgb(30, 25, 24)",
+                "codeToken": "rgb(212, 134, 195)",
+            },
+            {
+                "media": "light",
+                "temperature": "1200k",
+                "palette": "1200k-dark",
+                "header": "rgb(23, 19, 19)",
+                "body": "rgb(5, 4, 4)",
+                "blockquote": "rgb(23, 19, 19)",
+                "inlineCode": "rgb(38, 31, 29)",
+                "tableHeader": "rgb(23, 19, 19)",
+                "tableZebra": "rgb(23, 19, 19)",
+                "codePalette": "1200k-dark",
+                "codeBackground": "rgb(23, 19, 19)",
+                "codeToken": "rgb(246, 143, 150)",
+            },
+        )
+
+        for expected in cases:
+            with self.subTest(palette=expected["palette"]):
+                self.cdp.call(
+                    "Emulation.setEmulatedMedia",
+                    {
+                        "features": [
+                            {
+                                "name": "prefers-color-scheme",
+                                "value": expected["media"],
+                            }
+                        ]
+                    },
+                )
+                self.cdp.navigate(self.base_url + CODE_PAGE)
+                self.cdp.evaluate(
+                    f'document.querySelector(\'[data-ember-temperature-choice="{expected["temperature"]}"]\').click()'
+                )
+                self.cdp.evaluate(
+                    "new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))",
+                    await_promise=True,
+                )
+                actual = json.loads(
+                    self.cdp.evaluate(
+                        """
+JSON.stringify((() => {
+  const probe = document.createElement('div');
+  probe.innerHTML = '<blockquote>quote</blockquote><table><thead><tr><th>head</th></tr></thead><tbody><tr><td>one</td></tr><tr><td>two</td></tr></tbody></table>';
+  document.querySelector('main').append(probe);
+  const block = document.querySelector('main .highlight');
+  const inlineCode = document.querySelector('main p code');
+  const background = element => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    const context = canvas.getContext('2d');
+    context.fillStyle = getComputedStyle(element).backgroundColor;
+    context.fillRect(0, 0, 1, 1);
+    const [red, green, blue] = context.getImageData(0, 0, 1, 1).data;
+    return `rgb(${red}, ${green}, ${blue})`;
+  };
+  const result = {
+    palette: document.documentElement.dataset.emberPalette,
+    header: background(document.querySelector('.site-header')),
+    body: background(document.body),
+    blockquote: background(probe.querySelector('blockquote')),
+    inlineCode: background(inlineCode),
+    tableHeader: background(probe.querySelector('th')),
+    tableZebra: background(probe.querySelector('tbody tr:nth-child(even)')),
+    codePalette: block.dataset.emberPalette,
+    codeBackground: background(block),
+    codeToken: getComputedStyle(block.querySelector('.k')).color,
+  };
+  probe.remove();
+  return result;
+})())
+                        """
+                    )
+                )
+                expected_actual = {
+                    key: value
+                    for key, value in expected.items()
+                    if key not in {"media", "temperature"}
+                }
+                self.assertEqual(actual, expected_actual)
 
 
 if __name__ == "__main__":

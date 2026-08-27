@@ -114,12 +114,17 @@ class EmberSiteTests(unittest.TestCase):
 
     def test_active_shell_and_syntax_styles_use_ember_roles(self) -> None:
         custom = (ROOT / "_sass" / "minima" / "custom-styles.scss").read_text()
+        runtime = (ROOT / "js" / "ember-site.js").read_text()
         syntax = (
             ROOT / "_sass" / "minima" / "skins" / "syntax-gruvbox-dark.scss"
         ).read_text()
 
         self.assertIn("position: sticky", custom)
         self.assertIn("grid-template-rows: auto", custom)
+        self.assertIn("--site-header-bg: var(--ember-bg-0)", custom)
+        self.assertIn("--site-subtle-bg: color-mix", custom)
+        self.assertIn("--site-inline-code-bg: var(--site-subtle-bg)", custom)
+        self.assertIn("applyCodePalettes", runtime)
         self.assertIn("--site-link: var(--ember-terminal-red)", custom)
         self.assertIn("--site-link-visited: var(--ember-terminal-yellow)", custom)
         self.assertIn("--site-link-visited: var(--ember-category-six)", custom)
@@ -128,11 +133,11 @@ class EmberSiteTests(unittest.TestCase):
         self.assertNotIn("--site-link: var(--ember-terminal-blue)", custom)
         self.assertRegex(
             custom,
-            re.compile(r"\.site-header\s*\{[^}]*background: var\(--ember-bg-1\)", re.DOTALL),
+            re.compile(r"\.site-header\s*\{[^}]*background: var\(--site-header-bg\)", re.DOTALL),
         )
         self.assertRegex(
             custom,
-            re.compile(r"blockquote\s*\{[^}]*background: var\(--ember-bg-1\)", re.DOTALL),
+            re.compile(r"blockquote\s*\{[^}]*background: var\(--site-blockquote-bg\)", re.DOTALL),
         )
         self.assertRegex(
             custom,
